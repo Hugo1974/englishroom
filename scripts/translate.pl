@@ -19,7 +19,7 @@ $traductor->source('english');
 $traductor->get( $traductor->query('home') );
 
 my $builder = Gtk3::Builder->new();
-$builder->add_from_file("./WebView.glade");
+$builder->add_from_file("../data/UI/WebView.glade");
 $builder->connect_signals(undef);
 my $window    = $builder->get_object("WebViewWindow");
 my $web_align = $builder->get_object("AlignWebView")
