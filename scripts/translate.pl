@@ -9,7 +9,6 @@ use Gtk3 -init;
 use Gtk3::WebKit2;
 use Glib qw(TRUE FALSE);
 use utf8;
-use lib '../lib';
 use EnglishRoom::Linguee;
 
 my $traductor = EnglishRoom::Linguee->new();
