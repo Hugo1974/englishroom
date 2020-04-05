@@ -30,11 +30,20 @@ use Carp qw(croak carp);
 use Web::Query qw();
 use LWP::UserAgent;
 use LWP::Protocol::socks;
-use EnglishRoom::Config
-  qw(agent proxy  html_response_file html_formated_file html_formated_file css_uri js_uri pretty);
+use EnglishRoom::Config qw(
+  agent
+  proxy
+  html_response_file
+  html_formated_file
+  html_formated_file
+  css_uri
+  js_uri
+  pretty
+);
+use Data::Dumper;
+binmode( STDOUT, "encoding(UTF-8)" );
 
 our $VERSION = '0.01';
-use Data::Dumper;
 
 sub new {
 
@@ -45,7 +54,7 @@ sub new {
     my $clase = shift;
     my $self  = {@_};
 
-    print Dumper $self if DEBUG;
+    #    print Dumper $self if DEBUG;
 
     $self->{linguee} = LINGUEE_URL_SEARCH;
     $self->{query}             ||= 'hello';

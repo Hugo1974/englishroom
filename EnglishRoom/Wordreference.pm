@@ -20,8 +20,6 @@ package Wordreference;
 #   Mojo::DOM
 #   Web::Query
 
-
-
 use 5.006;
 use strict;
 use warnings;
@@ -31,82 +29,71 @@ use Carp qw(croak carp);
 use Web::Query qw();
 use Mojo::DOM;
 
-
 our $VERSION = '0.01';
 
 use constant WR_URL => ('https://www.wordreference.com');
-use constant DEBUG => '0';
-    
+use constant DEBUG  => '0';
+
 sub new {
-        
-        my $clase = shift;
-        my $self = {@_};
 
-        
-        print Dumper $self if DEBUG;
-        
-        $self->{wr_search_url} =    WR_URL;
-        $self->{linguee_get_url}    ||= '';
-        $self->{query}              ||= '';
-        $self->{translate_to}       ||= 'es';
-        $self->{translate_from}     ||= 'es';
-        $self->{source}             ||= 'english';
-        $self->{localfile}          ||= '/tmp/wr_tree.pl';
-        $self->{remotefile}         ||= './wr_res.html';
-        
-        my $search_string        = "/$self->{translate_to}/translation.asp?tranword=";
+    my $clase = shift;
+    my $self  = {@_};
 
-        
-        
-        $self->{get}                ||= '';
-        
-#         say "URL search>" . $self->{wr_search_url} . $search_string;
+    print Dumper $self if DEBUG;
 
-        return bless $self, $clase;
-        
-        }
-        
-        
-    # Comporbar si la palabra es un verbo
-    
-    # si es un verbo, obtener la conjugación en inglés y español
-    
-    sub get_data {
-    
-        my $self = shift;
-        
-#         say "Accediedo a data";
-        
+    $self->{wr_search_url} = WR_URL;
+    $self->{linguee_get_url} ||= '';
+    $self->{query}           ||= '';
+    $self->{translate_to}    ||= 'es';
+    $self->{translate_from}  ||= 'es';
+    $self->{source}          ||= 'english';
+    $self->{localfile}       ||= '/tmp/wr_tree.pl';
+    $self->{remotefile}      ||= './wr_res.html';
 
-        open (DATA, "<", './file.html') || "Error:$!";
-        my $content;
-            {
-                local $/ = undef; # slurp mode
-                $content = <DATA>;
-            }
-        close DATA;
+    my $search_string = "/$self->{translate_to}/translation.asp?tranword=";
 
-        my $dom = Mojo::DOM->new( $content );
+    $self->{get} ||= '';
 
-        my $module_list = $dom
-            ->find('td[style="vertical-align:top;"]')
-            ->join("\n");
-            
-        print "<html><head>";
-        print '<meta content="text/html; charset=utf-8" http-equiv="Content-Type">';
-        print "<link href=\"main.css\" rel=\"stylesheet\" type=\"text/css\">";
-        print "<link href=\"WRredesign.css\" rel=\"stylesheet\" type=\"text/css\">";
-        print "</head><body><div><table>\n\n";
-        print $module_list;
-        print "\n\n</table></div></body></html>";
-        
-        }
-    
-    # devolver el resultado
-    
+    #         say "URL search>" . $self->{wr_search_url} . $search_string;
 
+    return bless $self, $clase;
+
+}
+
+# Comporbar si la palabra es un verbo
+
+# si es un verbo, obtener la conjugación en inglés y español
+
+sub get_data {
+
+    my $self = shift;
+
+    #         say "Accediedo a data";
+
+    open( DATA, "<", './file.html' ) || "Error:$!";
+    my $content;
+    {
+        local $/ = undef;    # slurp mode
+        $content = <DATA>;
+    }
+    close DATA;
+
+    my $dom = Mojo::DOM->new($content);
+
+    my $module_list = $dom->find('td[style="vertical-align:top;"]')->join("\n");
+
+    print "<html><head>";
+    print '<meta content="text/html; charset=utf-8" http-equiv="Content-Type">';
+    print "<link href=\"main.css\" rel=\"stylesheet\" type=\"text/css\">";
+    print "<link href=\"WRredesign.css\" rel=\"stylesheet\" type=\"text/css\">";
+    print "</head><body><div><table>\n\n";
+    print $module_list;
+    print "\n\n</table></div></body></html>";
+
+}
+
+# devolver el resultado
 
 # Hugo Morago Martín, C<< <nanti.penguin at gmail.com> >>
 
-
-1; # End of Wordreference
+1;    # End of Wordreference

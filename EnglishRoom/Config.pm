@@ -18,8 +18,16 @@ BEGIN {
     our @ISA = qw(Exporter);
 
     # funciones y variables que se exportan de forma predeterminada
-    our @EXPORT =
-      qw(agent proxy html_response_file html_formated_file html_formated_file_uri css_uri js_uri pretty);
+    our @EXPORT = qw(
+      agent
+      proxy
+      html_response_file
+      html_formated_file
+      html_formated_file_uri
+      css_uri
+      js_uri
+      pretty
+    );
 
     # funciones y variables que se exportan de forma opcional
 }
@@ -47,15 +55,21 @@ sub html_formated_file {
 }
 
 sub css_uri {
-    return ('file:///home/hugo/Workspace/EnglishRoom/data/style.css');
+    return ('file:///home/hugo/.atom/github/englishroom/data/styles/style.css');
 }
 
 sub js_uri {
-    return ('file:///home/hugo/Workspace/EnglishRoom/scripts/play_audio.js');
+    return (
+        'file:///home/hugo/.atom/github/englishroom/EnglishRoom/play_audio.js');
 }
 
 sub pretty {
+    my ( undef, undef, $hpp ) = split( /\s/, `which html5-print` );
     return '/home/hugo/.config/.local/bin/html5-print';
+}
+
+sub linguasorb_html_response_file {
+    return '/tmp/';
 }
 
 1;
