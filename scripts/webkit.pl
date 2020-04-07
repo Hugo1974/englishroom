@@ -54,7 +54,7 @@ $view->grab_focus;
 #$view->open( $ARGV[0] || 'http://perlmonks.org' );
 
 #$view->load_uri('http://localhost/phpmyadmin/');
-$view->load_uri( 'file:///home/hugo/bin/INGLES/tmp/conj_es.html'
+$view->load_uri( 'file:///home/hugo/.atom/github/englishroom/tmp/conj_es.html'
       || 'http://localhost' );
 
 Gtk3->main;

@@ -12,6 +12,11 @@ use utf8;
 use lib '/home/hugo/.atom/github/englishroom/';
 use EnglishRoom::Linguee;
 
+my $WebViewGladeUI =
+  '/home/hugo/.atom/github/englishroom/data/UI/WebView.glade';
+my $BooksViewGladeUI =
+  '/home/hugo/.atom/github/englishroom/data/UI/FrameBooks.glade';
+
 my $clippy =
   Gtk3::Clipboard::get( Gtk3::Gdk::Atom::intern( 'PRIMARY', FALSE ) );
 $clippy->wait_for_text();
@@ -20,33 +25,87 @@ my $traductor = EnglishRoom::Linguee->new();
 
 $traductor->source('english');
 
-$traductor->get( $traductor->query('home') );
+# $traductor->get( $traductor->query('home') );
 
-my $builder = Gtk3::Builder->new();
-$builder->add_from_file("../data/UI/WebView.glade");
-$builder->connect_signals(undef);
-my $window    = $builder->get_object("WebViewWindow");
-my $web_align = $builder->get_object("AlignWebView")
+my $builder_main = Gtk3::Builder->new();
+$builder_main->add_from_file("$WebViewGladeUI")
+  or die "Error: no se encuentra el asrchivo";
+my $builder_frame_books = Gtk3::Builder->new();
+$builder_frame_books->add_from_file("$BooksViewGladeUI")
+  or die "Error: no se encuentra el asrchivo $BooksViewGladeUI";
+
+$builder_main->connect_signals(undef);
+$builder_frame_books->connect_signals(undef);
+
+my $window = $builder_main->get_object("WebViewWindow")
+  or die "Error: no se encuentra el widget WebViewWindow";
+my $tgl_book = $builder_main->get_object("TglBook")
+  or die "Error: no se encuentra el widget TglBook";
+my $main_stack = $builder_main->get_object("MainStack")
+  or die "Error: no se encuentra el widget MainStack";
+my $box_book = $builder_main->get_object("BoxBook")
+  or die "Error: no se encuentra el widget BoxBook";
+
+my $revealer_book_list = $builder_frame_books->get_object("RevealerBookList")
+  or die "Error: no se encuentra el widget RevealerBookList";
+my $books_menu_lista = $builder_frame_books->get_object("BooksMenuVerID")
+  or die "Error: no se encuentra el widget BooksMenuVerID";
+$books_menu_lista->set_draw_as_radio(1);
+$books_menu_lista->set_active(1);
+$books_menu_lista->signal_connect(
+    'toggled' => sub {
+        say "active>> " . $books_menu_lista->get_active;
+
+        if ( $books_menu_lista->get_active() ) {
+            $revealer_book_list->set_reveal_child('1');
+            $books_menu_lista->set_active('1');
+            return;
+        }
+        else {
+            $revealer_book_list->set_reveal_child('0');
+            $books_menu_lista->set_active('0');
+            return;
+        }
+
+    }
+);
+
+my $frame_books = $builder_frame_books->get_object("FrameBooks")
+  or die "Error: no se encuentra el widget FrameBooks";
+
+$box_book->pack_start( $frame_books, 1, 1, 0 );
+
+my $web_align = $builder_main->get_object("AlignWebView")
   or die "Error: no se encuentra el widget WebAlign";
-my $entry_search = $builder->get_object("EntrySearch")
+
+my $entry_search = $builder_main->get_object("EntrySearch")
   or die "Error: no se encuentra el widget EntrySearch";
 
-my $verbs_button = $builder->get_object("MenuVerbsButton")
+my $verbs_button = $builder_main->get_object("MenuVerbsButton")
   or die "Error: no se encuentra el widget VerbsButton";
-my $revealer          = $builder->get_object('revealer');
-my $stack_menu        = $builder->get_object('stack_menu');
-my $menu_page1        = $builder->get_object('menu_page1');
-my $menu_page2        = $builder->get_object('menu_page2');
-my $button_menu_local = $builder->get_object('button_menu_local');
+my $revealer          = $builder_main->get_object('revealer');
+my $stack_menu        = $builder_main->get_object('StackMenu');
+my $menu_page1        = $builder_main->get_object('menu_page1');
+my $menu_page2        = $builder_main->get_object('menu_page2');
+my $button_menu_local = $builder_main->get_object('button_menu_local');
 
-my $find_buttom = $builder->get_object("find_VerbsButton")
+my $find_buttom = $builder_main->get_object("find_VerbsButton")
   or die "Error: no se encuentra el widget VerbsButton";
-my $find_revealer   = $builder->get_object('find_revealer');
-my $find_stack_menu = $builder->get_object('find_stack_menu');
-my $find_menu_page1 = $builder->get_object('find_menu_page1');
-my $find_menu_page2 = $builder->get_object('find_menu_page2');
+my $find_revealer   = $builder_main->get_object('find_revealer');
+my $find_stack_menu = $builder_main->get_object('find_stack_menu');
+my $find_menu_page1 = $builder_main->get_object('find_menu_page1');
+my $find_menu_page2 = $builder_main->get_object('find_menu_page2');
 
 $window->signal_connect( destroy => sub { Gtk3->main_quit() } );
+
+$tgl_book->signal_connect(
+    'toggled' => sub {
+        $main_stack->set_visible_child($box_book);
+        $stack_menu->set_visible_child($menu_page1);
+        $window->show_all;
+        return;
+    }
+);
 
 my $view = Gtk3::WebKit2::WebView->new();
 

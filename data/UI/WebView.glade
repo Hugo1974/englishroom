@@ -7,39 +7,23 @@
     <property name="can_focus">False</property>
     <property name="anchor_hints"/>
     <child>
-      <object class="GtkMenuItem" id="SelectAll">
+      <object class="GtkRadioMenuItem" id="ToEnglish">
+        <property name="name">ToEnglish</property>
         <property name="visible">True</property>
         <property name="can_focus">False</property>
-        <property name="label" translatable="yes">Seleccionar todo</property>
+        <property name="label" translatable="yes">Traducir al español</property>
+        <property name="active">True</property>
+        <property name="draw_as_radio">True</property>
+        <property name="group">ToSpanish</property>
       </object>
     </child>
     <child>
-      <object class="GtkMenuItem" id="SelectFolders">
+      <object class="GtkRadioMenuItem" id="ToSpanish">
         <property name="visible">True</property>
         <property name="can_focus">False</property>
-        <property name="label" translatable="yes">Seleccionar carpetas</property>
-      </object>
-    </child>
-    <child>
-      <object class="GtkMenuItem" id="SelectFiles">
-        <property name="visible">True</property>
-        <property name="can_focus">False</property>
-        <property name="label" translatable="yes">Seleccionar archivos</property>
-      </object>
-    </child>
-    <child>
-      <object class="GtkMenuItem" id="InvertSelect">
-        <property name="visible">True</property>
-        <property name="can_focus">False</property>
-        <property name="label" translatable="yes">Invertir selección</property>
-      </object>
-    </child>
-    <child>
-      <object class="GtkMenuItem" id="SelectNull">
-        <property name="visible">True</property>
-        <property name="can_focus">False</property>
-        <property name="label" translatable="yes">Quitar selección</property>
-        <property name="use_underline">True</property>
+        <property name="label" translatable="yes">Traducir al ingles</property>
+        <property name="draw_as_radio">True</property>
+        <property name="group">ToEnglish</property>
       </object>
     </child>
   </object>
@@ -48,43 +32,29 @@
     <property name="can_focus">False</property>
     <property name="stock">gtk-go-down</property>
   </object>
-  <object class="GtkPopoverMenu" id="NewLocalFolderPopMenu">
+  <object class="GtkImage" id="img_help">
+    <property name="visible">True</property>
     <property name="can_focus">False</property>
-    <property name="relative_to">MenuSelectionButton</property>
-    <child>
-      <object class="GtkFrame">
-        <property name="visible">True</property>
-        <property name="can_focus">False</property>
-        <property name="margin_top">5</property>
-        <property name="margin_bottom">5</property>
-        <property name="label_xalign">0</property>
-        <property name="shadow_type">none</property>
-        <child>
-          <object class="GtkAlignment">
-            <property name="visible">True</property>
-            <property name="can_focus">False</property>
-            <property name="left_padding">12</property>
-            <child>
-              <object class="GtkEntry">
-                <property name="visible">True</property>
-                <property name="can_focus">True</property>
-              </object>
-            </child>
-          </object>
-        </child>
-        <child type="label">
-          <object class="GtkLabel">
-            <property name="visible">True</property>
-            <property name="can_focus">False</property>
-            <property name="label" translatable="yes">Nueva carpeta</property>
-          </object>
-        </child>
-      </object>
-      <packing>
-        <property name="submenu">main</property>
-        <property name="position">1</property>
-      </packing>
-    </child>
+    <property name="stock">gtk-help</property>
+    <property name="icon_size">3</property>
+  </object>
+  <object class="GtkImage" id="img_libro">
+    <property name="visible">True</property>
+    <property name="can_focus">False</property>
+    <property name="icon_name">emblem-documents</property>
+    <property name="use_fallback">True</property>
+    <property name="icon_size">3</property>
+  </object>
+  <object class="GtkImage" id="img_translates">
+    <property name="visible">True</property>
+    <property name="can_focus">False</property>
+    <property name="icon_name">preferences-desktop-locale</property>
+    <property name="use_fallback">True</property>
+  </object>
+  <object class="GtkImage" id="ing_conjugations">
+    <property name="visible">True</property>
+    <property name="can_focus">False</property>
+    <property name="icon_name">preferences-desktop-locale</property>
   </object>
   <object class="GtkWindow" id="WebViewWindow">
     <property name="name">WebViewWindow</property>
@@ -95,9 +65,8 @@
       <object class="GtkHeaderBar">
         <property name="visible">True</property>
         <property name="can_focus">False</property>
-        <property name="hexpand">True</property>
         <property name="title" translatable="yes">English Room</property>
-        <property name="spacing">1</property>
+        <property name="spacing">0</property>
         <property name="show_close_button">True</property>
         <child>
           <object class="GtkBox">
@@ -130,12 +99,6 @@
                 <property name="position">0</property>
               </packing>
             </child>
-            <child>
-              <placeholder/>
-            </child>
-            <child>
-              <placeholder/>
-            </child>
           </object>
         </child>
         <child>
@@ -146,6 +109,7 @@
               <object class="GtkBox">
                 <property name="visible">True</property>
                 <property name="can_focus">False</property>
+                <property name="spacing">5</property>
                 <child>
                   <object class="GtkBox">
                     <property name="visible">True</property>
@@ -258,20 +222,43 @@
                 </child>
                 <child>
                   <object class="GtkButton" id="find_VerbsButton">
-                    <property name="label">gtk-find</property>
+                    <property name="name">find_VerbsButton</property>
                     <property name="visible">True</property>
                     <property name="can_focus">True</property>
                     <property name="receives_default">True</property>
-                    <property name="margin_left">5</property>
-                    <property name="margin_right">6</property>
-                    <property name="use_stock">True</property>
-                    <property name="image_position">right</property>
-                    <property name="always_show_image">True</property>
+                    <child>
+                      <object class="GtkImage">
+                        <property name="visible">True</property>
+                        <property name="can_focus">False</property>
+                        <property name="icon_name">edit-find</property>
+                        <property name="use_fallback">True</property>
+                        <property name="icon_size">3</property>
+                      </object>
+                    </child>
+                    <accelerator key="f" signal="activate" modifiers="GDK_CONTROL_MASK"/>
                   </object>
                   <packing>
                     <property name="expand">False</property>
                     <property name="fill">True</property>
                     <property name="position">1</property>
+                  </packing>
+                </child>
+                <child>
+                  <object class="GtkMenuButton" id="BtnTransMenu">
+                    <property name="name">BtnTransMenu</property>
+                    <property name="visible">True</property>
+                    <property name="can_focus">True</property>
+                    <property name="receives_default">True</property>
+                    <property name="draw_indicator">True</property>
+                    <property name="popup">MenuSelect</property>
+                    <child>
+                      <placeholder/>
+                    </child>
+                  </object>
+                  <packing>
+                    <property name="expand">False</property>
+                    <property name="fill">True</property>
+                    <property name="position">2</property>
                   </packing>
                 </child>
               </object>
@@ -289,10 +276,7 @@
         <property name="name">FrameWebView</property>
         <property name="visible">True</property>
         <property name="can_focus">False</property>
-        <property name="top_padding">5</property>
         <property name="bottom_padding">5</property>
-        <property name="left_padding">5</property>
-        <property name="right_padding">5</property>
         <child>
           <object class="GtkBox">
             <property name="visible">True</property>
@@ -304,139 +288,115 @@
                 <property name="can_focus">False</property>
                 <property name="reveal_child">True</property>
                 <child>
-                  <object class="GtkBox">
+                  <object class="GtkStack" id="StackMenu">
                     <property name="visible">True</property>
                     <property name="can_focus">False</property>
-                    <property name="orientation">vertical</property>
+                    <property name="hhomogeneous">False</property>
+                    <property name="vhomogeneous">False</property>
+                    <property name="transition_duration">250</property>
+                    <property name="transition_type">crossfade</property>
+                    <property name="interpolate_size">True</property>
                     <child>
-                      <object class="GtkAlignment">
+                      <object class="GtkBox" id="menu_page1">
+                        <property name="name">menu_page1</property>
                         <property name="visible">True</property>
                         <property name="can_focus">False</property>
-                        <property name="yalign">0</property>
-                        <property name="yscale">0</property>
+                        <property name="opacity">0.80000000000000004</property>
+                        <property name="orientation">vertical</property>
                         <child>
-                          <object class="GtkStack" id="stack_menu">
+                          <placeholder/>
+                        </child>
+                        <style>
+                          <class name="gb_color: 'black';"/>
+                        </style>
+                      </object>
+                      <packing>
+                        <property name="name">menu_page1</property>
+                        <property name="title" translatable="yes">page1</property>
+                      </packing>
+                    </child>
+                    <child>
+                      <object class="GtkAlignment" id="menu_page2">
+                        <property name="visible">True</property>
+                        <property name="can_focus">False</property>
+                        <property name="top_padding">5</property>
+                        <property name="bottom_padding">5</property>
+                        <child>
+                          <object class="GtkBox">
                             <property name="visible">True</property>
                             <property name="can_focus">False</property>
-                            <property name="hhomogeneous">False</property>
-                            <property name="vhomogeneous">False</property>
-                            <property name="transition_duration">250</property>
-                            <property name="transition_type">crossfade</property>
-                            <property name="interpolate_size">True</property>
                             <child>
-                              <object class="GtkBox" id="menu_page1">
-                                <property name="name">menu_page1</property>
+                              <object class="GtkBox">
                                 <property name="visible">True</property>
                                 <property name="can_focus">False</property>
-                                <property name="opacity">0.80000000000000004</property>
                                 <property name="orientation">vertical</property>
                                 <child>
-                                  <placeholder/>
-                                </child>
-                                <style>
-                                  <class name="gb_color: 'black';"/>
-                                </style>
-                              </object>
-                              <packing>
-                                <property name="name">menu_page1</property>
-                                <property name="title" translatable="yes">page1</property>
-                              </packing>
-                            </child>
-                            <child>
-                              <object class="GtkBox" id="menu_page2">
-                                <property name="name">menu_page2</property>
-                                <property name="visible">True</property>
-                                <property name="can_focus">False</property>
-                                <property name="opacity">0.85098039215686272</property>
-                                <property name="orientation">vertical</property>
-                                <child>
-                                  <object class="GtkAlignment">
+                                  <object class="GtkBox">
                                     <property name="visible">True</property>
                                     <property name="can_focus">False</property>
-                                    <property name="bottom_padding">5</property>
-                                    <property name="left_padding">5</property>
-                                    <property name="right_padding">5</property>
+                                    <property name="spacing">5</property>
                                     <child>
-                                      <object class="GtkBox">
+                                      <object class="GtkButtonBox">
                                         <property name="visible">True</property>
                                         <property name="can_focus">False</property>
-                                        <property name="spacing">5</property>
+                                        <property name="layout_style">start</property>
                                         <child>
-                                          <object class="GtkMenuButton">
+                                          <object class="GtkToggleButton" id="TglBook">
+                                            <property name="label" translatable="yes" context="Mostrar libro">  Mostrar libro</property>
                                             <property name="visible">True</property>
                                             <property name="can_focus">True</property>
                                             <property name="receives_default">True</property>
-                                            <property name="popover">NewLocalFolderPopMenu</property>
-                                            <child>
-                                              <object class="GtkImage" id="MenuSelectionButton">
-                                                <property name="visible">True</property>
-                                                <property name="can_focus">False</property>
-                                                <property name="pixel_size">32</property>
-                                                <property name="icon_name">folder-new</property>
-                                                <property name="icon_size">1</property>
-                                              </object>
-                                            </child>
+                                            <property name="image">img_libro</property>
+                                            <property name="relief">none</property>
+                                            <property name="use_underline">True</property>
+                                            <property name="always_show_image">True</property>
                                           </object>
                                           <packing>
-                                            <property name="expand">False</property>
+                                            <property name="expand">True</property>
                                             <property name="fill">True</property>
                                             <property name="position">0</property>
                                           </packing>
                                         </child>
                                         <child>
-                                          <object class="GtkMenuButton">
+                                          <object class="GtkToggleButton">
+                                            <property name="label" translatable="yes">  Mostrar traducciones</property>
                                             <property name="visible">True</property>
                                             <property name="can_focus">True</property>
                                             <property name="receives_default">True</property>
+                                            <property name="image">img_translates</property>
                                             <property name="relief">none</property>
-                                            <property name="popup">MenuSelect</property>
-                                            <property name="use_popover">False</property>
-                                            <child>
-                                              <object class="GtkLinkButton">
-                                                <property name="label" translatable="yes">button</property>
-                                                <property name="visible">True</property>
-                                                <property name="can_focus">True</property>
-                                                <property name="receives_default">True</property>
-                                                <property name="relief">none</property>
-                                                <property name="uri">http://glade.gnome.org</property>
-                                              </object>
-                                            </child>
+                                            <property name="use_underline">True</property>
+                                            <property name="always_show_image">True</property>
                                           </object>
                                           <packing>
-                                            <property name="expand">False</property>
+                                            <property name="expand">True</property>
                                             <property name="fill">True</property>
                                             <property name="position">1</property>
                                           </packing>
                                         </child>
                                         <child>
-                                          <object class="GtkToggleButton" id="ToggleMenu">
-                                            <property name="label" translatable="yes">togglebutton</property>
+                                          <object class="GtkToggleButton">
+                                            <property name="label" translatable="yes">  Mostrar conjugaciones</property>
                                             <property name="visible">True</property>
                                             <property name="can_focus">True</property>
                                             <property name="receives_default">True</property>
+                                            <property name="image">ing_conjugations</property>
+                                            <property name="relief">none</property>
+                                            <property name="use_underline">True</property>
+                                            <property name="always_show_image">True</property>
                                           </object>
                                           <packing>
-                                            <property name="expand">False</property>
+                                            <property name="expand">True</property>
                                             <property name="fill">True</property>
                                             <property name="position">2</property>
                                           </packing>
                                         </child>
-                                        <child>
-                                          <object class="GtkLinkButton">
-                                            <property name="label" translatable="yes">button</property>
-                                            <property name="visible">True</property>
-                                            <property name="can_focus">True</property>
-                                            <property name="receives_default">True</property>
-                                            <property name="relief">none</property>
-                                            <property name="uri">http://glade.gnome.org</property>
-                                          </object>
-                                          <packing>
-                                            <property name="expand">False</property>
-                                            <property name="fill">True</property>
-                                            <property name="position">3</property>
-                                          </packing>
-                                        </child>
                                       </object>
+                                      <packing>
+                                        <property name="expand">False</property>
+                                        <property name="fill">True</property>
+                                        <property name="position">0</property>
+                                      </packing>
                                     </child>
                                   </object>
                                   <packing>
@@ -445,13 +405,37 @@
                                     <property name="position">0</property>
                                   </packing>
                                 </child>
-                                <style>
-                                  <class name="gb_color: 'black';"/>
-                                </style>
                               </object>
                               <packing>
-                                <property name="name">menu_page2</property>
-                                <property name="title" translatable="yes">page2</property>
+                                <property name="expand">False</property>
+                                <property name="fill">True</property>
+                                <property name="position">0</property>
+                              </packing>
+                            </child>
+                            <child>
+                              <object class="GtkBox">
+                                <property name="visible">True</property>
+                                <property name="can_focus">False</property>
+                                <property name="orientation">vertical</property>
+                                <child>
+                                  <object class="GtkButton">
+                                    <property name="visible">True</property>
+                                    <property name="can_focus">True</property>
+                                    <property name="receives_default">True</property>
+                                    <property name="image">img_help</property>
+                                    <property name="always_show_image">True</property>
+                                  </object>
+                                  <packing>
+                                    <property name="expand">False</property>
+                                    <property name="fill">True</property>
+                                    <property name="position">0</property>
+                                  </packing>
+                                </child>
+                              </object>
+                              <packing>
+                                <property name="expand">False</property>
+                                <property name="fill">True</property>
+                                <property name="pack_type">end</property>
                                 <property name="position">1</property>
                               </packing>
                             </child>
@@ -459,9 +443,9 @@
                         </child>
                       </object>
                       <packing>
-                        <property name="expand">False</property>
-                        <property name="fill">True</property>
-                        <property name="position">0</property>
+                        <property name="name">page0</property>
+                        <property name="title" translatable="yes">page0</property>
+                        <property name="position">1</property>
                       </packing>
                     </child>
                   </object>
@@ -474,22 +458,50 @@
               </packing>
             </child>
             <child>
-              <object class="GtkAlignment" id="AlignWebView">
-                <property name="name">AlignWebView</property>
+              <object class="GtkStack" id="MainStack">
+                <property name="name">MainStack</property>
                 <property name="visible">True</property>
                 <property name="can_focus">False</property>
-                <property name="top_padding">5</property>
-                <property name="bottom_padding">5</property>
-                <property name="left_padding">5</property>
-                <property name="right_padding">5</property>
+                <property name="hhomogeneous">False</property>
+                <property name="vhomogeneous">False</property>
+                <property name="transition_duration">300</property>
+                <property name="transition_type">crossfade</property>
                 <child>
-                  <placeholder/>
+                  <object class="GtkBox" id="BoxBook">
+                    <property name="name">BoxBook</property>
+                    <property name="visible">True</property>
+                    <property name="can_focus">False</property>
+                    <property name="orientation">vertical</property>
+                    <child>
+                      <placeholder/>
+                    </child>
+                  </object>
+                  <packing>
+                    <property name="name">page1</property>
+                    <property name="title" translatable="yes">page1</property>
+                  </packing>
+                </child>
+                <child>
+                  <object class="GtkAlignment" id="AlignWebView">
+                    <property name="name">AlignWebView</property>
+                    <property name="visible">True</property>
+                    <property name="can_focus">False</property>
+                    <property name="top_padding">5</property>
+                    <property name="bottom_padding">5</property>
+                    <property name="left_padding">5</property>
+                    <property name="right_padding">5</property>
+                  </object>
+                  <packing>
+                    <property name="name">page0</property>
+                    <property name="title" translatable="yes">page0</property>
+                    <property name="position">1</property>
+                  </packing>
                 </child>
               </object>
               <packing>
                 <property name="expand">True</property>
                 <property name="fill">True</property>
-                <property name="position">3</property>
+                <property name="position">1</property>
               </packing>
             </child>
           </object>
