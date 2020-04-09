@@ -38,20 +38,17 @@
     <property name="stock">gtk-help</property>
     <property name="icon_size">3</property>
   </object>
-  <object class="GtkImage" id="img_libro">
+  <object class="GtkImage" id="img_tgl_book">
     <property name="visible">True</property>
     <property name="can_focus">False</property>
-    <property name="icon_name">emblem-documents</property>
-    <property name="use_fallback">True</property>
-    <property name="icon_size">3</property>
+    <property name="icon_name">edit-select-all</property>
   </object>
-  <object class="GtkImage" id="img_translates">
+  <object class="GtkImage" id="img_tgl_conj">
     <property name="visible">True</property>
     <property name="can_focus">False</property>
-    <property name="icon_name">preferences-desktop-locale</property>
-    <property name="use_fallback">True</property>
+    <property name="icon_name">accessories-dictionary</property>
   </object>
-  <object class="GtkImage" id="ing_conjugations">
+  <object class="GtkImage" id="img_tgl_translate">
     <property name="visible">True</property>
     <property name="can_focus">False</property>
     <property name="icon_name">preferences-desktop-locale</property>
@@ -81,9 +78,9 @@
                 <property name="left_padding">5</property>
                 <property name="right_padding">5</property>
                 <child>
-                  <object class="GtkButton" id="MenuVerbsButton">
+                  <object class="GtkButton" id="BtnMenu">
                     <property name="label" translatable="yes">Menú</property>
-                    <property name="name">BtnMenuVerbs</property>
+                    <property name="name">BtnMenu</property>
                     <property name="visible">True</property>
                     <property name="can_focus">True</property>
                     <property name="receives_default">True</property>
@@ -185,9 +182,6 @@
                                             <property name="position">0</property>
                                           </packing>
                                         </child>
-                                        <child>
-                                          <placeholder/>
-                                        </child>
                                         <style>
                                           <class name="gb_color: 'black';"/>
                                         </style>
@@ -226,9 +220,9 @@
                 <child>
                   <object class="GtkButton" id="BtnSearch">
                     <property name="name">BtnSearch</property>
-                    <property name="visible">True</property>
                     <property name="can_focus">True</property>
                     <property name="receives_default">True</property>
+                    <property name="no_show_all">True</property>
                     <child>
                       <object class="GtkImage">
                         <property name="visible">True</property>
@@ -249,9 +243,9 @@
                 <child>
                   <object class="GtkMenuButton" id="BtnTransMenu">
                     <property name="name">BtnTransMenu</property>
-                    <property name="visible">True</property>
                     <property name="can_focus">True</property>
                     <property name="receives_default">True</property>
+                    <property name="no_show_all">True</property>
                     <property name="draw_indicator">True</property>
                     <property name="popup">MenuSelect</property>
                     <child>
@@ -347,17 +341,17 @@
                                       <object class="GtkButtonBox">
                                         <property name="visible">True</property>
                                         <property name="can_focus">False</property>
+                                        <property name="spacing">10</property>
                                         <property name="layout_style">start</property>
                                         <child>
-                                          <object class="GtkToggleButton" id="TglBook">
-                                            <property name="label" translatable="yes" context="Mostrar libro">Mostrar libro</property>
-                                            <property name="visible">True</property>
-                                            <property name="can_focus">True</property>
-                                            <property name="receives_default">True</property>
-                                            <property name="image">img_libro</property>
-                                            <property name="relief">none</property>
-                                            <property name="use_underline">True</property>
-                                            <property name="always_show_image">True</property>
+                                          <object class="GtkRadioButton" id="TglMain">
+                                            <property name="label" translatable="yes">radiobutton</property>
+                                            <property name="sensitive">False</property>
+                                            <property name="can_focus">False</property>
+                                            <property name="receives_default">False</property>
+                                            <property name="no_show_all">True</property>
+                                            <property name="active">True</property>
+                                            <property name="draw_indicator">True</property>
                                           </object>
                                           <packing>
                                             <property name="expand">True</property>
@@ -366,15 +360,16 @@
                                           </packing>
                                         </child>
                                         <child>
-                                          <object class="GtkToggleButton">
-                                            <property name="label" translatable="yes">Mostrar traducciones</property>
+                                          <object class="GtkRadioButton" id="TglBook">
+                                            <property name="label" translatable="yes">Books</property>
                                             <property name="visible">True</property>
                                             <property name="can_focus">True</property>
-                                            <property name="receives_default">True</property>
-                                            <property name="image">img_translates</property>
-                                            <property name="relief">none</property>
+                                            <property name="receives_default">False</property>
+                                            <property name="image">img_tgl_book</property>
                                             <property name="use_underline">True</property>
                                             <property name="always_show_image">True</property>
+                                            <property name="draw_indicator">False</property>
+                                            <property name="group">TglMain</property>
                                           </object>
                                           <packing>
                                             <property name="expand">True</property>
@@ -383,20 +378,39 @@
                                           </packing>
                                         </child>
                                         <child>
-                                          <object class="GtkToggleButton">
-                                            <property name="label" translatable="yes"> Mostrar conjugaciones</property>
+                                          <object class="GtkRadioButton" id="TglTranslate">
+                                            <property name="label" translatable="yes">Translates</property>
                                             <property name="visible">True</property>
                                             <property name="can_focus">True</property>
-                                            <property name="receives_default">True</property>
-                                            <property name="image">ing_conjugations</property>
-                                            <property name="relief">none</property>
+                                            <property name="receives_default">False</property>
+                                            <property name="image">img_tgl_translate</property>
                                             <property name="use_underline">True</property>
                                             <property name="always_show_image">True</property>
+                                            <property name="draw_indicator">False</property>
+                                            <property name="group">TglMain</property>
                                           </object>
                                           <packing>
                                             <property name="expand">True</property>
                                             <property name="fill">True</property>
                                             <property name="position">2</property>
+                                          </packing>
+                                        </child>
+                                        <child>
+                                          <object class="GtkRadioButton" id="TglConjugations">
+                                            <property name="label" translatable="yes">Conjugations</property>
+                                            <property name="visible">True</property>
+                                            <property name="can_focus">True</property>
+                                            <property name="receives_default">False</property>
+                                            <property name="image">img_tgl_conj</property>
+                                            <property name="use_underline">True</property>
+                                            <property name="always_show_image">True</property>
+                                            <property name="draw_indicator">False</property>
+                                            <property name="group">TglMain</property>
+                                          </object>
+                                          <packing>
+                                            <property name="expand">True</property>
+                                            <property name="fill">True</property>
+                                            <property name="position">3</property>
                                           </packing>
                                         </child>
                                       </object>
