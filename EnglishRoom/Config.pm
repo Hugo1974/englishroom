@@ -27,6 +27,7 @@ BEGIN {
       css_uri
       js_uri
       pretty
+      UI_path
     );
 
     # funciones y variables que se exportan de forma opcional
@@ -70,6 +71,10 @@ sub pretty {
 
 sub linguasorb_html_response_file {
     return '/tmp/';
+}
+
+sub UI_path {
+    return '/home/hugo/.atom/github/englishroom/data/UI/';
 }
 
 1;

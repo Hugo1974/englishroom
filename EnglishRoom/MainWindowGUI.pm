@@ -7,6 +7,8 @@ use Carp qw(croak carp);
 use Web::Query qw();
 use Gtk3 -init;
 use Glib qw(TRUE FALSE);    #use Gtk3::WebKit2;
+use lib '.';
+use EnglishRoom::Config qw(UI_path);
 
 BEGIN {
     require Exporter;
@@ -33,9 +35,8 @@ BEGIN {
 
 ###
 
-my $glade_file_path = '/home/hugo/.atom/github/englishroom/data/UI/';
-my $glade_file      = "$glade_file_path/MainWindow.glade";
-my $WordsView       = "$glade_file";
+# my $glade_file_path = UI_path;
+my $WordsView = UI_path . "/MainWindow.glade";
 
 # starting Builder
 my $builder_main = Gtk3::Builder->new();
