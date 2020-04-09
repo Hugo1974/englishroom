@@ -1,4 +1,6 @@
-package EnglishRoom::WordsGUI;
+#!/usr/bin/env perl 
+
+# package EnglishRoom::WordsGUI;
 
 use strict;
 use warnings;
@@ -7,9 +9,8 @@ use Carp qw(croak carp);
 use Web::Query qw();
 use Gtk3 -init;
 use Glib qw(TRUE FALSE);    #use Gtk3::WebKit2;
-use utf8;
-use Encode;
-use open 'locale';
+use lib '.';
+use EnglishRoom::Config qw(UI_path);
 
 BEGIN {
     require Exporter;
@@ -23,20 +24,24 @@ BEGIN {
       find_menu_page2
       EntrySearch
       BtnSearch
-      BtnMenuVerbs
+      BtnMenu
       RevMain
       StackMainMenu
       MainMenuPage1
       MainMenuPage2
+      TglBook
+      TglTranslate
+      TglConjugations
       RoomsPage1
       RoomsPage2
       RoomBox
     );
 }
 
-my $glade_file_path = '/home/hugo/.atom/github/englishroom/data/UI/';
-my $glade_file      = "$glade_file_path/MainWindow.glade";
-my $WordsView       = "$glade_file";
+###
+
+# my $glade_file_path = UI_path;
+my $WordsView = UI_path . "/MainWindow.glade";
 
 # starting Builder
 my $builder_main = Gtk3::Builder->new();
@@ -86,61 +91,97 @@ sub BtnSearch {
     return $BtnSearch;
 }
 
-sub BtnMenuVerbs {
-    my $BtnMenuVerbs = $builder_main->get_object("BtnMenuVerbs")
-      or die "Error: no se encuentra el widget MenuVerbsButton";
-    return $BtnMenuVerbs;
+sub BtnMenu {
+    my $BtnMenu = $builder_main->get_object("BtnMenu")
+      or die "Error: no se encuentra el widget BtnMenu";
+    return $BtnMenu;
 }
 
 sub RevMain {
     my $RevMain = $builder_main->get_object("RevMain")
-      or die "Error: no se encuentra el widget MenuVerbsButton";
+      or die "Error: no se encuentra el widget RevMain";
     return $RevMain;
 }
 
 sub StackMainMenu {
     my $StackMainMenu = $builder_main->get_object("StackMainMenu")
-      or die "Error: no se encuentra el widget MenuVerbsButton";
+      or die "Error: no se encuentra el widget StackMainMenu";
     return $StackMainMenu;
 }
 
 sub MainMenuPage1 {
     my $MainMenuPage1 = $builder_main->get_object("MainMenuPage1")
-      or die "Error: no se encuentra el widget MenuVerbsButton";
+      or die "Error: no se encuentra el widget MainMenuPage1";
     return $MainMenuPage1;
 }
 
-sub MainMenuPage2 {
-    my $MainMenuPage2 = $builder_main->get_object("MenuVerbsButton")
-      or die "Error: no se encuentra el widget MenuVerbsButton";
-    return $MainMenuPage2;
+sub TglBook {
+    my $TglBook = $builder_main->get_object("TglBook")
+      or die "Error: no se encuentra el widget TglBook";
+    return $TglBook;
 }
 
-sub RoomsPage1 {
-    my $RoomsPage1 = $builder_main->get_object("RoomsPage1")
-      or die "Error: no se encuentra el widget MenuVerbsButton";
-    return $RoomsPage1;
+sub TglTranslate {
+    my $TglTranslate = $builder_main->get_object("TglTranslate")
+      or die "Error: no se encuentra el widget TglTranslate";
+    return $TglTranslate;
+}
+
+sub TglConjugations {
+    my $TglConjugations = $builder_main->get_object("TglConjugations")
+      or die "Error: no se encuentra el widget TglConjugations";
+    return $TglConjugations;
+}
+
+sub MainMenuPage2 {
+    my $MainMenuPage2 = $builder_main->get_object("MainMenuPage2")
+      or die "Error: no se encuentra el widget MainMenuPage2";
+    return $MainMenuPage2;
 }
 
 sub StackRooms {
     my $StackRooms = $builder_main->get_object("StackRooms")
-      or die "Error: no se encuentra el widget MenuVerbsButton";
+      or die "Error: no se encuentra el widget StackRooms";
     return $StackRooms;
 }
 
+sub RoomsPage1 {
+    my $RoomsPage1 = $builder_main->get_object("RoomsPage1")
+      or die "Error: no se encuentra el widget RoomsPage1";
+    return $RoomsPage1;
+}
+
 sub RoomsPage2 {
-    my $RoomsPage2 = $builder_main->get_object("StackRooms")
-      or die "Error: no se encuentra el widget MenuVerbsButton";
+    my $RoomsPage2 = $builder_main->get_object("RoomsPage2")
+      or die "Error: no se encuentra el widget RoomsPage2";
     return $RoomsPage2;
 }
 
 sub RoomBox {
     my $RoomBox = $builder_main->get_object("RoomBox")
-      or die "Error: no se encuentra el widget MenuVerbsButton";
+      or die "Error: no se encuentra el widget RoomBox";
     return $RoomBox;
 }
 
-&MainWindow->show_all;
-Gtk3::main;
+TglBook->signal_connect(
+    'toggled',
+    sub {
+        return;
+    }
+);
+
+TglTranslate->signal_connect(
+    'toggled',
+    sub {
+        return;
+    }
+);
+
+TglConjugations->signal_connect(
+    'toggled',
+    sub {
+        return;
+    }
+);
 
 1;
