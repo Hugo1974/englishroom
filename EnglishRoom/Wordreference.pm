@@ -31,8 +31,8 @@ use Mojo::DOM;
 
 our $VERSION = '0.01';
 
-use constant WR_URL => ('https://www.wordreference.com');
-use constant DEBUG  => '0';
+use constant 'WR_URL' => ('https://www.wordreference.com');
+use constant 'DEBUG'  => '0';
 
 sub new {
 
