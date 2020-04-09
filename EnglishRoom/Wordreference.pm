@@ -31,7 +31,7 @@ use Mojo::DOM;
 
 our $VERSION = '0.01';
 
-use constant 'WR_URL' => ('https://www.wordreference.com');
+use constant 'WR_URL' => 'https://www.wordreference.com';
 use constant 'DEBUG'  => '0';
 
 sub new {
@@ -70,7 +70,7 @@ sub get_data {
 
     #         say "Accediedo a data";
 
-    open( DATA, "<", './file.html' ) || "Error:$!";
+    open( DATA, "<", 'conj_es.html' ) || die "Error:$!";
     my $content;
     {
         local $/ = undef;    # slurp mode
@@ -93,6 +93,7 @@ sub get_data {
 }
 
 # devolver el resultado
+&get_data;
 
 # Hugo Morago Martín, C<< <nanti.penguin at gmail.com> >>
 
