@@ -2,7 +2,6 @@
 <!-- Generated with glade 3.22.1 -->
 <interface>
   <requires lib="gtk+" version="3.20"/>
-  <requires lib="webkit2gtk" version="2.12"/>
   <object class="GtkListStore" id="ls">
     <columns>
       <!-- column-name Book -->
@@ -10,10 +9,10 @@
     </columns>
     <data>
       <row>
-        <col id="0">Book 1</col>
+        <col id="0">All books</col>
       </row>
       <row>
-        <col id="0" translatable="yes">Book 2</col>
+        <col id="0" translatable="yes">Book 1</col>
       </row>
     </data>
   </object>
@@ -29,8 +28,6 @@
           <object class="GtkMenuItem">
             <property name="visible">True</property>
             <property name="can_focus">False</property>
-            <property name="label" translatable="yes">_Archivo</property>
-            <property name="use_underline">True</property>
             <child type="submenu">
               <object class="GtkMenu">
                 <property name="visible">True</property>
@@ -67,8 +64,6 @@
           <object class="GtkMenuItem">
             <property name="visible">True</property>
             <property name="can_focus">False</property>
-            <property name="label" translatable="yes">_Ver</property>
-            <property name="use_underline">True</property>
             <child type="submenu">
               <object class="GtkMenu">
                 <property name="visible">True</property>
@@ -78,8 +73,6 @@
                     <property name="visible">True</property>
                     <property name="can_focus">False</property>
                     <property name="tooltip_text" translatable="yes">Lista de libros</property>
-                    <property name="label" translatable="yes">Lista de libros</property>
-                    <property name="use_underline">True</property>
                     <property name="draw_as_radio">True</property>
                   </object>
                 </child>
@@ -91,8 +84,6 @@
           <object class="GtkMenuItem">
             <property name="visible">True</property>
             <property name="can_focus">False</property>
-            <property name="label" translatable="yes">Ay_uda</property>
-            <property name="use_underline">True</property>
             <child type="submenu">
               <object class="GtkMenu">
                 <property name="visible">True</property>
@@ -157,7 +148,6 @@
                                 <property name="can_focus">True</property>
                                 <property name="model">ls</property>
                                 <property name="search_column">0</property>
-                                <property name="ubuntu_almost_fixed_height_mode">True</property>
                                 <property name="show_expanders">False</property>
                                 <property name="level_indentation">5</property>
                                 <property name="activate_on_single_click">True</property>
@@ -166,12 +156,15 @@
                                 </child>
                                 <child>
                                   <object class="GtkTreeViewColumn" id="tvc">
-                                    <property name="sizing">autosize</property>
+                                    <property name="resizable">True</property>
+                                    <property name="spacing">5</property>
                                     <property name="title" translatable="yes">Books</property>
                                     <property name="expand">True</property>
                                     <property name="clickable">True</property>
+                                    <property name="alignment">0.10000000149011612</property>
                                     <property name="sort_indicator">True</property>
                                     <property name="sort_order">descending</property>
+                                    <property name="sort_column_id">0</property>
                                     <child>
                                       <object class="GtkCellRendererText" id="cel_book"/>
                                       <attributes>
@@ -220,43 +213,10 @@
                     <property name="visible">True</property>
                     <property name="can_focus">True</property>
                     <child>
-                      <object class="GtkAlignment">
-                        <property name="visible">True</property>
-                        <property name="can_focus">False</property>
-                        <child>
-                          <object class="WebKitWebView" id="BookViewer">
-                            <property name="name">BookViewer</property>
-                            <property name="visible">True</property>
-                            <property name="can_focus">True</property>
-                            <child>
-                              <placeholder/>
-                            </child>
-                          </object>
-                        </child>
-                      </object>
+                      <placeholder/>
                     </child>
                     <child type="tab">
-                      <object class="GtkAlignment">
-                        <property name="visible">True</property>
-                        <property name="can_focus">False</property>
-                        <property name="left_padding">10</property>
-                        <property name="right_padding">10</property>
-                        <child>
-                          <object class="GtkLabel">
-                            <property name="visible">True</property>
-                            <property name="can_focus">False</property>
-                            <property name="label" translatable="yes">Book</property>
-                            <property name="use_underline">True</property>
-                            <attributes>
-                              <attribute name="underline" value="True"/>
-                              <attribute name="foreground" value="#52c5072c072c"/>
-                            </attributes>
-                          </object>
-                        </child>
-                      </object>
-                      <packing>
-                        <property name="tab_fill">False</property>
-                      </packing>
+                      <placeholder/>
                     </child>
                     <child>
                       <object class="GtkAlignment">
@@ -274,13 +234,13 @@
                       <object class="GtkAlignment">
                         <property name="visible">True</property>
                         <property name="can_focus">False</property>
-                        <property name="left_padding">20</property>
-                        <property name="right_padding">20</property>
+                        <property name="left_padding">10</property>
+                        <property name="right_padding">10</property>
                         <child>
                           <object class="GtkLabel">
                             <property name="visible">True</property>
                             <property name="can_focus">False</property>
-                            <property name="label" translatable="yes">Translations</property>
+                            <property name="label" translatable="yes">Saved Translations</property>
                             <attributes>
                               <attribute name="underline" value="True"/>
                             </attributes>
@@ -308,8 +268,8 @@
                       <object class="GtkAlignment">
                         <property name="visible">True</property>
                         <property name="can_focus">False</property>
-                        <property name="left_padding">20</property>
-                        <property name="right_padding">20</property>
+                        <property name="left_padding">10</property>
+                        <property name="right_padding">10</property>
                         <child>
                           <object class="GtkLabel">
                             <property name="visible">True</property>
@@ -342,8 +302,8 @@
                       <object class="GtkAlignment">
                         <property name="visible">True</property>
                         <property name="can_focus">False</property>
-                        <property name="left_padding">20</property>
-                        <property name="right_padding">20</property>
+                        <property name="left_padding">10</property>
+                        <property name="right_padding">10</property>
                         <child>
                           <object class="GtkLabel">
                             <property name="visible">True</property>
@@ -370,7 +330,7 @@
               </packing>
             </child>
             <child>
-              <object class="GtkAlignment" id="ViewerRelated">
+              <object class="GtkAlignment">
                 <property name="visible">True</property>
                 <property name="can_focus">False</property>
                 <child>
@@ -397,13 +357,5 @@
         <property name="position">1</property>
       </packing>
     </child>
-  </object>
-  <object class="GtkSizeGroup">
-    <widgets>
-      <widget name="notebook1"/>
-    </widgets>
-  </object>
-  <object class="WebKitSettings" id="settings1">
-    <property name="user_agent">Mozilla/5.0 (X11; Ubuntu; Linux x86_64) AppleWebKit/605.1.15 (KHTML, like Gecko) Version/13.0 Safari/605.1.15</property>
   </object>
 </interface>
