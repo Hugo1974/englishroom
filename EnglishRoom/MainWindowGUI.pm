@@ -11,6 +11,7 @@ use Gtk3 -init;
 use Glib qw(TRUE FALSE);    #use Gtk3::WebKit2;
 use lib '.';
 use EnglishRoom::Config qw(UI_path);
+use EnglishRoom::FrameBooksGUI qw(FrameBooks);
 
 BEGIN {
     require Exporter;
@@ -139,12 +140,6 @@ sub MainMenuPage2 {
     return $MainMenuPage2;
 }
 
-sub StackRooms {
-    my $StackRooms = $builder_main->get_object("StackRooms")
-      or die "Error: no se encuentra el widget StackRooms";
-    return $StackRooms;
-}
-
 sub RoomsPage1 {
     my $RoomsPage1 = $builder_main->get_object("RoomsPage1")
       or die "Error: no se encuentra el widget RoomsPage1";
@@ -154,7 +149,14 @@ sub RoomsPage1 {
 sub RoomsPage2 {
     my $RoomsPage2 = $builder_main->get_object("RoomsPage2")
       or die "Error: no se encuentra el widget RoomsPage2";
+    $RoomsPage2->pack_start( FrameBooks, 1, 1, 0 );
     return $RoomsPage2;
+}
+
+sub StackRooms {
+    my $StackRooms = $builder_main->get_object("StackRooms")
+      or die "Error: no se encuentra el widget StackRooms";
+    return $StackRooms;
 }
 
 sub RoomBox {
@@ -162,6 +164,8 @@ sub RoomBox {
       or die "Error: no se encuentra el widget RoomBox";
     return $RoomBox;
 }
+
+StackRooms->set_visible_child( RoomsPage1() );
 
 TglBook->signal_connect(
     'toggled',

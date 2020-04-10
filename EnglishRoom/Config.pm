@@ -28,6 +28,7 @@ BEGIN {
       js_uri
       pretty
       UI_path
+      Books_path
     );
 
     # funciones y variables que se exportan de forma opcional
@@ -75,6 +76,10 @@ sub linguasorb_html_response_file {
 
 sub UI_path {
     return '/home/hugo/.atom/github/englishroom/data/UI/';
+}
+
+sub Books_path {
+    return '/home/hugo/.atom/github/englishroom/data/books/';
 }
 
 1;

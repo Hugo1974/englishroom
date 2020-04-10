@@ -29,6 +29,27 @@ use EnglishRoom::MainWindowGUI qw(
   RoomBox
 );
 
+use EnglishRoom::FrameBooksGUI qw(
+  FrameBooks
+  MenuBooks
+  BookMenuFileOpen
+  BookMenuFileClose
+  BooksMenuShowList
+  BooksMenuHelpAbout
+  RevealerBookList
+  StackBookList
+  TWBooks
+  TWColumnBooks
+  TWCellBooks
+  NoteBookBooks
+  BookViewer
+  BookTabLabel_book
+  BookTabLabel_translations
+  BookTabLabel_notes
+  BookTabLabel_exercises
+  BooksViewerSettings
+);
+
 ##
 MainWindow->set_title('English Room 0.01');
 MainWindow->signal_connect( destroy => sub { Gtk3->main_quit(); return; } );
@@ -43,6 +64,15 @@ BtnMenu->signal_connect(
         else {
             StackMainMenu->set_visible_child( MainMenuPage2() );
         }
+        return;
+    }
+);
+
+TglBook->signal_connect(
+    'clicked',
+    sub {
+        StackRooms->set_visible_child( RoomsPage2() );
+        StackMainMenu->set_visible_child( MainMenuPage1() );
         return;
     }
 );

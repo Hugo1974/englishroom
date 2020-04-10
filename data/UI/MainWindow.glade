@@ -380,6 +380,7 @@
                                         <child>
                                           <object class="GtkRadioButton" id="TglTranslate">
                                             <property name="label" translatable="yes">Translates</property>
+                                            <property name="name">TglTranslate</property>
                                             <property name="visible">True</property>
                                             <property name="can_focus">True</property>
                                             <property name="receives_default">False</property>
@@ -480,42 +481,27 @@
               </packing>
             </child>
             <child>
-              <object class="GtkStack" id="StackRooms">
-                <property name="name">StackRooms</property>
+              <object class="GtkRevealer">
                 <property name="visible">True</property>
                 <property name="can_focus">False</property>
-                <property name="hhomogeneous">False</property>
-                <property name="vhomogeneous">False</property>
-                <property name="transition_duration">250</property>
                 <property name="transition_type">crossfade</property>
-                <property name="interpolate_size">True</property>
+                <property name="reveal_child">True</property>
                 <child>
-                  <object class="GtkBox" id="RoomsPage1">
-                    <property name="name">RoomsPage1</property>
+                  <object class="GtkStack" id="StackRooms">
+                    <property name="name">StackRooms</property>
                     <property name="visible">True</property>
                     <property name="can_focus">False</property>
-                    <property name="opacity">0.80000000000000004</property>
-                    <property name="orientation">vertical</property>
+                    <property name="hhomogeneous">False</property>
+                    <property name="vhomogeneous">False</property>
+                    <property name="transition_duration">100</property>
+                    <property name="transition_type">slide-down</property>
+                    <property name="interpolate_size">True</property>
                     <child>
                       <placeholder/>
                     </child>
-                    <style>
-                      <class name="gb_color: 'black';"/>
-                    </style>
-                  </object>
-                  <packing>
-                    <property name="name">menu_page1</property>
-                    <property name="title" translatable="yes">page1</property>
-                  </packing>
-                </child>
-                <child>
-                  <object class="GtkAlignment" id="RoomsPage2">
-                    <property name="name">RoomsPage2</property>
-                    <property name="visible">True</property>
-                    <property name="can_focus">False</property>
                     <child>
-                      <object class="GtkBox">
-                        <property name="name">RoomBox</property>
+                      <object class="GtkBox" id="RoomsPage1">
+                        <property name="name">RoomsPage1</property>
                         <property name="visible">True</property>
                         <property name="can_focus">False</property>
                         <property name="orientation">vertical</property>
@@ -523,19 +509,53 @@
                           <placeholder/>
                         </child>
                       </object>
+                      <packing>
+                        <property name="name">page0</property>
+                        <property name="title" translatable="yes">page0</property>
+                        <property name="position">1</property>
+                      </packing>
+                    </child>
+                    <child>
+                      <object class="GtkBox" id="RoomsPage2">
+                        <property name="name">RoomsPage2</property>
+                        <property name="visible">True</property>
+                        <property name="can_focus">False</property>
+                        <property name="orientation">vertical</property>
+                        <child>
+                          <placeholder/>
+                        </child>
+                      </object>
+                      <packing>
+                        <property name="name">page1</property>
+                        <property name="title" translatable="yes">page1</property>
+                        <property name="position">2</property>
+                      </packing>
+                    </child>
+                    <child>
+                      <object class="GtkBox" id="RoomsPage3">
+                        <property name="visible">True</property>
+                        <property name="can_focus">False</property>
+                        <property name="orientation">vertical</property>
+                        <child>
+                          <placeholder/>
+                        </child>
+                      </object>
+                      <packing>
+                        <property name="name">page2</property>
+                        <property name="title" translatable="yes">page2</property>
+                        <property name="position">3</property>
+                      </packing>
+                    </child>
+                    <child>
+                      <placeholder/>
                     </child>
                   </object>
-                  <packing>
-                    <property name="name">page0</property>
-                    <property name="title" translatable="yes">page0</property>
-                    <property name="position">1</property>
-                  </packing>
                 </child>
               </object>
               <packing>
                 <property name="expand">True</property>
                 <property name="fill">True</property>
-                <property name="position">1</property>
+                <property name="position">2</property>
               </packing>
             </child>
           </object>
