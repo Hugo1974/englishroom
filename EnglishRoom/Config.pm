@@ -1,4 +1,4 @@
-#!/usr/bin/env perl
+package EnglishRoom::Config;
 
 use strict;
 use warnings;
@@ -29,10 +29,13 @@ BEGIN {
       pretty
       UI_path
       Books_path
+      html_english_words_path
     );
 
     # funciones y variables que se exportan de forma opcional
 }
+
+my $ER_PATH = "/home/hugo/.atom/github/englishroom/";
 
 sub agent {
     return (
@@ -53,33 +56,36 @@ sub html_formated_file_uri {
 }
 
 sub html_formated_file {
-    return ('/tmp/formated.html');
+    return ("/tmp/formated.html");
 }
 
 sub css_uri {
-    return ('file:///home/hugo/.atom/github/englishroom/data/styles/style.css');
+    return ( "file://" . $ER_PATH . "data/styles/style.css" );
 }
 
 sub js_uri {
-    return (
-        'file:///home/hugo/.atom/github/englishroom/EnglishRoom/play_audio.js');
+    return ( "file://" . $ER_PATH . "EnglishRoom/play_audio.js" );
 }
 
 sub pretty {
     my ( undef, undef, $hpp ) = split( /\s/, `which html5-print` );
-    return '/home/hugo/.config/.local/bin/html5-print';
+    return "/home/hugo/.config/.local/bin/html5-print";
 }
 
 sub linguasorb_html_response_file {
-    return '/tmp/';
+    return "/tmp/";
 }
 
 sub UI_path {
-    return '/home/hugo/.atom/github/englishroom/data/UI/';
+    return "$ER_PATH" . "data/UI/";
 }
 
 sub Books_path {
-    return 'file:///home/hugo/.atom/github/englishroom/data/books/';
+    return "file://" . $ER_PATH . "data/books/";
+}
+
+sub html_english_words_path {
+    return $ER_PATH . "data/dicts/english/html/";
 }
 
 1;

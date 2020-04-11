@@ -35,7 +35,7 @@ use EnglishRoom::Config qw(
   proxy
   html_response_file
   html_formated_file
-  html_formated_file
+  html_formated_file_uri
   css_uri
   js_uri
   pretty
@@ -116,7 +116,20 @@ sub query {
 
 sub get {
     my $self = shift;
-    $self->{query} = shift;
+
+    if ( $self->{localfile} ) {
+        open( LOCALFILE, "<", $self->{localfile} )
+          or die "Error: $self->{localfile}: $!\n";
+        my $res_cont;
+        {
+            local $/ = undef;    # slurp mode
+            $res_cont = <LOCALFILE>;
+        }
+
+        return &format_html( $self, $res_cont );
+    }
+
+    #$self->{query} = shift;
     say "GETTING> " . $self->{search_url} . $self->{query};
 
     my $ua = new LWP::UserAgent( 'agent' => $self->{agent} );
@@ -144,8 +157,20 @@ sub get {
 
     my $res_cont = $response->content;
 
-    my $w    = Web::Query->new_from_html($res_cont);
-    my $html = $w->find('#dictionary')->as_html;
+    return &format_html( $self, $res_cont );
+
+}
+
+sub get_output_file {
+    my $self = shift;
+    return $self->{formated_file};
+}
+
+sub format_html {
+    my $self     = shift;
+    my $res_cont = shift;
+    my $w        = Web::Query->new_from_html($res_cont);
+    my $html     = $w->find('#dictionary')->as_html;
 
     my $css_file           = $self->{css_uri};
     my $play_audio_js_file = $self->{js_uri};
@@ -177,12 +202,6 @@ sub get {
     print OUTPUT_FILE $pretty_html;
     close OUTPUT_FILE;
 
-    return;
-
-}
-
-sub get_output_file {
-    my $self = shift;
     return $self->{formated_file};
 }
 

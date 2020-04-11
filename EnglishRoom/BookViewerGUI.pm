@@ -12,7 +12,7 @@ use Gtk3 -init;
 use Glib qw(TRUE FALSE);    #use Gtk3::WebKit2;
 use utf8;
 use lib ".";
-use EnglishRoom::Config();
+use EnglishRoom::SearchHandler qw(linguee);
 
 # use EnglishRoom::FrameBooksGUI qw(BookViewer);
 
@@ -45,6 +45,7 @@ sub new {
     $self->{viewer}->grab_focus;
     $self->{clippy}->wait_for_text();
 
+    $self->{viewer}->set_zoom_level('1.7');
     $self->{viewer}
       ->signal_connect( 'context-menu', \&append_item, $self->{clippy} );
 
@@ -55,9 +56,6 @@ sub new {
 
 # Functions
 sub append_item {
-    say "@_";
-    use Data::Dumper;
-    say Dumper @_;
     my ( $webview, $context_menu, $hit_result_event, $event, $clippy ) = @_;
 
     $context_menu->remove_all();
@@ -67,13 +65,15 @@ sub append_item {
     $menu_action_translate->signal_connect(
         "activate",
         sub {
-            print "Traducir:\n";
             my $text = $clippy->wait_for_text;
             return unless ($clippy);
-            print("\t>>> $text");
-            $webview->load_uri(
-"https://www.wordreference.com/es/translation.asp?tranword=$text"
-            );
+            my $file = linguee($text);
+            say "Se ha encontrado $file" if ($file);
+            if ($file) { $webview->load_uri( "file://" . $file ); }
+
+            # $webview->load_uri(
+            # "https://www.wordreference.com/es/translation.asp?tranword=$text"
+            # );
             return;
         }
     );
