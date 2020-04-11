@@ -79,7 +79,7 @@ sub UI_path {
 }
 
 sub Books_path {
-    return '/home/hugo/.atom/github/englishroom/data/books/';
+    return 'file:///home/hugo/.atom/github/englishroom/data/books/';
 }
 
 1;

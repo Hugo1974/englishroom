@@ -1,4 +1,4 @@
-package Package::Name;
+package EnglishRoom::Linguasorb;
 
 use strict;
 use warnings;
@@ -16,8 +16,8 @@ BEGIN {
     our @ISA = qw(Exporter);
 
     our @EXPORT = qw(
-      func01,
-      func02,
+      func01
+      func02
     );
 }
 
@@ -39,7 +39,7 @@ sub new {
 # Functions
 sub func01 {
 
-    #...
+    say 'hello world';
 }
 
 sub func02 {
@@ -49,26 +49,27 @@ sub func02 {
 
 # Getters
 sub get_01 {
-    $self = shift;
+    my $self = shift;
+    return $self->{opt01};
 
     #...
 }
 
 sub get_02 {
-    $self = shift;
+    my $self = shift;
 
     #...
 }
 
 # Setters
 sub set_01 {
-    $self = shift;
+    my $self = shift;
 
     #...
 }
 
 sub set_02 {
-    $self = shift;
+    my $self = shift;
 
     #...
 }

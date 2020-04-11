@@ -10,6 +10,7 @@ use Glib qw(TRUE FALSE);    #use Gtk3::WebKit2;
 use lib '.';
 use Gtk3::WebKit2;
 use EnglishRoom::Config qw(UI_path Books_path);
+use EnglishRoom::BookViewerGUI;
 
 BEGIN {
     require Exporter;
@@ -58,10 +59,12 @@ sub FrameBooks {
 sub BookViewer {
     my $AlignViewerBooks = $builder_main->get_object("AlignViewerBooks")
       or die "Error: no se encuentra el widget AlignViewerBooks";
-    my $viewer = Gtk3::WebKit2::WebView->new;
+    my $v = EnglishRoom::BookViewerGUI->new( 'opt01' => 'hola mundo' );
+    my $viewer = $v->get_viewer;
     $viewer->load_uri($BooksPath);
+    say $viewer;
     $AlignViewerBooks->add($viewer);
-    return $viewer;
+    return $AlignViewerBooks;
 }
 
 sub MenuBooks {

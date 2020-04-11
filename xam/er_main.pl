@@ -71,8 +71,10 @@ BtnMenu->signal_connect(
 TglBook->signal_connect(
     'clicked',
     sub {
+        BookViewer;
         StackRooms->set_visible_child( RoomsPage2() );
         StackMainMenu->set_visible_child( MainMenuPage1() );
+        MainWindow->show_all;
         return;
     }
 );
