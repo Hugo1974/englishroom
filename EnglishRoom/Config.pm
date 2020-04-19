@@ -81,7 +81,7 @@ sub UI_path {
 }
 
 sub Books_path {
-    return "file://" . $ER_PATH . "data/books/";
+    return $ER_PATH . "data/books/html";
 }
 
 sub html_english_words_path {

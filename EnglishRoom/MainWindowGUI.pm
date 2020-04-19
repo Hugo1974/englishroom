@@ -167,6 +167,9 @@ sub RoomBox {
 
 StackRooms->set_visible_child( RoomsPage1() );
 
+# adding books to liststore (FrameBooksGUI)
+# BooksListStore();
+
 TglBook->signal_connect(
     'toggled',
     sub {

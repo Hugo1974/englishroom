@@ -11,6 +11,8 @@ use utf8;
 use Encode;
 use open 'locale';
 use lib '../';
+use Data::Dumper;
+
 use EnglishRoom::MainWindowGUI qw(
   MainWindow
   RevSearchEntry
@@ -75,6 +77,8 @@ TglBook->signal_connect(
         StackRooms->set_visible_child( RoomsPage2() );
         StackMainMenu->set_visible_child( MainMenuPage1() );
         MainWindow->show_all;
+
+        # say Dumper %INC;
         return;
     }
 );

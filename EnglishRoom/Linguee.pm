@@ -13,8 +13,6 @@
 #You should have received a copy of the GNU General Public License
 #along with this program.  If not, see L<http://www.gnu.org/licenses/>.
 
-# TODO Archivo de configuración (indicar localización de js y css)
-
 package EnglishRoom::Linguee;
 
 ####  DEPENDENCIAS ####
@@ -129,7 +127,6 @@ sub get {
         return &format_html( $self, $res_cont );
     }
 
-    #$self->{query} = shift;
     say "GETTING> " . $self->{search_url} . $self->{query};
 
     my $ua = new LWP::UserAgent( 'agent' => $self->{agent} );

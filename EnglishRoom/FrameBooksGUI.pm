@@ -9,6 +9,7 @@ use Gtk3 -init;
 use Glib qw(TRUE FALSE);    #use Gtk3::WebKit2;
 use lib '.';
 use Gtk3::WebKit2;
+use File::Find qw(find);
 use EnglishRoom::Config qw(UI_path Books_path);
 use EnglishRoom::BookViewerGUI;
 
@@ -35,6 +36,7 @@ BEGIN {
       BookTabLabel_notes
       BookTabLabel_exercises
       BooksViewerSettings
+      BooksListStore
     );
 }
 
@@ -42,7 +44,28 @@ BEGIN {
 
 # my $glade_file_path = UI_path;
 my $BooksView = UI_path . "/FrameBooks.glade";
-my $BooksPath = Books_path;
+my $BooksPath = 'file://' . Books_path();
+my @my_books;
+my $n = '0';
+
+for my $file ( glob Books_path . '/*' ) {
+    say "\"$file\"";
+    my ( $path, $dir ) = split( /html\//, $file );
+    my $index = "$path" . 'html/' . "$dir/" . "$dir" . '.html';
+    my $title = $dir;
+    $title =~ s/_englishroom_book//;
+
+    push @my_books,
+      {
+        'title' => $title,
+        'path'  => $path . "html/" . $dir,
+        'index' => $index
+      };
+    $n++;
+}
+
+use Data::Dumper;
+say Dumper @my_books;
 
 # starting Builder
 my $builder_main = Gtk3::Builder->new();
@@ -164,5 +187,24 @@ sub BooksViewerSettings {
       or die "Error: no se encuentra el widget BooksViewerSettings";
     return $BooksViewerSettings;
 }
+
+sub BooksListStore {
+    my $BooksListStore = $builder_main->get_object("BooksListStore")
+      or die "Error: no se encuentra el widget BooksListStore";
+    for my $item (@my_books) {
+        my $iter = $BooksListStore->append();
+        $item->{title} =~ s/.*html\///;
+        $BooksListStore->set(
+            $iter,
+            0 => $item->{title},
+            1 => $item->{path},
+            2 => $item->{index}
+
+        );
+    }
+    return $BooksListStore;
+}
+
+BooksListStore();
 
 1;

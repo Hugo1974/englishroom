@@ -1,0 +1,24 @@
+body {
+  margin-bottom: 8px !important;
+  border: 1px solid gray;
+  padding: 10px !important;
+  box-shadow: 2px 2px 15px 0px gray;
+  margin: 20px;
+  border-radius: 5px;
+  width: max-content;
+  line-height: 30px;
+}
+
+a:link {
+  text-decoration: none;
+  color: cadetblue;
+  margin: 10px;
+}
+
+a:visited {
+  color: brown;
+}
+
+a:hover {
+  text-decoration: underline;
+}
