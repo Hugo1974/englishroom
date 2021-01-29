@@ -135,7 +135,7 @@ EnglishRoom::Linguasorb::set_02	EnglishRoom/Linguasorb.pm	71;"	s
 EnglishRoom::Linguasorb::set_02	EnglishRoom/todo/Linguasorb.pm	71;"	s
 EnglishRoom::Linguee	EnglishRoom/Linguee.pm	16;"	p
 EnglishRoom::Linguee	EnglishRoom/todo/Linguee.pm	16;"	p
-EnglishRoom::Linguee::format_html	EnglishRoom/Linguee.pm	166;"	s
+EnglishRoom::Linguee::format_html	EnglishRoom/Linguee.pm	180;"	s
 EnglishRoom::Linguee::format_html	EnglishRoom/todo/Linguee.pm	166;"	s
 EnglishRoom::Linguee::get	EnglishRoom/Linguee.pm	115;"	s
 EnglishRoom::Linguee::get	EnglishRoom/todo/Linguee.pm	115;"	s
@@ -143,7 +143,7 @@ EnglishRoom::Linguee::get_formated_file	EnglishRoom/Linguee.pm	94;"	s
 EnglishRoom::Linguee::get_formated_file	EnglishRoom/todo/Linguee.pm	94;"	s
 EnglishRoom::Linguee::get_formated_file_uri	EnglishRoom/Linguee.pm	88;"	s
 EnglishRoom::Linguee::get_formated_file_uri	EnglishRoom/todo/Linguee.pm	88;"	s
-EnglishRoom::Linguee::get_output_file	EnglishRoom/Linguee.pm	161;"	s
+EnglishRoom::Linguee::get_output_file	EnglishRoom/Linguee.pm	175;"	s
 EnglishRoom::Linguee::get_output_file	EnglishRoom/todo/Linguee.pm	161;"	s
 EnglishRoom::Linguee::new	EnglishRoom/Linguee.pm	46;"	s
 EnglishRoom::Linguee::new	EnglishRoom/todo/Linguee.pm	46;"	s
@@ -436,6 +436,7 @@ add_row	pruebas/Gtk2/examples/sizegroup.pl	59;"	s
 agent	EnglishRoom/Config.pm	131;"	s
 agent	EnglishRoom/basura/Config_old.pm	61;"	s
 all_fired	pruebas/Gtk2/examples/thread_usage.pl	104;"	s
+append_item	scripts/linguee.pl	136;"	s
 append_item	scripts/webkit.pl	112;"	s
 append_record	pruebas/Gtk2/examples/customlist.pl	391;"	s
 apply_changes_gradually	EnglishRoom/BookAssistantGUI.pm	225;"	s
@@ -707,7 +708,7 @@ find_toplevel_at_pointer	pruebas/Gtk2/examples/changedisplay.pl	77;"	s
 fixed_toggled	pruebas/Gtk2/examples/list_store.pl	59;"	s
 follow_if_link	pruebas/Gtk2/examples/hypertext.pl	79;"	s
 fontify	pruebas/Gtk2/examples/main.pl	334;"	s
-format_html	EnglishRoom/Linguee.pm	166;"	s
+format_html	EnglishRoom/Linguee.pm	180;"	s
 format_html	EnglishRoom/todo/Linguee.pm	166;"	s
 format_text	pruebas/Gtk2/examples/cellrenderer_spinbutton.pl	85;"	s
 func01	EnglishRoom/Linguasorb.pm	40;"	s
@@ -740,7 +741,7 @@ get_layout	pruebas/Gtk2/examples/cellrenderer_popup.pl	92;"	s
 get_layout	pruebas/Gtk2/examples/cellrenderer_spinbutton.pl	100;"	s
 get_links	scripts/linguasorb.pl	27;"	s
 get_node	pruebas/Gtk2/examples/customtree.pl	304;"	s
-get_output_file	EnglishRoom/Linguee.pm	161;"	s
+get_output_file	EnglishRoom/Linguee.pm	175;"	s
 get_output_file	EnglishRoom/todo/Linguee.pm	161;"	s
 get_table	scripts/linguasorb.pl	48;"	s
 get_text	pruebas/Gtk2/examples/customrenderer.pl	52;"	s
@@ -948,7 +949,7 @@ remove_item	pruebas/Gtk2/examples/editable_cells.pl	77;"	s
 response_cb	pruebas/Gtk2/examples/changedisplay.pl	213;"	s
 ret_png_filter	pruebas/Gtk2/gtk2_file_chooser.pl	163;"	s
 ret_vbox	pruebas/Gtk2/gtk2_file_chooser.pl	20;"	s
-reveal_child	scripts/linguee.pl	108;"	s
+reveal_child	scripts/linguee.pl	117;"	s
 reveal_child	scripts/translate.pl	167;"	s
 rotated_text	pruebas/Gtk2/examples/rotated_text.pl	18;"	p
 rotated_text::FONT	pruebas/Gtk2/examples/rotated_text.pl	34;"	c
@@ -1037,6 +1038,7 @@ toolbar_cb	pruebas/Gtk2/examples/appwindow.pl	60;"	s
 transform_expose_rectangle	pruebas/Gtk2/examples/offscreen_rotation.pl	103;"	s
 translate	pruebas/gtk3/GTranslate/gtranslate.pl	72;"	s
 translate	tmp/PerlGtk3-examples-master/GTranslate/gtranslate.pl	72;"	s
+traslate	scripts/linguee.pl	171;"	s
 tree_store	pruebas/Gtk2/examples/tree_store.pl	10;"	p
 tree_store::ALEX_COLUMN	pruebas/Gtk2/examples/tree_store.pl	19;"	c
 tree_store::DAVE_COLUMN	pruebas/Gtk2/examples/tree_store.pl	23;"	c

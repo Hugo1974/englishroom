@@ -26,7 +26,7 @@ use warnings;
 use feature qw(say switch :5.10);
 use Carp qw(croak carp);
 use Web::Query qw();
-use LWP::UserAgent;
+use LWP::UserAgent::Tor;
 use LWP::Protocol::socks;
 use EnglishRoom::Config qw(
   agent
@@ -129,8 +129,22 @@ sub get {
 
     say "GETTING> " . $self->{search_url} . $self->{query};
 
-    my $ua = new LWP::UserAgent( 'agent' => $self->{agent} );
-#    $ua->proxy( [qw(http https)] => $self->{proxy} );
+    my $ua = new LWP::UserAgent::Tor(
+        'agent'            => $self->{agent},
+        'tor_control_port' => 9051,
+        'tor_port'         => 9050,
+        'tor_config'       => '/etc/tor/torrc'
+    );
+    say `sudo service tor restart`;
+    if ( $ua->rotate_ip ) {
+        say 'got another ip';
+    }
+    else {
+        say 'try again?';
+    }
+
+    # $ua -> proxy([qw(http https)] => 'socks://127.0.0.1:9050');
+    $ua->proxy( [qw(http https)] => $self->{proxy} );
     my $response = $ua->get( $self->{search_url} . $self->{query} );
     print $response->code, ' ', $response->message, "\n" if DEBUG;
 
@@ -202,4 +216,4 @@ sub format_html {
     return $self->{formated_file};
 }
 
-1;    # End of MyEnglish::LinGuee
+1;    # End of EnglishRoom::LinGuee

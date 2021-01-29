@@ -20,7 +20,7 @@ my $traductor = EnglishRoom::Linguee->new();
 
 $traductor->source('english');
 
-$traductor->get( $traductor->query('home') );
+# $traductor->get( $traductor->query('home') );
 
 my $builder = Gtk3::Builder->new();
 $builder->add_from_file("../data/UI/WebView.glade");
@@ -54,10 +54,10 @@ my $scrolls = Gtk3::ScrolledWindow->new();
 $scrolls->add($view);
 $web_align->add($scrolls);
 
-$view->load_uri( $traductor->get_formated_file_uri );
+# $view->load_uri( $traductor->get_formated_file_uri );
 $web_align->show_all();
 $view->show_all();
-
+$view->signal_connect( 'context-menu', \&append_item );
 $entry_search->signal_connect(
     'activate',
     sub {
@@ -78,6 +78,12 @@ $clippy->signal_connect(
         my $text = $clippy->wait_for_text;
         print "Traducir:\n";
         say("\t>>> $text");
+        $entry_search->set_text("$text");
+        &reveal_child(
+            'find',            \$find_revealer,
+            \$find_stack_menu, \$find_menu_page1,
+            \$find_menu_page2
+        );
         return unless ($text);
     }
 );
@@ -97,6 +103,9 @@ $find_buttom->signal_connect(
             \$find_stack_menu, \$find_menu_page1,
             \$find_menu_page2
         );
+
+        # $traductor->get( $traductor->query( $entry_search->get_text ) );
+
     }
 );
 
@@ -123,3 +132,53 @@ sub reveal_child {
     return;
 
 }
+
+sub append_item {
+    use Data::Dumper;
+    print Dumper @_;
+    my ( $webview, $context_menu, $hit_result_event, $event ) = @_;
+
+    $context_menu->remove_all();
+
+    my $menu_action_translate = Gtk3::Action->new( "Traducir", "_Traducir",
+        "Traducir texto seleccionado", 'gtk-find' );
+    $menu_action_translate->signal_connect(
+        "activate", \&traslate
+
+    );
+
+    my $option = Gtk3::WebKit2::ContextMenuItem->new($menu_action_translate);
+    $context_menu->append($option);
+
+    my $option_back = Gtk3::WebKit2::ContextMenuItem->new_from_stock_action(
+        'WEBKIT_CONTEXT_MENU_ACTION_GO_BACK');
+    $context_menu->append($option_back);
+
+    my $option_forward =
+      Gtk3::WebKit2::ContextMenuItem->new_from_stock_action(
+        'WEBKIT_CONTEXT_MENU_ACTION_GO_FORWARD');
+    $context_menu->append($option_forward);
+
+    my $option_copy = Gtk3::WebKit2::ContextMenuItem->new_from_stock_action(
+        'WEBKIT_CONTEXT_MENU_ACTION_COPY');
+    $context_menu->append($option_copy);
+}
+
+#         $view->signal_connect( 'notify::title' => \&notify_title, undef );
+#         $view->signal_connect( 'notify::load-status' => \&notify_load_status, undef );
+#         $view->signal_connect( 'notify::progress' => \&notify_progress, undef );
+
+sub traslate {
+    print "Traducir:\n";
+    my $text = $clippy->wait_for_text;
+    return unless ($text);
+    print("\t>>> $text");
+    $traductor->get( $traductor->query("$text") );
+    if ( -f $traductor->get_formated_file ) {
+        $view->load_uri( $traductor->get_formated_file_uri );
+    }
+    else { die "Error abriendo " . $traductor->get_formated_file_uri }
+    return;
+
+}
+
