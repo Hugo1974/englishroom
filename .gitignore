@@ -3,6 +3,6 @@ pruebas/
 *~
 *.py
 books/
-data/dicts
-data/doc
-
+data/dicts/
+data/doc/
+data/books/
