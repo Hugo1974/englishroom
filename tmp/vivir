@@ -1,0 +1,2265 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="x-ua-compatible" content="ie=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Conjugation - All Spanish Verb Forms With Audio</title>
+  <meta name="description" content="Spanish verb conjugated in all tenses, audio and English translations for all forms.">
+
+  <link rel="shortcut icon" href="https://www.linguasorb.com/favicon.ico" type="image/x-icon">
+  <link href="https://fonts.googleapis.com/css?family=Open+Sans:400,700|Roboto:400,700" rel="stylesheet">
+  <link rel=StyleSheet href="global.css" type="text/css">
+
+  <style>
+    .async-hide {
+      opacity: 0 !important
+    }
+  </style>
+  <script>
+    (function(a, s, y, n, c, h, i, d, e) {
+      s.className += ' ' + y;
+      h.start = 1 * new Date;
+      h.end = i = function() {
+        s.className = s.className.replace(RegExp(' ?' + y), '')
+      };
+      (a[n] = a[n] || []).hide = h;
+      setTimeout(function() {
+        i();
+        h.end = null
+      }, c);
+      h.timeout = c;
+    })(window, document.documentElement, 'async-hide', 'dataLayer', 4000, {
+      'GTM-N7PJVZT': true
+    });
+  </script>
+  <script>
+    (function(i, s, o, g, r, a, m) {
+      i['GoogleAnalyticsObject'] = r;
+      i[r] = i[r] || function() {
+        (i[r].q = i[r].q || []).push(arguments)
+      }, i[r].l = 1 * new Date();
+      a = s.createElement(o),
+        m = s.getElementsByTagName(o)[0];
+      a.async = 1;
+      a.src = g;
+      m.parentNode.insertBefore(a, m)
+    })(window, document, 'script', '//www.google-analytics.com/analytics.js', 'ga');
+
+    ga('create', 'UA-12411017-1', 'linguasorb.com');
+    ga('require', 'GTM-N7PJVZT');
+    ga('send', 'pageview');
+
+
+    (function(h, o, t, j, a, r) {
+      h.hj = h.hj || function() {
+        (h.hj.q = h.hj.q || []).push(arguments)
+      };
+      h._hjSettings = {
+        hjid: 40944,
+        hjsv: 5
+      };
+      a = o.getElementsByTagName('head')[0];
+      r = o.createElement('script');
+      r.async = 1;
+      r.src = t + h._hjSettings.hjid + j + h._hjSettings.hjsv;
+      a.appendChild(r);
+    })(window, document, '//static.hotjar.com/c/hotjar-', '.js?sv=');
+  </script>
+
+
+
+  <style>
+    .egg-responsive {
+      width: 350px;
+      height: 200px;
+    }
+
+    @media(min-width: 768px) {
+      .egg-responsive {
+        width: 468px;
+        height: 60px;
+      }
+    }
+
+    @media(min-width: 992px) {
+      .egg-responsive {
+        width: 728px;
+        height: 90px;
+      }
+    }
+  </style>
+
+</head>
+
+<body class="linguasorb">
+  <header id="header">
+    <nav id="ling-menu" class="navbar navbar-default " role="navigation">
+      <div class="navbar-wrapper">
+        <div class="navbar-header">
+          <a class="navbar-brand" href="/"><img src="/Content/Images/logos/logotran150.png" alt="Linguasorb logo" /></a>
+          <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-menubuilder">
+            <span class="sr-only">Toggle navigation</span><span class="icon-bar"></span><span class="icon-bar"></span><span class="icon-bar"></span>
+          </button>
+        </div>
+        <div class="collapse navbar-collapse navbar-menubuilder">
+          <ul class="nav navbar-nav navbar-left">
+            <li class="dropdown">
+              <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Spanish <span class="caret"></span></a>
+              <ul class="dropdown-menu">
+                <li><a href="/spanish/">Spanish Home</a></li>
+                <li><a href="/spanish/verbs/">Verbs</a></li>
+                <li><a href="/spanish/grammar/">Grammar</a></li>
+                <li><a href="/spanish/vocabulary/">Vocabulary</a></li>
+                <li><a href="/spanish/cognates/">Cognates</a></li>
+                <li><a href="/spanish/recommendations/">Course Reviews</a></li>
+                <li><a href="/spanish/blog/">Blog</a></li>
+              </ul>
+            </li>
+            <li><a href="/apps">Apps</a></li>
+            <li><a href="/resources/">Resources</a></li>
+            <li><a href="https://courses.linguasorb.com">Courses</a></li>
+          </ul>
+          <ul class="nav navbar-nav navbar-right">
+            <li><a href="/account/login/">Log In</a></li>
+          </ul>
+        </div>
+      </div>
+    </nav>
+    <div class="subnav">
+      <div class="subnav-wrapper">
+        <div class="subnav-title">
+          <img src="/content/images/flags/spain32.png" alt="Spanish" />
+          <span>Spanish</span>
+        </div>
+        <div class="subnav-search">
+          <form action="/spanish/search/" method="get">
+            <input name="q" class="autoSearch" id="spanishVerbSearch" placeholder="Search Spanish verbs..." autofocus />
+          </form>
+        </div>
+      </div>
+    </div>
+    <div class="sticky-header" id="sticky-header" data-language="spanish">
+      <div class="sticky-header-inner">
+        <div class="sticky-header-text">
+          <h3>Select your Spanish level</h3>
+          <h4>To personalize your experience</h4>
+        </div>
+        <div class="sticky-header-buttons" id="sticky-header-buttons">
+          <button class="btn btn-success" data-level="beginner">Beginner</button>
+          <button class="btn btn-success" data-level="intermediate">Intermediate</button>
+          <button class="btn btn-success" data-level="advanced">Advanced</button>
+          <button class="btn btn-warning" data-level="teacher">I'm a Teacher</button>
+        </div>
+        <div class="sticky-header-thanks" id="sticky-header-thanks">Thank you!</div>
+      </div>
+    </div>
+  </header>
+  <div class="body-wrapper">
+    <div class="top-message">
+      Check out <b><a href="https://courses.linguasorb.com/s/spanish-verbs-123" onclick="ga('send', 'event', 'Sales Page Link', 'top link', 'Spanish verbs 123');">Spanish Verbs 1-2-3</a></b> - the ULTIMATE guide to Spanish verbs.
+    </div>
+    <div class="body-wrapper-inner">
+      <div class="body-content content-panel">
+        <div class="content-panel-body">
+          <nav>
+            <ol class="breadcrumb">
+              <li><a href="https://www.linguasorb.com/spanish/verbs/">Verbs</a></li>
+              <li class="active">Vivir Conjugations</li>
+            </ol>
+          </nav>
+          <header class="conjugation-header">
+            <h1 itemprop="name" class="conjugation-title">Vivir - Conjugations</h1>
+            <div class="l1-infinitive">to live</div>
+          </header>
+          <section class="verb-mood-section">
+            <ul class="nominal-forms">
+              <li>
+                <label>Infinitve:</label> <span title="to live">vivir</span>&nbsp;
+                &nbsp;<span class='audio-button  ' data-audio-button data-audio-restricted>
+                  <i class='icon-play' aria-hidden='true' data-file="https://www.linguasorb.com/speech/es/vivir"></i>
+                </span>
+              </li>
+              <li>
+                <label>Past Participle:</label>
+                <span title="lived"><span class='vReg'>vivido</span></span>&nbsp;
+                <span class='audio-button  ' data-audio-button data-audio-restricted>
+                  <i class='icon-play' aria-hidden='true' data-file="https://www.linguasorb.com/speech/es/vivido"></i>
+                </span> </li>
+              <li>
+                <label>Gerund:</label>
+                <span title="living"><span class='vReg'>viviendo</span></span>&nbsp;
+                <span class='audio-button  ' data-audio-button data-audio-restricted>
+                  <i class='icon-play' aria-hidden='true' data-file="/speech/es/viviendo"></i>
+                </span><br />
+              </li>
+            </ul>
+            <div class="verbs-legend">
+              Irregular forms are in <span class="vIrreg">red</span>.<br />
+              Auxilliary verbs are in <span class="aux">blue</span>.<br />
+            </div>
+            <div class="content-top-bonus-box">
+              <p>
+                <b>Bonus:</b>
+                <a href="#" data-drip-showForm data-formId="782308869" data-formName="Top Spanish verbs Top">Get a printable list of the most common 250 Spanish verbs</a>,
+                with links to quizzes for every tense.
+              </p>
+            </div>
+            <div class="hidden-xs">
+              <a href="/spanish/verbs/print/vivir/" class="btn btn-default btn-sm"><i class='icon-print' aria-hidden='true'></i> Print</a>
+            </div>
+          </section>
+          <section class="verb-mood-section">
+            <div class="verb-polarity-buttons hidden-xs">
+              <button class="btn btn-xs btn-positive btn-active" data-positive-button>Positive</button>
+              <button class="btn btn-xs btn-negative" data-negative-button>Negative</button>
+            </div>
+            <h2>Vivir - Indicative</h2>
+            <div class="verb-polarity-buttons-mobile visible-xs-block">
+              <button class="btn btn-xs btn-positive btn-active" data-positive-button>Positive</button>
+              <button class="btn btn-xs btn-negative" data-negative-button>Negative</button>
+            </div>
+            <div class="conjugation-tense-container">
+              <section class="verb-tense-section">
+                <a href="/spanish/grammar/present-tense/" class="pull-right">
+                  <i class="icon-help-circled verb-tense-helper" aria-hidden="true" title="Click for more information on this tense"></i>
+                </a>
+                <h3>Present</h3>
+                <div class="vPos" data-positive-conjugation>
+                  <ul class="verb-conjugation-list">
+                    <li>
+                      <span class="" title="I live, I am living" data-tooltip><span class='pron'>yo</span> <span class='vReg'>vivo</span></span>
+                      <span class='audio-button  pull-right' data-audio-button data-audio-restricted>
+                        <i class='icon-play' aria-hidden='true' data-file="/speech/es/yo vivo"></i>
+                      </span>
+                    </li>
+                    <li>
+                      <span class="" title="you live, you are living" data-tooltip><span class='pron'>tú</span> <span class='vReg'>vives</span></span>
+                      <span class='audio-button  pull-right' data-audio-button data-audio-restricted>
+                        <i class='icon-play' aria-hidden='true' data-file="/speech/es/tú vives"></i>
+                      </span>
+                    </li>
+                    <li>
+                      <span class="" title="he/she/it lives, he/she/it is living" data-tooltip><span class='pron'>él</span> <span class='vReg'>vive</span></span>
+                      <span class='audio-button  pull-right' data-audio-button data-audio-restricted>
+                        <i class='icon-play' aria-hidden='true' data-file="/speech/es/él vive"></i>
+                      </span>
+                    </li>
+                    <li>
+                      <span class="" title="we live, we are living" data-tooltip><span class='pron'>nosotros</span> <span class='vReg'>vivimos</span></span>
+                      <span class='audio-button  pull-right' data-audio-button data-audio-restricted>
+                        <i class='icon-play' aria-hidden='true' data-file="/speech/es/nosotros vivimos"></i>
+                      </span>
+                    </li>
+                    <li>
+                      <span class="" title="you live, you are living" data-tooltip><span class='pron'>vosotros</span> <span class='vReg'>vivís</span></span>
+                      <span class='audio-button  pull-right' data-audio-button data-audio-restricted>
+                        <i class='icon-play' aria-hidden='true' data-file="/speech/es/vosotros vivís"></i>
+                      </span>
+                    </li>
+                    <li>
+                      <span class="" title="they live, they are living" data-tooltip><span class='pron'>ellos</span> <span class='vReg'>viven</span></span>
+                      <span class='audio-button  pull-right' data-audio-button data-audio-restricted>
+                        <i class='icon-play' aria-hidden='true' data-file="/speech/es/ellos viven"></i>
+                      </span>
+                    </li>
+                  </ul>
+                  <a href="/spanish/verbs/quiz/?m=in&t=present&v=vivir" class="btn btn-xs btn-default btn-block bold" role="button">Quiz</a>
+                </div>
+                <div class="vNeg" data-negative-conjugation>
+                  <ul class="verb-conjugation-list">
+                    <li>
+                      <span class="" title="I do not live, I am not living" data-tooltip>
+                        <span class='pron'>yo</span> no <span class='vReg'>vivo</span>
+                      </span>
+                      <span class='audio-button  pull-right' data-audio-button data-audio-restricted>
+                        <i class='icon-play' aria-hidden='true' data-file="/speech/es/yo no vivo"></i>
+                      </span>
+                    </li>
+                    <li>
+                      <span class="" title="you do not live, you are not living" data-tooltip>
+                        <span class='pron'>tú</span> no <span class='vReg'>vives</span>
+                      </span>
+                      <span class='audio-button  pull-right' data-audio-button data-audio-restricted>
+                        <i class='icon-play' aria-hidden='true' data-file="/speech/es/tú no vives"></i>
+                      </span>
+                    </li>
+                    <li>
+                      <span class="" title="he/she/it does not live, he/she/it is not living" data-tooltip>
+                        <span class='pron'>él</span> no <span class='vReg'>vive</span>
+                      </span>
+                      <span class='audio-button  pull-right' data-audio-button data-audio-restricted>
+                        <i class='icon-play' aria-hidden='true' data-file="/speech/es/él no vive"></i>
+                      </span>
+                    </li>
+                    <li>
+                      <span class="" title="we do not live, we are not living" data-tooltip>
+                        <span class='pron'>nosotros</span> no <span class='vReg'>vivimos</span>
+                      </span>
+                      <span class='audio-button  pull-right' data-audio-button data-audio-restricted>
+                        <i class='icon-play' aria-hidden='true' data-file="/speech/es/nosotros no vivimos"></i>
+                      </span>
+                    </li>
+                    <li>
+                      <span class="" title="you do not live, you are not living" data-tooltip>
+                        <span class='pron'>vosotros</span> no <span class='vReg'>vivís</span>
+                      </span>
+                      <span class='audio-button  pull-right' data-audio-button data-audio-restricted>
+                        <i class='icon-play' aria-hidden='true' data-file="/speech/es/vosotros no vivís"></i>
+                      </span>
+                    </li>
+                    <li>
+                      <span class="" title="they do not live, they are not living" data-tooltip>
+                        <span class='pron'>ellos</span> no <span class='vReg'>viven</span>
+                      </span>
+                      <span class='audio-button  pull-right' data-audio-button data-audio-restricted>
+                        <i class='icon-play' aria-hidden='true' data-file="/speech/es/ellos no viven"></i>
+                      </span>
+                    </li>
+                  </ul>
+                  <a href="/spanish/verbs/quiz/?pn=neg&m=in&t=present&v=vivir" class="btn btn-xs btn-default bold btn-block" role="button">Quiz</a>
+                </div>
+              </section>
+              <section class="verb-tense-section">
+                <a href="/spanish/grammar/future-tense/" class="pull-right">
+                  <i class="icon-help-circled verb-tense-helper" aria-hidden="true" title="Click for more information on this tense"></i>
+                </a>
+                <h3>Future</h3>
+                <div class="vPos" data-positive-conjugation>
+                  <ul class="verb-conjugation-list">
+                    <li>
+                      <span class="" title="I will live" data-tooltip><span class='pron'>yo</span> <span class='vReg'>viviré</span></span>
+                      <span class='audio-button  pull-right' data-audio-button data-audio-restricted>
+                        <i class='icon-play' aria-hidden='true' data-file="/speech/es/yo viviré"></i>
+                      </span>
+                    </li>
+                    <li>
+                      <span class="" title="you will live" data-tooltip><span class='pron'>tú</span> <span class='vReg'>vivirás</span></span>
+                      <span class='audio-button  pull-right' data-audio-button data-audio-restricted>
+                        <i class='icon-play' aria-hidden='true' data-file="/speech/es/tú vivirás"></i>
+                      </span>
+                    </li>
+                    <li>
+                      <span class="" title="he/she/it will live" data-tooltip><span class='pron'>él</span> <span class='vReg'>vivirá</span></span>
+                      <span class='audio-button  pull-right' data-audio-button data-audio-restricted>
+                        <i class='icon-play' aria-hidden='true' data-file="/speech/es/él vivirá"></i>
+                      </span>
+                    </li>
+                    <li>
+                      <span class="" title="we will live" data-tooltip><span class='pron'>nosotros</span> <span class='vReg'>viviremos</span></span>
+                      <span class='audio-button  pull-right' data-audio-button data-audio-restricted>
+                        <i class='icon-play' aria-hidden='true' data-file="/speech/es/nosotros viviremos"></i>
+                      </span>
+                    </li>
+                    <li>
+                      <span class="" title="you will live" data-tooltip><span class='pron'>vosotros</span> <span class='vReg'>viviréis</span></span>
+                      <span class='audio-button  pull-right' data-audio-button data-audio-restricted>
+                        <i class='icon-play' aria-hidden='true' data-file="/speech/es/vosotros viviréis"></i>
+                      </span>
+                    </li>
+                    <li>
+                      <span class="" title="they will live" data-tooltip><span class='pron'>ellos</span> <span class='vReg'>vivirán</span></span>
+                      <span class='audio-button  pull-right' data-audio-button data-audio-restricted>
+                        <i class='icon-play' aria-hidden='true' data-file="/speech/es/ellos vivirán"></i>
+                      </span>
+                    </li>
+                  </ul>
+                  <a href="/spanish/verbs/quiz/?m=in&t=future&v=vivir" class="btn btn-xs btn-default btn-block bold" role="button">Quiz</a>
+                </div>
+                <div class="vNeg" data-negative-conjugation>
+                  <ul class="verb-conjugation-list">
+                    <li>
+                      <span class="" title="I will not live" data-tooltip>
+                        <span class='pron'>yo</span> no <span class='vReg'>viviré</span>
+                      </span>
+                      <span class='audio-button  pull-right' data-audio-button data-audio-restricted>
+                        <i class='icon-play' aria-hidden='true' data-file="/speech/es/yo no viviré"></i>
+                      </span>
+                    </li>
+                    <li>
+                      <span class="" title="you will not live" data-tooltip>
+                        <span class='pron'>tú</span> no <span class='vReg'>vivirás</span>
+                      </span>
+                      <span class='audio-button  pull-right' data-audio-button data-audio-restricted>
+                        <i class='icon-play' aria-hidden='true' data-file="/speech/es/tú no vivirás"></i>
+                      </span>
+                    </li>
+                    <li>
+                      <span class="" title="he/she/it will not live" data-tooltip>
+                        <span class='pron'>él</span> no <span class='vReg'>vivirá</span>
+                      </span>
+                      <span class='audio-button  pull-right' data-audio-button data-audio-restricted>
+                        <i class='icon-play' aria-hidden='true' data-file="/speech/es/él no vivirá"></i>
+                      </span>
+                    </li>
+                    <li>
+                      <span class="" title="we will not live" data-tooltip>
+                        <span class='pron'>nosotros</span> no <span class='vReg'>viviremos</span>
+                      </span>
+                      <span class='audio-button  pull-right' data-audio-button data-audio-restricted>
+                        <i class='icon-play' aria-hidden='true' data-file="/speech/es/nosotros no viviremos"></i>
+                      </span>
+                    </li>
+                    <li>
+                      <span class="" title="you will not live" data-tooltip>
+                        <span class='pron'>vosotros</span> no <span class='vReg'>viviréis</span>
+                      </span>
+                      <span class='audio-button  pull-right' data-audio-button data-audio-restricted>
+                        <i class='icon-play' aria-hidden='true' data-file="/speech/es/vosotros no viviréis"></i>
+                      </span>
+                    </li>
+                    <li>
+                      <span class="" title="they will not live" data-tooltip>
+                        <span class='pron'>ellos</span> no <span class='vReg'>vivirán</span>
+                      </span>
+                      <span class='audio-button  pull-right' data-audio-button data-audio-restricted>
+                        <i class='icon-play' aria-hidden='true' data-file="/speech/es/ellos no vivirán"></i>
+                      </span>
+                    </li>
+                  </ul>
+                  <a href="/spanish/verbs/quiz/?pn=neg&m=in&t=future&v=vivir" class="btn btn-xs btn-default bold btn-block" role="button">Quiz</a>
+                </div>
+              </section>
+              <section class="verb-tense-section">
+                <a href="/spanish/grammar/imperfect-tense/" class="pull-right">
+                  <i class="icon-help-circled verb-tense-helper" aria-hidden="true" title="Click for more information on this tense"></i>
+                </a>
+                <h3>Imperfect</h3>
+                <div class="vPos" data-positive-conjugation>
+                  <ul class="verb-conjugation-list">
+                    <li>
+                      <span class="" title="I was living, I used to live" data-tooltip><span class='pron'>yo</span> <span class='vReg'>vivía</span></span>
+                      <span class='audio-button  pull-right' data-audio-button data-audio-restricted>
+                        <i class='icon-play' aria-hidden='true' data-file="/speech/es/yo vivía"></i>
+                      </span>
+                    </li>
+                    <li>
+                      <span class="" title="you were living, you used to live" data-tooltip><span class='pron'>tú</span> <span class='vReg'>vivías</span></span>
+                      <span class='audio-button  pull-right' data-audio-button data-audio-restricted>
+                        <i class='icon-play' aria-hidden='true' data-file="/speech/es/tú vivías"></i>
+                      </span>
+                    </li>
+                    <li>
+                      <span class="" title="he/she/it was living, he/she/it used to live" data-tooltip><span class='pron'>él</span> <span class='vReg'>vivía</span></span>
+                      <span class='audio-button  pull-right' data-audio-button data-audio-restricted>
+                        <i class='icon-play' aria-hidden='true' data-file="/speech/es/él vivía"></i>
+                      </span>
+                    </li>
+                    <li>
+                      <span class="" title="we were living, we used to live" data-tooltip><span class='pron'>nosotros</span> <span class='vReg'>vivíamos</span></span>
+                      <span class='audio-button  pull-right' data-audio-button data-audio-restricted>
+                        <i class='icon-play' aria-hidden='true' data-file="/speech/es/nosotros vivíamos"></i>
+                      </span>
+                    </li>
+                    <li>
+                      <span class="" title="you were living, you used to live" data-tooltip><span class='pron'>vosotros</span> <span class='vReg'>vivíais</span></span>
+                      <span class='audio-button  pull-right' data-audio-button data-audio-restricted>
+                        <i class='icon-play' aria-hidden='true' data-file="/speech/es/vosotros vivíais"></i>
+                      </span>
+                    </li>
+                    <li>
+                      <span class="" title="they were living, they used to live" data-tooltip><span class='pron'>ellos</span> <span class='vReg'>vivían</span></span>
+                      <span class='audio-button  pull-right' data-audio-button data-audio-restricted>
+                        <i class='icon-play' aria-hidden='true' data-file="/speech/es/ellos vivían"></i>
+                      </span>
+                    </li>
+                  </ul>
+                  <a href="/spanish/verbs/quiz/?m=in&t=imperfect&v=vivir" class="btn btn-xs btn-default btn-block bold" role="button">Quiz</a>
+                </div>
+                <div class="vNeg" data-negative-conjugation>
+                  <ul class="verb-conjugation-list">
+                    <li>
+                      <span class="" title="I was not living, I never used to live" data-tooltip>
+                        <span class='pron'>yo</span> no <span class='vReg'>vivía</span>
+                      </span>
+                      <span class='audio-button  pull-right' data-audio-button data-audio-restricted>
+                        <i class='icon-play' aria-hidden='true' data-file="/speech/es/yo no vivía"></i>
+                      </span>
+                    </li>
+                    <li>
+                      <span class="" title="you were not living, you never used to live" data-tooltip>
+                        <span class='pron'>tú</span> no <span class='vReg'>vivías</span>
+                      </span>
+                      <span class='audio-button  pull-right' data-audio-button data-audio-restricted>
+                        <i class='icon-play' aria-hidden='true' data-file="/speech/es/tú no vivías"></i>
+                      </span>
+                    </li>
+                    <li>
+                      <span class="" title="he/she/it was not living, he/she/it never used to live" data-tooltip>
+                        <span class='pron'>él</span> no <span class='vReg'>vivía</span>
+                      </span>
+                      <span class='audio-button  pull-right' data-audio-button data-audio-restricted>
+                        <i class='icon-play' aria-hidden='true' data-file="/speech/es/él no vivía"></i>
+                      </span>
+                    </li>
+                    <li>
+                      <span class="" title="we were not living, we never used to live" data-tooltip>
+                        <span class='pron'>nosotros</span> no <span class='vReg'>vivíamos</span>
+                      </span>
+                      <span class='audio-button  pull-right' data-audio-button data-audio-restricted>
+                        <i class='icon-play' aria-hidden='true' data-file="/speech/es/nosotros no vivíamos"></i>
+                      </span>
+                    </li>
+                    <li>
+                      <span class="" title="you were not living, you never used to live" data-tooltip>
+                        <span class='pron'>vosotros</span> no <span class='vReg'>vivíais</span>
+                      </span>
+                      <span class='audio-button  pull-right' data-audio-button data-audio-restricted>
+                        <i class='icon-play' aria-hidden='true' data-file="/speech/es/vosotros no vivíais"></i>
+                      </span>
+                    </li>
+                    <li>
+                      <span class="" title="they were not living, they never used to live" data-tooltip>
+                        <span class='pron'>ellos</span> no <span class='vReg'>vivían</span>
+                      </span>
+                      <span class='audio-button  pull-right' data-audio-button data-audio-restricted>
+                        <i class='icon-play' aria-hidden='true' data-file="/speech/es/ellos no vivían"></i>
+                      </span>
+                    </li>
+                  </ul>
+                  <a href="/spanish/verbs/quiz/?pn=neg&m=in&t=imperfect&v=vivir" class="btn btn-xs btn-default bold btn-block" role="button">Quiz</a>
+                </div>
+              </section>
+              <section class="verb-tense-section">
+                <a href="/spanish/grammar/preterite-tense/" class="pull-right">
+                  <i class="icon-help-circled verb-tense-helper" aria-hidden="true" title="Click for more information on this tense"></i>
+                </a>
+                <h3>Preterite</h3>
+                <div class="vPos" data-positive-conjugation>
+                  <ul class="verb-conjugation-list">
+                    <li>
+                      <span class="" title="I lived" data-tooltip><span class='pron'>yo</span> <span class='vReg'>viví</span></span>
+                      <span class='audio-button  pull-right' data-audio-button data-audio-restricted>
+                        <i class='icon-play' aria-hidden='true' data-file="/speech/es/yo viví"></i>
+                      </span>
+                    </li>
+                    <li>
+                      <span class="" title="you lived" data-tooltip><span class='pron'>tú</span> <span class='vReg'>viviste</span></span>
+                      <span class='audio-button  pull-right' data-audio-button data-audio-restricted>
+                        <i class='icon-play' aria-hidden='true' data-file="/speech/es/tú viviste"></i>
+                      </span>
+                    </li>
+                    <li>
+                      <span class="" title="he/she/it lived" data-tooltip><span class='pron'>él</span> <span class='vReg'>vivió</span></span>
+                      <span class='audio-button  pull-right' data-audio-button data-audio-restricted>
+                        <i class='icon-play' aria-hidden='true' data-file="/speech/es/él vivió"></i>
+                      </span>
+                    </li>
+                    <li>
+                      <span class="" title="we lived" data-tooltip><span class='pron'>nosotros</span> <span class='vReg'>vivimos</span></span>
+                      <span class='audio-button  pull-right' data-audio-button data-audio-restricted>
+                        <i class='icon-play' aria-hidden='true' data-file="/speech/es/nosotros vivimos"></i>
+                      </span>
+                    </li>
+                    <li>
+                      <span class="" title="you lived" data-tooltip><span class='pron'>vosotros</span> <span class='vReg'>vivisteis</span></span>
+                      <span class='audio-button  pull-right' data-audio-button data-audio-restricted>
+                        <i class='icon-play' aria-hidden='true' data-file="/speech/es/vosotros vivisteis"></i>
+                      </span>
+                    </li>
+                    <li>
+                      <span class="" title="they lived" data-tooltip><span class='pron'>ellos</span> <span class='vReg'>vivieron</span></span>
+                      <span class='audio-button  pull-right' data-audio-button data-audio-restricted>
+                        <i class='icon-play' aria-hidden='true' data-file="/speech/es/ellos vivieron"></i>
+                      </span>
+                    </li>
+                  </ul>
+                  <a href="/spanish/verbs/quiz/?m=in&t=preterite&v=vivir" class="btn btn-xs btn-default btn-block bold" role="button">Quiz</a>
+                </div>
+                <div class="vNeg" data-negative-conjugation>
+                  <ul class="verb-conjugation-list">
+                    <li>
+                      <span class="" title="I did not live" data-tooltip>
+                        <span class='pron'>yo</span> no <span class='vReg'>viví</span>
+                      </span>
+                      <span class='audio-button  pull-right' data-audio-button data-audio-restricted>
+                        <i class='icon-play' aria-hidden='true' data-file="/speech/es/yo no viví"></i>
+                      </span>
+                    </li>
+                    <li>
+                      <span class="" title="you did not live" data-tooltip>
+                        <span class='pron'>tú</span> no <span class='vReg'>viviste</span>
+                      </span>
+                      <span class='audio-button  pull-right' data-audio-button data-audio-restricted>
+                        <i class='icon-play' aria-hidden='true' data-file="/speech/es/tú no viviste"></i>
+                      </span>
+                    </li>
+                    <li>
+                      <span class="" title="he/she/it did not live" data-tooltip>
+                        <span class='pron'>él</span> no <span class='vReg'>vivió</span>
+                      </span>
+                      <span class='audio-button  pull-right' data-audio-button data-audio-restricted>
+                        <i class='icon-play' aria-hidden='true' data-file="/speech/es/él no vivió"></i>
+                      </span>
+                    </li>
+                    <li>
+                      <span class="" title="we did not live" data-tooltip>
+                        <span class='pron'>nosotros</span> no <span class='vReg'>vivimos</span>
+                      </span>
+                      <span class='audio-button  pull-right' data-audio-button data-audio-restricted>
+                        <i class='icon-play' aria-hidden='true' data-file="/speech/es/nosotros no vivimos"></i>
+                      </span>
+                    </li>
+                    <li>
+                      <span class="" title="you did not live" data-tooltip>
+                        <span class='pron'>vosotros</span> no <span class='vReg'>vivisteis</span>
+                      </span>
+                      <span class='audio-button  pull-right' data-audio-button data-audio-restricted>
+                        <i class='icon-play' aria-hidden='true' data-file="/speech/es/vosotros no vivisteis"></i>
+                      </span>
+                    </li>
+                    <li>
+                      <span class="" title="they did not live" data-tooltip>
+                        <span class='pron'>ellos</span> no <span class='vReg'>vivieron</span>
+                      </span>
+                      <span class='audio-button  pull-right' data-audio-button data-audio-restricted>
+                        <i class='icon-play' aria-hidden='true' data-file="/speech/es/ellos no vivieron"></i>
+                      </span>
+                    </li>
+                  </ul>
+                  <a href="/spanish/verbs/quiz/?pn=neg&m=in&t=preterite&v=vivir" class="btn btn-xs btn-default bold btn-block" role="button">Quiz</a>
+                </div>
+              </section>
+              <section class="verb-tense-section">
+                <a href="/spanish/grammar/conditional-tense/" class="pull-right">
+                  <i class="icon-help-circled verb-tense-helper" aria-hidden="true" title="Click for more information on this tense"></i>
+                </a>
+                <h3>Conditional</h3>
+                <div class="vPos" data-positive-conjugation>
+                  <ul class="verb-conjugation-list">
+                    <li>
+                      <span class="" title="I would live" data-tooltip><span class='pron'>yo</span> <span class='vReg'>viviría</span></span>
+                      <span class='audio-button  pull-right' data-audio-button data-audio-restricted>
+                        <i class='icon-play' aria-hidden='true' data-file="/speech/es/yo viviría"></i>
+                      </span>
+                    </li>
+                    <li>
+                      <span class="" title="you would live" data-tooltip><span class='pron'>tú</span> <span class='vReg'>vivirías</span></span>
+                      <span class='audio-button  pull-right' data-audio-button data-audio-restricted>
+                        <i class='icon-play' aria-hidden='true' data-file="/speech/es/tú vivirías"></i>
+                      </span>
+                    </li>
+                    <li>
+                      <span class="" title="he/she/it would live" data-tooltip><span class='pron'>él</span> <span class='vReg'>viviría</span></span>
+                      <span class='audio-button  pull-right' data-audio-button data-audio-restricted>
+                        <i class='icon-play' aria-hidden='true' data-file="/speech/es/él viviría"></i>
+                      </span>
+                    </li>
+                    <li>
+                      <span class="" title="we would live" data-tooltip><span class='pron'>nosotros</span> <span class='vReg'>viviríamos</span></span>
+                      <span class='audio-button  pull-right' data-audio-button data-audio-restricted>
+                        <i class='icon-play' aria-hidden='true' data-file="/speech/es/nosotros viviríamos"></i>
+                      </span>
+                    </li>
+                    <li>
+                      <span class="" title="you would live" data-tooltip><span class='pron'>vosotros</span> <span class='vReg'>viviríais</span></span>
+                      <span class='audio-button  pull-right' data-audio-button data-audio-restricted>
+                        <i class='icon-play' aria-hidden='true' data-file="/speech/es/vosotros viviríais"></i>
+                      </span>
+                    </li>
+                    <li>
+                      <span class="" title="they would live" data-tooltip><span class='pron'>ellos</span> <span class='vReg'>vivirían</span></span>
+                      <span class='audio-button  pull-right' data-audio-button data-audio-restricted>
+                        <i class='icon-play' aria-hidden='true' data-file="/speech/es/ellos vivirían"></i>
+                      </span>
+                    </li>
+                  </ul>
+                  <a href="/spanish/verbs/quiz/?m=in&t=conditional&v=vivir" class="btn btn-xs btn-default btn-block bold" role="button">Quiz</a>
+                </div>
+                <div class="vNeg" data-negative-conjugation>
+                  <ul class="verb-conjugation-list">
+                    <li>
+                      <span class="" title="I would not live" data-tooltip>
+                        <span class='pron'>yo</span> no <span class='vReg'>viviría</span>
+                      </span>
+                      <span class='audio-button  pull-right' data-audio-button data-audio-restricted>
+                        <i class='icon-play' aria-hidden='true' data-file="/speech/es/yo no viviría"></i>
+                      </span>
+                    </li>
+                    <li>
+                      <span class="" title="you would not live" data-tooltip>
+                        <span class='pron'>tú</span> no <span class='vReg'>vivirías</span>
+                      </span>
+                      <span class='audio-button  pull-right' data-audio-button data-audio-restricted>
+                        <i class='icon-play' aria-hidden='true' data-file="/speech/es/tú no vivirías"></i>
+                      </span>
+                    </li>
+                    <li>
+                      <span class="" title="he/she/it would not live" data-tooltip>
+                        <span class='pron'>él</span> no <span class='vReg'>viviría</span>
+                      </span>
+                      <span class='audio-button  pull-right' data-audio-button data-audio-restricted>
+                        <i class='icon-play' aria-hidden='true' data-file="/speech/es/él no viviría"></i>
+                      </span>
+                    </li>
+                    <li>
+                      <span class="" title="we would not live" data-tooltip>
+                        <span class='pron'>nosotros</span> no <span class='vReg'>viviríamos</span>
+                      </span>
+                      <span class='audio-button  pull-right' data-audio-button data-audio-restricted>
+                        <i class='icon-play' aria-hidden='true' data-file="/speech/es/nosotros no viviríamos"></i>
+                      </span>
+                    </li>
+                    <li>
+                      <span class="" title="you would not live" data-tooltip>
+                        <span class='pron'>vosotros</span> no <span class='vReg'>viviríais</span>
+                      </span>
+                      <span class='audio-button  pull-right' data-audio-button data-audio-restricted>
+                        <i class='icon-play' aria-hidden='true' data-file="/speech/es/vosotros no viviríais"></i>
+                      </span>
+                    </li>
+                    <li>
+                      <span class="" title="they would not live" data-tooltip>
+                        <span class='pron'>ellos</span> no <span class='vReg'>vivirían</span>
+                      </span>
+                      <span class='audio-button  pull-right' data-audio-button data-audio-restricted>
+                        <i class='icon-play' aria-hidden='true' data-file="/speech/es/ellos no vivirían"></i>
+                      </span>
+                    </li>
+                  </ul>
+                  <a href="/spanish/verbs/quiz/?pn=neg&m=in&t=conditional&v=vivir" class="btn btn-xs btn-default bold btn-block" role="button">Quiz</a>
+                </div>
+              </section>
+              <section class="verb-tense-section">
+                <div class="alert alert-info">
+                  <h3>Confused by the preterite and imperfect?</h3>
+                  <p>Get our guide to the past tenses in Spanish.</p><br /><br />
+                  <a class="btn btn-success" href="https://www.getdrip.com/forms/830962806/submissions/new" data-drip-show-form="830962806">Click here</a>
+                </div>
+              </section>
+            </div>
+          </section>
+          <section class="verb-mood-section">
+            <div class="verb-polarity-buttons hidden-xs">
+              <button class="btn btn-xs btn-positive btn-active" data-positive-button>Positive</button>
+              <button class="btn btn-xs btn-negative" data-negative-button>Negative</button>
+            </div>
+            <h2>Vivir - Perfect</h2>
+            <div class="verb-polarity-buttons-mobile visible-xs-block">
+              <button class="btn btn-xs btn-positive btn-active" data-positive-button>Positive</button>
+              <button class="btn btn-xs btn-negative" data-negative-button>Negative</button>
+            </div>
+            <div class="conjugation-tense-container">
+              <section class="verb-tense-section">
+                <h3>Present Perfect</h3>
+                <div class="vPos" data-positive-conjugation>
+                  <ul class="verb-conjugation-list">
+                    <li>
+                      <span class="" title="I have lived" data-tooltip><span class='pron'>yo</span> <span class='aux'>he</span> <span class='vReg'>vivido</span></span>
+                      <span class='audio-button  pull-right' data-audio-button data-audio-restricted>
+                        <i class='icon-play' aria-hidden='true' data-file="/speech/es/yo he vivido"></i>
+                      </span>
+                    </li>
+                    <li>
+                      <span class="" title="you have lived" data-tooltip><span class='pron'>tú</span> <span class='aux'>has</span> <span class='vReg'>vivido</span></span>
+                      <span class='audio-button  pull-right' data-audio-button data-audio-restricted>
+                        <i class='icon-play' aria-hidden='true' data-file="/speech/es/tú has vivido"></i>
+                      </span>
+                    </li>
+                    <li>
+                      <span class="" title="he/she/it has lived" data-tooltip><span class='pron'>él</span> <span class='aux'>ha</span> <span class='vReg'>vivido</span></span>
+                      <span class='audio-button  pull-right' data-audio-button data-audio-restricted>
+                        <i class='icon-play' aria-hidden='true' data-file="/speech/es/él ha vivido"></i>
+                      </span>
+                    </li>
+                    <li>
+                      <span class="" title="we have lived" data-tooltip><span class='pron'>nosotros</span> <span class='aux'>hemos</span> <span class='vReg'>vivido</span></span>
+                      <span class='audio-button  pull-right' data-audio-button data-audio-restricted>
+                        <i class='icon-play' aria-hidden='true' data-file="/speech/es/nosotros hemos vivido"></i>
+                      </span>
+                    </li>
+                    <li>
+                      <span class="" title="you have lived" data-tooltip><span class='pron'>vosotros</span> <span class='aux'>habéis</span> <span class='vReg'>vivido</span></span>
+                      <span class='audio-button  pull-right' data-audio-button data-audio-restricted>
+                        <i class='icon-play' aria-hidden='true' data-file="/speech/es/vosotros habéis vivido"></i>
+                      </span>
+                    </li>
+                    <li>
+                      <span class="" title="they have lived" data-tooltip><span class='pron'>ellos</span> <span class='aux'>han</span> <span class='vReg'>vivido</span></span>
+                      <span class='audio-button  pull-right' data-audio-button data-audio-restricted>
+                        <i class='icon-play' aria-hidden='true' data-file="/speech/es/ellos han vivido"></i>
+                      </span>
+                    </li>
+                  </ul>
+                  <a href="/spanish/verbs/quiz/?m=in&t=perfectpresent&v=vivir" class="btn btn-xs btn-default btn-block bold" role="button">Quiz</a>
+                </div>
+                <div class="vNeg" data-negative-conjugation>
+                  <ul class="verb-conjugation-list">
+                    <li>
+                      <span class="" title="I have not lived" data-tooltip>
+                        <span class='pron'>yo</span> no <span class='aux'>he</span> <span class='vReg'>vivido</span>
+                      </span>
+                      <span class='audio-button  pull-right' data-audio-button data-audio-restricted>
+                        <i class='icon-play' aria-hidden='true' data-file="/speech/es/yo no he vivido"></i>
+                      </span>
+                    </li>
+                    <li>
+                      <span class="" title="you have not lived" data-tooltip>
+                        <span class='pron'>tú</span> no <span class='aux'>has</span> <span class='vReg'>vivido</span>
+                      </span>
+                      <span class='audio-button  pull-right' data-audio-button data-audio-restricted>
+                        <i class='icon-play' aria-hidden='true' data-file="/speech/es/tú no has vivido"></i>
+                      </span>
+                    </li>
+                    <li>
+                      <span class="" title="he/she/it has not lived" data-tooltip>
+                        <span class='pron'>él</span> no <span class='aux'>ha</span> <span class='vReg'>vivido</span>
+                      </span>
+                      <span class='audio-button  pull-right' data-audio-button data-audio-restricted>
+                        <i class='icon-play' aria-hidden='true' data-file="/speech/es/él no ha vivido"></i>
+                      </span>
+                    </li>
+                    <li>
+                      <span class="" title="we have not lived" data-tooltip>
+                        <span class='pron'>nosotros</span> no <span class='aux'>hemos</span> <span class='vReg'>vivido</span>
+                      </span>
+                      <span class='audio-button  pull-right' data-audio-button data-audio-restricted>
+                        <i class='icon-play' aria-hidden='true' data-file="/speech/es/nosotros no hemos vivido"></i>
+                      </span>
+                    </li>
+                    <li>
+                      <span class="" title="you have not lived" data-tooltip>
+                        <span class='pron'>vosotros</span> no <span class='aux'>habéis</span> <span class='vReg'>vivido</span>
+                      </span>
+                      <span class='audio-button  pull-right' data-audio-button data-audio-restricted>
+                        <i class='icon-play' aria-hidden='true' data-file="/speech/es/vosotros no habéis vivido"></i>
+                      </span>
+                    </li>
+                    <li>
+                      <span class="" title="they have not lived" data-tooltip>
+                        <span class='pron'>ellos</span> no <span class='aux'>han</span> <span class='vReg'>vivido</span>
+                      </span>
+                      <span class='audio-button  pull-right' data-audio-button data-audio-restricted>
+                        <i class='icon-play' aria-hidden='true' data-file="/speech/es/ellos no han vivido"></i>
+                      </span>
+                    </li>
+                  </ul>
+                  <a href="/spanish/verbs/quiz/?pn=neg&m=in&t=perfectpresent&v=vivir" class="btn btn-xs btn-default bold btn-block" role="button">Quiz</a>
+                </div>
+              </section>
+              <section class="verb-tense-section">
+                <h3>Future Perfect</h3>
+                <div class="vPos" data-positive-conjugation>
+                  <ul class="verb-conjugation-list">
+                    <li>
+                      <span class="" title="I will have lived" data-tooltip><span class='pron'>yo</span> <span class='aux'>habré</span> <span class='vReg'>vivido</span></span>
+                      <span class='audio-button  pull-right' data-audio-button data-audio-restricted>
+                        <i class='icon-play' aria-hidden='true' data-file="/speech/es/yo habré vivido"></i>
+                      </span>
+                    </li>
+                    <li>
+                      <span class="" title="you will have lived" data-tooltip><span class='pron'>tú</span> <span class='aux'>habrás</span> <span class='vReg'>vivido</span></span>
+                      <span class='audio-button  pull-right' data-audio-button data-audio-restricted>
+                        <i class='icon-play' aria-hidden='true' data-file="/speech/es/tú habrás vivido"></i>
+                      </span>
+                    </li>
+                    <li>
+                      <span class="" title="he/she/it will have lived" data-tooltip><span class='pron'>él</span> <span class='aux'>habrá</span> <span class='vReg'>vivido</span></span>
+                      <span class='audio-button  pull-right' data-audio-button data-audio-restricted>
+                        <i class='icon-play' aria-hidden='true' data-file="/speech/es/él habrá vivido"></i>
+                      </span>
+                    </li>
+                    <li>
+                      <span class="" title="we will have lived" data-tooltip><span class='pron'>nosotros</span> <span class='aux'>habremos</span> <span class='vReg'>vivido</span></span>
+                      <span class='audio-button  pull-right' data-audio-button data-audio-restricted>
+                        <i class='icon-play' aria-hidden='true' data-file="/speech/es/nosotros habremos vivido"></i>
+                      </span>
+                    </li>
+                    <li>
+                      <span class="" title="you will have lived" data-tooltip><span class='pron'>vosotros</span> <span class='aux'>habréis</span> <span class='vReg'>vivido</span></span>
+                      <span class='audio-button  pull-right' data-audio-button data-audio-restricted>
+                        <i class='icon-play' aria-hidden='true' data-file="/speech/es/vosotros habréis vivido"></i>
+                      </span>
+                    </li>
+                    <li>
+                      <span class="" title="they will have lived" data-tooltip><span class='pron'>ellos</span> <span class='aux'>habrán</span> <span class='vReg'>vivido</span></span>
+                      <span class='audio-button  pull-right' data-audio-button data-audio-restricted>
+                        <i class='icon-play' aria-hidden='true' data-file="/speech/es/ellos habrán vivido"></i>
+                      </span>
+                    </li>
+                  </ul>
+                  <a href="/spanish/verbs/quiz/?m=in&t=perfectfuture&v=vivir" class="btn btn-xs btn-default btn-block bold" role="button">Quiz</a>
+                </div>
+                <div class="vNeg" data-negative-conjugation>
+                  <ul class="verb-conjugation-list">
+                    <li>
+                      <span class="" title="I will not have lived" data-tooltip>
+                        <span class='pron'>yo</span> no <span class='aux'>habré</span> <span class='vReg'>vivido</span>
+                      </span>
+                      <span class='audio-button  pull-right' data-audio-button data-audio-restricted>
+                        <i class='icon-play' aria-hidden='true' data-file="/speech/es/yo no habré vivido"></i>
+                      </span>
+                    </li>
+                    <li>
+                      <span class="" title="you will not have lived" data-tooltip>
+                        <span class='pron'>tú</span> no <span class='aux'>habrás</span> <span class='vReg'>vivido</span>
+                      </span>
+                      <span class='audio-button  pull-right' data-audio-button data-audio-restricted>
+                        <i class='icon-play' aria-hidden='true' data-file="/speech/es/tú no habrás vivido"></i>
+                      </span>
+                    </li>
+                    <li>
+                      <span class="" title="he/she/it will not have lived" data-tooltip>
+                        <span class='pron'>él</span> no <span class='aux'>habrá</span> <span class='vReg'>vivido</span>
+                      </span>
+                      <span class='audio-button  pull-right' data-audio-button data-audio-restricted>
+                        <i class='icon-play' aria-hidden='true' data-file="/speech/es/él no habrá vivido"></i>
+                      </span>
+                    </li>
+                    <li>
+                      <span class="" title="we will not have lived" data-tooltip>
+                        <span class='pron'>nosotros</span> no <span class='aux'>habremos</span> <span class='vReg'>vivido</span>
+                      </span>
+                      <span class='audio-button  pull-right' data-audio-button data-audio-restricted>
+                        <i class='icon-play' aria-hidden='true' data-file="/speech/es/nosotros no habremos vivido"></i>
+                      </span>
+                    </li>
+                    <li>
+                      <span class="" title="you will not have lived" data-tooltip>
+                        <span class='pron'>vosotros</span> no <span class='aux'>habréis</span> <span class='vReg'>vivido</span>
+                      </span>
+                      <span class='audio-button  pull-right' data-audio-button data-audio-restricted>
+                        <i class='icon-play' aria-hidden='true' data-file="/speech/es/vosotros no habréis vivido"></i>
+                      </span>
+                    </li>
+                    <li>
+                      <span class="" title="they will not have lived" data-tooltip>
+                        <span class='pron'>ellos</span> no <span class='aux'>habrán</span> <span class='vReg'>vivido</span>
+                      </span>
+                      <span class='audio-button  pull-right' data-audio-button data-audio-restricted>
+                        <i class='icon-play' aria-hidden='true' data-file="/speech/es/ellos no habrán vivido"></i>
+                      </span>
+                    </li>
+                  </ul>
+                  <a href="/spanish/verbs/quiz/?pn=neg&m=in&t=perfectfuture&v=vivir" class="btn btn-xs btn-default bold btn-block" role="button">Quiz</a>
+                </div>
+              </section>
+              <section class="verb-tense-section">
+                <h3>Pluperfect</h3>
+                <div class="vPos" data-positive-conjugation>
+                  <ul class="verb-conjugation-list">
+                    <li>
+                      <span class="" title="I had lived" data-tooltip><span class='pron'>yo</span> <span class='aux'>había</span> <span class='vReg'>vivido</span></span>
+                      <span class='audio-button  pull-right' data-audio-button data-audio-restricted>
+                        <i class='icon-play' aria-hidden='true' data-file="/speech/es/yo había vivido"></i>
+                      </span>
+                    </li>
+                    <li>
+                      <span class="" title="you had lived" data-tooltip><span class='pron'>tú</span> <span class='aux'>habías</span> <span class='vReg'>vivido</span></span>
+                      <span class='audio-button  pull-right' data-audio-button data-audio-restricted>
+                        <i class='icon-play' aria-hidden='true' data-file="/speech/es/tú habías vivido"></i>
+                      </span>
+                    </li>
+                    <li>
+                      <span class="" title="he/she/it had lived" data-tooltip><span class='pron'>él</span> <span class='aux'>había</span> <span class='vReg'>vivido</span></span>
+                      <span class='audio-button  pull-right' data-audio-button data-audio-restricted>
+                        <i class='icon-play' aria-hidden='true' data-file="/speech/es/él había vivido"></i>
+                      </span>
+                    </li>
+                    <li>
+                      <span class="" title="we had lived" data-tooltip><span class='pron'>nosotros</span> <span class='aux'>habíamos</span> <span class='vReg'>vivido</span></span>
+                      <span class='audio-button  pull-right' data-audio-button data-audio-restricted>
+                        <i class='icon-play' aria-hidden='true' data-file="/speech/es/nosotros habíamos vivido"></i>
+                      </span>
+                    </li>
+                    <li>
+                      <span class="" title="you had lived" data-tooltip><span class='pron'>vosotros</span> <span class='aux'>habíais</span> <span class='vReg'>vivido</span></span>
+                      <span class='audio-button  pull-right' data-audio-button data-audio-restricted>
+                        <i class='icon-play' aria-hidden='true' data-file="/speech/es/vosotros habíais vivido"></i>
+                      </span>
+                    </li>
+                    <li>
+                      <span class="" title="they had lived" data-tooltip><span class='pron'>ellos</span> <span class='aux'>habían</span> <span class='vReg'>vivido</span></span>
+                      <span class='audio-button  pull-right' data-audio-button data-audio-restricted>
+                        <i class='icon-play' aria-hidden='true' data-file="/speech/es/ellos habían vivido"></i>
+                      </span>
+                    </li>
+                  </ul>
+                  <a href="/spanish/verbs/quiz/?m=in&t=perfectplu&v=vivir" class="btn btn-xs btn-default btn-block bold" role="button">Quiz</a>
+                </div>
+                <div class="vNeg" data-negative-conjugation>
+                  <ul class="verb-conjugation-list">
+                    <li>
+                      <span class="" title="I had not lived" data-tooltip>
+                        <span class='pron'>yo</span> no <span class='aux'>había</span> <span class='vReg'>vivido</span>
+                      </span>
+                      <span class='audio-button  pull-right' data-audio-button data-audio-restricted>
+                        <i class='icon-play' aria-hidden='true' data-file="/speech/es/yo no había vivido"></i>
+                      </span>
+                    </li>
+                    <li>
+                      <span class="" title="you had not lived" data-tooltip>
+                        <span class='pron'>tú</span> no <span class='aux'>habías</span> <span class='vReg'>vivido</span>
+                      </span>
+                      <span class='audio-button  pull-right' data-audio-button data-audio-restricted>
+                        <i class='icon-play' aria-hidden='true' data-file="/speech/es/tú no habías vivido"></i>
+                      </span>
+                    </li>
+                    <li>
+                      <span class="" title="he/she/it had not lived" data-tooltip>
+                        <span class='pron'>él</span> no <span class='aux'>había</span> <span class='vReg'>vivido</span>
+                      </span>
+                      <span class='audio-button  pull-right' data-audio-button data-audio-restricted>
+                        <i class='icon-play' aria-hidden='true' data-file="/speech/es/él no había vivido"></i>
+                      </span>
+                    </li>
+                    <li>
+                      <span class="" title="we had not lived" data-tooltip>
+                        <span class='pron'>nosotros</span> no <span class='aux'>habíamos</span> <span class='vReg'>vivido</span>
+                      </span>
+                      <span class='audio-button  pull-right' data-audio-button data-audio-restricted>
+                        <i class='icon-play' aria-hidden='true' data-file="/speech/es/nosotros no habíamos vivido"></i>
+                      </span>
+                    </li>
+                    <li>
+                      <span class="" title="you had not lived" data-tooltip>
+                        <span class='pron'>vosotros</span> no <span class='aux'>habíais</span> <span class='vReg'>vivido</span>
+                      </span>
+                      <span class='audio-button  pull-right' data-audio-button data-audio-restricted>
+                        <i class='icon-play' aria-hidden='true' data-file="/speech/es/vosotros no habíais vivido"></i>
+                      </span>
+                    </li>
+                    <li>
+                      <span class="" title="they had not lived" data-tooltip>
+                        <span class='pron'>ellos</span> no <span class='aux'>habían</span> <span class='vReg'>vivido</span>
+                      </span>
+                      <span class='audio-button  pull-right' data-audio-button data-audio-restricted>
+                        <i class='icon-play' aria-hidden='true' data-file="/speech/es/ellos no habían vivido"></i>
+                      </span>
+                    </li>
+                  </ul>
+                  <a href="/spanish/verbs/quiz/?pn=neg&m=in&t=perfectplu&v=vivir" class="btn btn-xs btn-default bold btn-block" role="button">Quiz</a>
+                </div>
+              </section>
+              <section class="verb-tense-section">
+                <h3>Conditional Perfect</h3>
+                <div class="vPos" data-positive-conjugation>
+                  <ul class="verb-conjugation-list">
+                    <li>
+                      <span class="" title="I would have lived" data-tooltip><span class='pron'>yo</span> <span class='aux'>habría</span> <span class='vReg'>vivido</span></span>
+                      <span class='audio-button  pull-right' data-audio-button data-audio-restricted>
+                        <i class='icon-play' aria-hidden='true' data-file="/speech/es/yo habría vivido"></i>
+                      </span>
+                    </li>
+                    <li>
+                      <span class="" title="you would have lived" data-tooltip><span class='pron'>tú</span> <span class='aux'>habrías</span> <span class='vReg'>vivido</span></span>
+                      <span class='audio-button  pull-right' data-audio-button data-audio-restricted>
+                        <i class='icon-play' aria-hidden='true' data-file="/speech/es/tú habrías vivido"></i>
+                      </span>
+                    </li>
+                    <li>
+                      <span class="" title="he/she/it would have lived" data-tooltip><span class='pron'>él</span> <span class='aux'>habría</span> <span class='vReg'>vivido</span></span>
+                      <span class='audio-button  pull-right' data-audio-button data-audio-restricted>
+                        <i class='icon-play' aria-hidden='true' data-file="/speech/es/él habría vivido"></i>
+                      </span>
+                    </li>
+                    <li>
+                      <span class="" title="we would have lived" data-tooltip><span class='pron'>nosotros</span> <span class='aux'>habríamos</span> <span class='vReg'>vivido</span></span>
+                      <span class='audio-button  pull-right' data-audio-button data-audio-restricted>
+                        <i class='icon-play' aria-hidden='true' data-file="/speech/es/nosotros habríamos vivido"></i>
+                      </span>
+                    </li>
+                    <li>
+                      <span class="" title="you would have lived" data-tooltip><span class='pron'>vosotros</span> <span class='aux'>habríais</span> <span class='vReg'>vivido</span></span>
+                      <span class='audio-button  pull-right' data-audio-button data-audio-restricted>
+                        <i class='icon-play' aria-hidden='true' data-file="/speech/es/vosotros habríais vivido"></i>
+                      </span>
+                    </li>
+                    <li>
+                      <span class="" title="they would have lived" data-tooltip><span class='pron'>ellos</span> <span class='aux'>habrían</span> <span class='vReg'>vivido</span></span>
+                      <span class='audio-button  pull-right' data-audio-button data-audio-restricted>
+                        <i class='icon-play' aria-hidden='true' data-file="/speech/es/ellos habrían vivido"></i>
+                      </span>
+                    </li>
+                  </ul>
+                  <a href="/spanish/verbs/quiz/?m=in&t=perfectconditional&v=vivir" class="btn btn-xs btn-default btn-block bold" role="button">Quiz</a>
+                </div>
+                <div class="vNeg" data-negative-conjugation>
+                  <ul class="verb-conjugation-list">
+                    <li>
+                      <span class="" title="I would not have lived" data-tooltip>
+                        <span class='pron'>yo</span> no <span class='aux'>habría</span> <span class='vReg'>vivido</span>
+                      </span>
+                      <span class='audio-button  pull-right' data-audio-button data-audio-restricted>
+                        <i class='icon-play' aria-hidden='true' data-file="/speech/es/yo no habría vivido"></i>
+                      </span>
+                    </li>
+                    <li>
+                      <span class="" title="you would not have lived" data-tooltip>
+                        <span class='pron'>tú</span> no <span class='aux'>habrías</span> <span class='vReg'>vivido</span>
+                      </span>
+                      <span class='audio-button  pull-right' data-audio-button data-audio-restricted>
+                        <i class='icon-play' aria-hidden='true' data-file="/speech/es/tú no habrías vivido"></i>
+                      </span>
+                    </li>
+                    <li>
+                      <span class="" title="he/she/it would not have lived" data-tooltip>
+                        <span class='pron'>él</span> no <span class='aux'>habría</span> <span class='vReg'>vivido</span>
+                      </span>
+                      <span class='audio-button  pull-right' data-audio-button data-audio-restricted>
+                        <i class='icon-play' aria-hidden='true' data-file="/speech/es/él no habría vivido"></i>
+                      </span>
+                    </li>
+                    <li>
+                      <span class="" title="we would not have lived" data-tooltip>
+                        <span class='pron'>nosotros</span> no <span class='aux'>habríamos</span> <span class='vReg'>vivido</span>
+                      </span>
+                      <span class='audio-button  pull-right' data-audio-button data-audio-restricted>
+                        <i class='icon-play' aria-hidden='true' data-file="/speech/es/nosotros no habríamos vivido"></i>
+                      </span>
+                    </li>
+                    <li>
+                      <span class="" title="you would not have lived" data-tooltip>
+                        <span class='pron'>vosotros</span> no <span class='aux'>habríais</span> <span class='vReg'>vivido</span>
+                      </span>
+                      <span class='audio-button  pull-right' data-audio-button data-audio-restricted>
+                        <i class='icon-play' aria-hidden='true' data-file="/speech/es/vosotros no habríais vivido"></i>
+                      </span>
+                    </li>
+                    <li>
+                      <span class="" title="they would not have lived" data-tooltip>
+                        <span class='pron'>ellos</span> no <span class='aux'>habrían</span> <span class='vReg'>vivido</span>
+                      </span>
+                      <span class='audio-button  pull-right' data-audio-button data-audio-restricted>
+                        <i class='icon-play' aria-hidden='true' data-file="/speech/es/ellos no habrían vivido"></i>
+                      </span>
+                    </li>
+                  </ul>
+                  <a href="/spanish/verbs/quiz/?pn=neg&m=in&t=perfectconditional&v=vivir" class="btn btn-xs btn-default bold btn-block" role="button">Quiz</a>
+                </div>
+              </section>
+              <section class="verb-tense-section">
+                <h3>Past Anterior</h3>
+                <div class="vPos" data-positive-conjugation>
+                  <ul class="verb-conjugation-list">
+                    <li>
+                      <span class="" title="I had lived" data-tooltip><span class='pron'>yo</span> <span class='aux'>hube</span> <span class='vReg'>vivido</span></span>
+                      <span class='audio-button  pull-right' data-audio-button data-audio-restricted>
+                        <i class='icon-play' aria-hidden='true' data-file="/speech/es/yo hube vivido"></i>
+                      </span>
+                    </li>
+                    <li>
+                      <span class="" title="you had lived" data-tooltip><span class='pron'>tú</span> <span class='aux'>hubiste</span> <span class='vReg'>vivido</span></span>
+                      <span class='audio-button  pull-right' data-audio-button data-audio-restricted>
+                        <i class='icon-play' aria-hidden='true' data-file="/speech/es/tú hubiste vivido"></i>
+                      </span>
+                    </li>
+                    <li>
+                      <span class="" title="he/she/it had lived" data-tooltip><span class='pron'>él</span> <span class='aux'>hubo</span> <span class='vReg'>vivido</span></span>
+                      <span class='audio-button  pull-right' data-audio-button data-audio-restricted>
+                        <i class='icon-play' aria-hidden='true' data-file="/speech/es/él hubo vivido"></i>
+                      </span>
+                    </li>
+                    <li>
+                      <span class="" title="we had lived" data-tooltip><span class='pron'>nosotros</span> <span class='aux'>hubimos</span> <span class='vReg'>vivido</span></span>
+                      <span class='audio-button  pull-right' data-audio-button data-audio-restricted>
+                        <i class='icon-play' aria-hidden='true' data-file="/speech/es/nosotros hubimos vivido"></i>
+                      </span>
+                    </li>
+                    <li>
+                      <span class="" title="you had lived" data-tooltip><span class='pron'>vosotros</span> <span class='aux'>hubisteis</span> <span class='vReg'>vivido</span></span>
+                      <span class='audio-button  pull-right' data-audio-button data-audio-restricted>
+                        <i class='icon-play' aria-hidden='true' data-file="/speech/es/vosotros hubisteis vivido"></i>
+                      </span>
+                    </li>
+                    <li>
+                      <span class="" title="they had lived" data-tooltip><span class='pron'>ellos</span> <span class='aux'>hubieron</span> <span class='vReg'>vivido</span></span>
+                      <span class='audio-button  pull-right' data-audio-button data-audio-restricted>
+                        <i class='icon-play' aria-hidden='true' data-file="/speech/es/ellos hubieron vivido"></i>
+                      </span>
+                    </li>
+                  </ul>
+                  <a href="/spanish/verbs/quiz/?m=in&t=perfectpastanterior&v=vivir" class="btn btn-xs btn-default btn-block bold" role="button">Quiz</a>
+                </div>
+                <div class="vNeg" data-negative-conjugation>
+                  <ul class="verb-conjugation-list">
+                    <li>
+                      <span class="" title="I had not lived" data-tooltip>
+                        <span class='pron'>yo</span> no <span class='aux'>hube</span> <span class='vReg'>vivido</span>
+                      </span>
+                      <span class='audio-button  pull-right' data-audio-button data-audio-restricted>
+                        <i class='icon-play' aria-hidden='true' data-file="/speech/es/yo no hube vivido"></i>
+                      </span>
+                    </li>
+                    <li>
+                      <span class="" title="you had not lived" data-tooltip>
+                        <span class='pron'>tú</span> no <span class='aux'>hubiste</span> <span class='vReg'>vivido</span>
+                      </span>
+                      <span class='audio-button  pull-right' data-audio-button data-audio-restricted>
+                        <i class='icon-play' aria-hidden='true' data-file="/speech/es/tú no hubiste vivido"></i>
+                      </span>
+                    </li>
+                    <li>
+                      <span class="" title="he/she/it had not lived" data-tooltip>
+                        <span class='pron'>él</span> no <span class='aux'>hubo</span> <span class='vReg'>vivido</span>
+                      </span>
+                      <span class='audio-button  pull-right' data-audio-button data-audio-restricted>
+                        <i class='icon-play' aria-hidden='true' data-file="/speech/es/él no hubo vivido"></i>
+                      </span>
+                    </li>
+                    <li>
+                      <span class="" title="we had not lived" data-tooltip>
+                        <span class='pron'>nosotros</span> no <span class='aux'>hubimos</span> <span class='vReg'>vivido</span>
+                      </span>
+                      <span class='audio-button  pull-right' data-audio-button data-audio-restricted>
+                        <i class='icon-play' aria-hidden='true' data-file="/speech/es/nosotros no hubimos vivido"></i>
+                      </span>
+                    </li>
+                    <li>
+                      <span class="" title="you had not lived" data-tooltip>
+                        <span class='pron'>vosotros</span> no <span class='aux'>hubisteis</span> <span class='vReg'>vivido</span>
+                      </span>
+                      <span class='audio-button  pull-right' data-audio-button data-audio-restricted>
+                        <i class='icon-play' aria-hidden='true' data-file="/speech/es/vosotros no hubisteis vivido"></i>
+                      </span>
+                    </li>
+                    <li>
+                      <span class="" title="they had not lived" data-tooltip>
+                        <span class='pron'>ellos</span> no <span class='aux'>hubieron</span> <span class='vReg'>vivido</span>
+                      </span>
+                      <span class='audio-button  pull-right' data-audio-button data-audio-restricted>
+                        <i class='icon-play' aria-hidden='true' data-file="/speech/es/ellos no hubieron vivido"></i>
+                      </span>
+                    </li>
+                  </ul>
+                  <a href="/spanish/verbs/quiz/?pn=neg&m=in&t=perfectpastanterior&v=vivir" class="btn btn-xs btn-default bold btn-block" role="button">Quiz</a>
+                </div>
+              </section>
+            </div>
+          </section>
+          <section class="verb-mood-section">
+            <div class="verb-polarity-buttons hidden-xs">
+              <button class="btn btn-xs btn-positive btn-active" data-positive-button>Positive</button>
+              <button class="btn btn-xs btn-negative" data-negative-button>Negative</button>
+            </div>
+            <h2>Vivir - Subjunctive</h2>
+            <div class="verb-polarity-buttons-mobile visible-xs-block">
+              <button class="btn btn-xs btn-positive btn-active" data-positive-button>Positive</button>
+              <button class="btn btn-xs btn-negative" data-negative-button>Negative</button>
+            </div>
+            <div class="conjugation-tense-container">
+              <section class="verb-tense-section">
+                <h3>Present</h3>
+                <div class="vPos" data-positive-conjugation>
+                  <ul class="verb-conjugation-list">
+                    <li>
+                      <span class="" title="I live, I am living" data-tooltip><span class='pron'>yo</span> <span class='vReg'>viva</span></span>
+                      <span class='audio-button  pull-right' data-audio-button data-audio-restricted>
+                        <i class='icon-play' aria-hidden='true' data-file="/speech/es/yo viva"></i>
+                      </span>
+                    </li>
+                    <li>
+                      <span class="" title="you live, you are living" data-tooltip><span class='pron'>tú</span> <span class='vReg'>vivas</span></span>
+                      <span class='audio-button  pull-right' data-audio-button data-audio-restricted>
+                        <i class='icon-play' aria-hidden='true' data-file="/speech/es/tú vivas"></i>
+                      </span>
+                    </li>
+                    <li>
+                      <span class="" title="he/she/it lives, he/she/it is living" data-tooltip><span class='pron'>él</span> <span class='vReg'>viva</span></span>
+                      <span class='audio-button  pull-right' data-audio-button data-audio-restricted>
+                        <i class='icon-play' aria-hidden='true' data-file="/speech/es/él viva"></i>
+                      </span>
+                    </li>
+                    <li>
+                      <span class="" title="we live, we are living" data-tooltip><span class='pron'>nosotros</span> <span class='vReg'>vivamos</span></span>
+                      <span class='audio-button  pull-right' data-audio-button data-audio-restricted>
+                        <i class='icon-play' aria-hidden='true' data-file="/speech/es/nosotros vivamos"></i>
+                      </span>
+                    </li>
+                    <li>
+                      <span class="" title="you live, you are living" data-tooltip><span class='pron'>vosotros</span> <span class='vReg'>viváis</span></span>
+                      <span class='audio-button  pull-right' data-audio-button data-audio-restricted>
+                        <i class='icon-play' aria-hidden='true' data-file="/speech/es/vosotros viváis"></i>
+                      </span>
+                    </li>
+                    <li>
+                      <span class="" title="they live, they are living" data-tooltip><span class='pron'>ellos</span> <span class='vReg'>vivan</span></span>
+                      <span class='audio-button  pull-right' data-audio-button data-audio-restricted>
+                        <i class='icon-play' aria-hidden='true' data-file="/speech/es/ellos vivan"></i>
+                      </span>
+                    </li>
+                  </ul>
+                  <a href="/spanish/verbs/quiz/?m=s&t=present&v=vivir" class="btn btn-xs btn-default btn-block bold" role="button">Quiz</a>
+                </div>
+                <div class="vNeg" data-negative-conjugation>
+                  <ul class="verb-conjugation-list">
+                    <li>
+                      <span class="" title="I do not live, I am not living" data-tooltip>
+                        <span class='pron'>yo</span> no <span class='vReg'>viva</span>
+                      </span>
+                      <span class='audio-button  pull-right' data-audio-button data-audio-restricted>
+                        <i class='icon-play' aria-hidden='true' data-file="/speech/es/yo no viva"></i>
+                      </span>
+                    </li>
+                    <li>
+                      <span class="" title="you do not live, you are not living" data-tooltip>
+                        <span class='pron'>tú</span> no <span class='vReg'>vivas</span>
+                      </span>
+                      <span class='audio-button  pull-right' data-audio-button data-audio-restricted>
+                        <i class='icon-play' aria-hidden='true' data-file="/speech/es/tú no vivas"></i>
+                      </span>
+                    </li>
+                    <li>
+                      <span class="" title="he/she/it does not live, he/she/it is not living" data-tooltip>
+                        <span class='pron'>él</span> no <span class='vReg'>viva</span>
+                      </span>
+                      <span class='audio-button  pull-right' data-audio-button data-audio-restricted>
+                        <i class='icon-play' aria-hidden='true' data-file="/speech/es/él no viva"></i>
+                      </span>
+                    </li>
+                    <li>
+                      <span class="" title="we do not live, we are not living" data-tooltip>
+                        <span class='pron'>nosotros</span> no <span class='vReg'>vivamos</span>
+                      </span>
+                      <span class='audio-button  pull-right' data-audio-button data-audio-restricted>
+                        <i class='icon-play' aria-hidden='true' data-file="/speech/es/nosotros no vivamos"></i>
+                      </span>
+                    </li>
+                    <li>
+                      <span class="" title="you do not live, you are not living" data-tooltip>
+                        <span class='pron'>vosotros</span> no <span class='vReg'>viváis</span>
+                      </span>
+                      <span class='audio-button  pull-right' data-audio-button data-audio-restricted>
+                        <i class='icon-play' aria-hidden='true' data-file="/speech/es/vosotros no viváis"></i>
+                      </span>
+                    </li>
+                    <li>
+                      <span class="" title="they do not live, they are not living" data-tooltip>
+                        <span class='pron'>ellos</span> no <span class='vReg'>vivan</span>
+                      </span>
+                      <span class='audio-button  pull-right' data-audio-button data-audio-restricted>
+                        <i class='icon-play' aria-hidden='true' data-file="/speech/es/ellos no vivan"></i>
+                      </span>
+                    </li>
+                  </ul>
+                  <a href="/spanish/verbs/quiz/?pn=neg&m=s&t=present&v=vivir" class="btn btn-xs btn-default bold btn-block" role="button">Quiz</a>
+                </div>
+              </section>
+              <section class="verb-tense-section">
+                <h3>Imperfect</h3>
+                <div class="vPos" data-positive-conjugation>
+                  <ul class="verb-conjugation-list">
+                    <li>
+                      <span class="" title="I lived, I was living" data-tooltip><span class='pron'>yo</span> <span class='vReg'>viviera</span></span>
+                      <span class='audio-button  pull-right' data-audio-button data-audio-restricted>
+                        <i class='icon-play' aria-hidden='true' data-file="/speech/es/yo viviera"></i>
+                      </span>
+                    </li>
+                    <li>
+                      <span class="" title="you lived, you were living" data-tooltip><span class='pron'>tú</span> <span class='vReg'>vivieras</span></span>
+                      <span class='audio-button  pull-right' data-audio-button data-audio-restricted>
+                        <i class='icon-play' aria-hidden='true' data-file="/speech/es/tú vivieras"></i>
+                      </span>
+                    </li>
+                    <li>
+                      <span class="" title="he/she/it lived, he/she/it was living" data-tooltip><span class='pron'>él</span> <span class='vReg'>viviera</span></span>
+                      <span class='audio-button  pull-right' data-audio-button data-audio-restricted>
+                        <i class='icon-play' aria-hidden='true' data-file="/speech/es/él viviera"></i>
+                      </span>
+                    </li>
+                    <li>
+                      <span class="" title="we lived, we were living" data-tooltip><span class='pron'>nosotros</span> <span class='vReg'>viviéramos</span></span>
+                      <span class='audio-button  pull-right' data-audio-button data-audio-restricted>
+                        <i class='icon-play' aria-hidden='true' data-file="/speech/es/nosotros viviéramos"></i>
+                      </span>
+                    </li>
+                    <li>
+                      <span class="" title="you lived, you were living" data-tooltip><span class='pron'>vosotros</span> <span class='vReg'>vivierais</span></span>
+                      <span class='audio-button  pull-right' data-audio-button data-audio-restricted>
+                        <i class='icon-play' aria-hidden='true' data-file="/speech/es/vosotros vivierais"></i>
+                      </span>
+                    </li>
+                    <li>
+                      <span class="" title="they lived, they were living" data-tooltip><span class='pron'>ellos</span> <span class='vReg'>vivieran</span></span>
+                      <span class='audio-button  pull-right' data-audio-button data-audio-restricted>
+                        <i class='icon-play' aria-hidden='true' data-file="/speech/es/ellos vivieran"></i>
+                      </span>
+                    </li>
+                  </ul>
+                  <a href="/spanish/verbs/quiz/?m=s&t=imperfect&v=vivir" class="btn btn-xs btn-default btn-block bold" role="button">Quiz</a>
+                </div>
+                <div class="vNeg" data-negative-conjugation>
+                  <ul class="verb-conjugation-list">
+                    <li>
+                      <span class="" title="I did not live, I was not living" data-tooltip>
+                        <span class='pron'>yo</span> no <span class='vReg'>viviera</span>
+                      </span>
+                      <span class='audio-button  pull-right' data-audio-button data-audio-restricted>
+                        <i class='icon-play' aria-hidden='true' data-file="/speech/es/yo no viviera"></i>
+                      </span>
+                    </li>
+                    <li>
+                      <span class="" title="you did not live, you were not living" data-tooltip>
+                        <span class='pron'>tú</span> no <span class='vReg'>vivieras</span>
+                      </span>
+                      <span class='audio-button  pull-right' data-audio-button data-audio-restricted>
+                        <i class='icon-play' aria-hidden='true' data-file="/speech/es/tú no vivieras"></i>
+                      </span>
+                    </li>
+                    <li>
+                      <span class="" title="he/she/it did not live, he/she/it was not living" data-tooltip>
+                        <span class='pron'>él</span> no <span class='vReg'>viviera</span>
+                      </span>
+                      <span class='audio-button  pull-right' data-audio-button data-audio-restricted>
+                        <i class='icon-play' aria-hidden='true' data-file="/speech/es/él no viviera"></i>
+                      </span>
+                    </li>
+                    <li>
+                      <span class="" title="we did not live, we were not living" data-tooltip>
+                        <span class='pron'>nosotros</span> no <span class='vReg'>viviéramos</span>
+                      </span>
+                      <span class='audio-button  pull-right' data-audio-button data-audio-restricted>
+                        <i class='icon-play' aria-hidden='true' data-file="/speech/es/nosotros no viviéramos"></i>
+                      </span>
+                    </li>
+                    <li>
+                      <span class="" title="you did not live, you were not living" data-tooltip>
+                        <span class='pron'>vosotros</span> no <span class='vReg'>vivierais</span>
+                      </span>
+                      <span class='audio-button  pull-right' data-audio-button data-audio-restricted>
+                        <i class='icon-play' aria-hidden='true' data-file="/speech/es/vosotros no vivierais"></i>
+                      </span>
+                    </li>
+                    <li>
+                      <span class="" title="they did not live, they were not living" data-tooltip>
+                        <span class='pron'>ellos</span> no <span class='vReg'>vivieran</span>
+                      </span>
+                      <span class='audio-button  pull-right' data-audio-button data-audio-restricted>
+                        <i class='icon-play' aria-hidden='true' data-file="/speech/es/ellos no vivieran"></i>
+                      </span>
+                    </li>
+                  </ul>
+                  <a href="/spanish/verbs/quiz/?pn=neg&m=s&t=imperfect&v=vivir" class="btn btn-xs btn-default bold btn-block" role="button">Quiz</a>
+                </div>
+              </section>
+              <section class="verb-tense-section">
+
+                <h3>Imperfect 2</h3>
+                <div class="vPos" data-positive-conjugation>
+                  <ul class="verb-conjugation-list">
+                    <li>
+                      <span class="" title="I lived, I was living" data-tooltip><span class='pron'>yo</span> <span class='vReg'>viviese</span></span>
+                      <span class='audio-button  pull-right' data-audio-button data-audio-restricted>
+                        <i class='icon-play' aria-hidden='true' data-file="/speech/es/yo viviese"></i>
+                      </span>
+                    </li>
+                    <li>
+                      <span class="" title="you lived, you were living" data-tooltip><span class='pron'>tú</span> <span class='vReg'>vivieses</span></span>
+                      <span class='audio-button  pull-right' data-audio-button data-audio-restricted>
+                        <i class='icon-play' aria-hidden='true' data-file="/speech/es/tú vivieses"></i>
+                      </span>
+                    </li>
+                    <li>
+                      <span class="" title="he/she/it lived, he/she/it was living" data-tooltip><span class='pron'>él</span> <span class='vReg'>viviese</span></span>
+                      <span class='audio-button  pull-right' data-audio-button data-audio-restricted>
+                        <i class='icon-play' aria-hidden='true' data-file="/speech/es/él viviese"></i>
+                      </span>
+                    </li>
+                    <li>
+                      <span class="" title="we lived, we were living" data-tooltip><span class='pron'>nosotros</span> <span class='vReg'>viviésemos</span></span>
+                      <span class='audio-button  pull-right' data-audio-button data-audio-restricted>
+                        <i class='icon-play' aria-hidden='true' data-file="/speech/es/nosotros viviésemos"></i>
+                      </span>
+                    </li>
+                    <li>
+                      <span class="" title="you lived, you were living" data-tooltip><span class='pron'>vosotros</span> <span class='vReg'>vivieseis</span></span>
+                      <span class='audio-button  pull-right' data-audio-button data-audio-restricted>
+                        <i class='icon-play' aria-hidden='true' data-file="/speech/es/vosotros vivieseis"></i>
+                      </span>
+                    </li>
+                    <li>
+                      <span class="" title="they lived, they were living" data-tooltip><span class='pron'>ellos</span> <span class='vReg'>viviesen</span></span>
+                      <span class='audio-button  pull-right' data-audio-button data-audio-restricted>
+                        <i class='icon-play' aria-hidden='true' data-file="/speech/es/ellos viviesen"></i>
+                      </span>
+                    </li>
+                  </ul>
+                  <a href="/spanish/verbs/quiz/?m=s&t=imperfect2&v=vivir" class="btn btn-xs btn-default btn-block bold" role="button">Quiz</a>
+                </div>
+                <div class="vNeg" data-negative-conjugation>
+                  <ul class="verb-conjugation-list">
+                    <li>
+                      <span class="" title="I did not live, I was not living" data-tooltip>
+                        <span class='pron'>yo</span> no <span class='vReg'>viviese</span>
+                      </span>
+                      <span class='audio-button  pull-right' data-audio-button data-audio-restricted>
+                        <i class='icon-play' aria-hidden='true' data-file="/speech/es/yo no viviese"></i>
+                      </span>
+                    </li>
+                    <li>
+                      <span class="" title="you did not live, you were not living" data-tooltip>
+                        <span class='pron'>tú</span> no <span class='vReg'>vivieses</span>
+                      </span>
+                      <span class='audio-button  pull-right' data-audio-button data-audio-restricted>
+                        <i class='icon-play' aria-hidden='true' data-file="/speech/es/tú no vivieses"></i>
+                      </span>
+                    </li>
+                    <li>
+                      <span class="" title="he/she/it did not live, he/she/it was not living" data-tooltip>
+                        <span class='pron'>él</span> no <span class='vReg'>viviese</span>
+                      </span>
+                      <span class='audio-button  pull-right' data-audio-button data-audio-restricted>
+                        <i class='icon-play' aria-hidden='true' data-file="/speech/es/él no viviese"></i>
+                      </span>
+                    </li>
+                    <li>
+                      <span class="" title="we did not live, we were not living" data-tooltip>
+                        <span class='pron'>nosotros</span> no <span class='vReg'>viviésemos</span>
+                      </span>
+                      <span class='audio-button  pull-right' data-audio-button data-audio-restricted>
+                        <i class='icon-play' aria-hidden='true' data-file="/speech/es/nosotros no viviésemos"></i>
+                      </span>
+                    </li>
+                    <li>
+                      <span class="" title="you did not live, you were not living" data-tooltip>
+                        <span class='pron'>vosotros</span> no <span class='vReg'>vivieseis</span>
+                      </span>
+                      <span class='audio-button  pull-right' data-audio-button data-audio-restricted>
+                        <i class='icon-play' aria-hidden='true' data-file="/speech/es/vosotros no vivieseis"></i>
+                      </span>
+                    </li>
+                    <li>
+                      <span class="" title="they did not live, they were not living" data-tooltip>
+                        <span class='pron'>ellos</span> no <span class='vReg'>viviesen</span>
+                      </span>
+                      <span class='audio-button  pull-right' data-audio-button data-audio-restricted>
+                        <i class='icon-play' aria-hidden='true' data-file="/speech/es/ellos no viviesen"></i>
+                      </span>
+                    </li>
+                  </ul>
+                  <a href="/spanish/verbs/quiz/?pn=neg&m=s&t=imperfect2&v=vivir" class="btn btn-xs btn-default bold btn-block" role="button">Quiz</a>
+                </div>
+              </section>
+              <section class="verb-tense-section">
+                <h3>Future</h3>
+                <div class="vPos" data-positive-conjugation>
+                  <ul class="verb-conjugation-list">
+                    <li>
+                      <span class="" title="I will live" data-tooltip><span class='pron'>yo</span> <span class='vReg'>viviere</span></span>
+                      <span class='audio-button  pull-right' data-audio-button data-audio-restricted>
+                        <i class='icon-play' aria-hidden='true' data-file="/speech/es/yo viviere"></i>
+                      </span>
+                    </li>
+                    <li>
+                      <span class="" title="you will live" data-tooltip><span class='pron'>tú</span> <span class='vReg'>vivieres</span></span>
+                      <span class='audio-button  pull-right' data-audio-button data-audio-restricted>
+                        <i class='icon-play' aria-hidden='true' data-file="/speech/es/tú vivieres"></i>
+                      </span>
+                    </li>
+                    <li>
+                      <span class="" title="he/she/it will live" data-tooltip><span class='pron'>él</span> <span class='vReg'>viviere</span></span>
+                      <span class='audio-button  pull-right' data-audio-button data-audio-restricted>
+                        <i class='icon-play' aria-hidden='true' data-file="/speech/es/él viviere"></i>
+                      </span>
+                    </li>
+                    <li>
+                      <span class="" title="we will live" data-tooltip><span class='pron'>nosotros</span> <span class='vReg'>viviéremos</span></span>
+                      <span class='audio-button  pull-right' data-audio-button data-audio-restricted>
+                        <i class='icon-play' aria-hidden='true' data-file="/speech/es/nosotros viviéremos"></i>
+                      </span>
+                    </li>
+                    <li>
+                      <span class="" title="you will live" data-tooltip><span class='pron'>vosotros</span> <span class='vReg'>viviereis</span></span>
+                      <span class='audio-button  pull-right' data-audio-button data-audio-restricted>
+                        <i class='icon-play' aria-hidden='true' data-file="/speech/es/vosotros viviereis"></i>
+                      </span>
+                    </li>
+                    <li>
+                      <span class="" title="they will live" data-tooltip><span class='pron'>ellos</span> <span class='vReg'>vivieren</span></span>
+                      <span class='audio-button  pull-right' data-audio-button data-audio-restricted>
+                        <i class='icon-play' aria-hidden='true' data-file="/speech/es/ellos vivieren"></i>
+                      </span>
+                    </li>
+                  </ul>
+                  <a href="/spanish/verbs/quiz/?m=s&t=future&v=vivir" class="btn btn-xs btn-default btn-block bold" role="button">Quiz</a>
+                </div>
+                <div class="vNeg" data-negative-conjugation>
+                  <ul class="verb-conjugation-list">
+                    <li>
+                      <span class="" title="I will not live" data-tooltip>
+                        <span class='pron'>yo</span> no <span class='vReg'>viviere</span>
+                      </span>
+                      <span class='audio-button  pull-right' data-audio-button data-audio-restricted>
+                        <i class='icon-play' aria-hidden='true' data-file="/speech/es/yo no viviere"></i>
+                      </span>
+                    </li>
+                    <li>
+                      <span class="" title="you will not live" data-tooltip>
+                        <span class='pron'>tú</span> no <span class='vReg'>vivieres</span>
+                      </span>
+                      <span class='audio-button  pull-right' data-audio-button data-audio-restricted>
+                        <i class='icon-play' aria-hidden='true' data-file="/speech/es/tú no vivieres"></i>
+                      </span>
+                    </li>
+                    <li>
+                      <span class="" title="he/she/it will not live" data-tooltip>
+                        <span class='pron'>él</span> no <span class='vReg'>viviere</span>
+                      </span>
+                      <span class='audio-button  pull-right' data-audio-button data-audio-restricted>
+                        <i class='icon-play' aria-hidden='true' data-file="/speech/es/él no viviere"></i>
+                      </span>
+                    </li>
+                    <li>
+                      <span class="" title="we will not live" data-tooltip>
+                        <span class='pron'>nosotros</span> no <span class='vReg'>viviéremos</span>
+                      </span>
+                      <span class='audio-button  pull-right' data-audio-button data-audio-restricted>
+                        <i class='icon-play' aria-hidden='true' data-file="/speech/es/nosotros no viviéremos"></i>
+                      </span>
+                    </li>
+                    <li>
+                      <span class="" title="you will not live" data-tooltip>
+                        <span class='pron'>vosotros</span> no <span class='vReg'>viviereis</span>
+                      </span>
+                      <span class='audio-button  pull-right' data-audio-button data-audio-restricted>
+                        <i class='icon-play' aria-hidden='true' data-file="/speech/es/vosotros no viviereis"></i>
+                      </span>
+                    </li>
+                    <li>
+                      <span class="" title="they will not live" data-tooltip>
+                        <span class='pron'>ellos</span> no <span class='vReg'>vivieren</span>
+                      </span>
+                      <span class='audio-button  pull-right' data-audio-button data-audio-restricted>
+                        <i class='icon-play' aria-hidden='true' data-file="/speech/es/ellos no vivieren"></i>
+                      </span>
+                    </li>
+                  </ul>
+                  <a href="/spanish/verbs/quiz/?pn=neg&m=s&t=future&v=vivir" class="btn btn-xs btn-default bold btn-block" role="button">Quiz</a>
+                </div>
+              </section>
+            </div>
+          </section>
+          <section class="verb-mood-section">
+            <div class="verb-polarity-buttons hidden-xs">
+              <button class="btn btn-xs btn-positive btn-active" data-positive-button>Positive</button>
+              <button class="btn btn-xs btn-negative" data-negative-button>Negative</button>
+            </div>
+            <h2>Vivir - Subjunctive Perfect</h2>
+            <div class="verb-polarity-buttons-mobile visible-xs-block">
+              <button class="btn btn-xs btn-positive btn-active" data-positive-button>Positive</button>
+              <button class="btn btn-xs btn-negative" data-negative-button>Negative</button>
+            </div>
+            <div class="conjugation-tense-container">
+              <section class="verb-tense-section">
+                <h3>Present Perfect</h3>
+                <div class="vPos" data-positive-conjugation>
+                  <ul class="verb-conjugation-list">
+                    <li>
+                      <span class="" title="I have lived" data-tooltip><span class='pron'>yo</span> <span class='aux'>haya</span> <span class='vReg'>vivido</span></span>
+                      <span class='audio-button  pull-right' data-audio-button data-audio-restricted>
+                        <i class='icon-play' aria-hidden='true' data-file="/speech/es/yo haya vivido"></i>
+                      </span>
+                    </li>
+                    <li>
+                      <span class="" title="you have lived" data-tooltip><span class='pron'>tú</span> <span class='aux'>hayas</span> <span class='vReg'>vivido</span></span>
+                      <span class='audio-button  pull-right' data-audio-button data-audio-restricted>
+                        <i class='icon-play' aria-hidden='true' data-file="/speech/es/tú hayas vivido"></i>
+                      </span>
+                    </li>
+                    <li>
+                      <span class="" title="he/she/it has lived" data-tooltip><span class='pron'>él</span> <span class='aux'>haya</span> <span class='vReg'>vivido</span></span>
+                      <span class='audio-button  pull-right' data-audio-button data-audio-restricted>
+                        <i class='icon-play' aria-hidden='true' data-file="/speech/es/él haya vivido"></i>
+                      </span>
+                    </li>
+                    <li>
+                      <span class="" title="we have lived" data-tooltip><span class='pron'>nosotros</span> <span class='aux'>hayamos</span> <span class='vReg'>vivido</span></span>
+                      <span class='audio-button  pull-right' data-audio-button data-audio-restricted>
+                        <i class='icon-play' aria-hidden='true' data-file="/speech/es/nosotros hayamos vivido"></i>
+                      </span>
+                    </li>
+                    <li>
+                      <span class="" title="you have lived" data-tooltip><span class='pron'>vosotros</span> <span class='aux'>hayáis</span> <span class='vReg'>vivido</span></span>
+                      <span class='audio-button  pull-right' data-audio-button data-audio-restricted>
+                        <i class='icon-play' aria-hidden='true' data-file="/speech/es/vosotros hayáis vivido"></i>
+                      </span>
+                    </li>
+                    <li>
+                      <span class="" title="they have lived" data-tooltip><span class='pron'>ellos</span> <span class='aux'>hayan</span> <span class='vReg'>vivido</span></span>
+                      <span class='audio-button  pull-right' data-audio-button data-audio-restricted>
+                        <i class='icon-play' aria-hidden='true' data-file="/speech/es/ellos hayan vivido"></i>
+                      </span>
+                    </li>
+                  </ul>
+                  <a href="/spanish/verbs/quiz/?m=s&t=perfectpresent&v=vivir" class="btn btn-xs btn-default btn-block bold" role="button">Quiz</a>
+                </div>
+                <div class="vNeg" data-negative-conjugation>
+                  <ul class="verb-conjugation-list">
+                    <li>
+                      <span class="" title="I have not lived" data-tooltip>
+                        <span class='pron'>yo</span> no <span class='aux'>haya</span> <span class='vReg'>vivido</span>
+                      </span>
+                      <span class='audio-button  pull-right' data-audio-button data-audio-restricted>
+                        <i class='icon-play' aria-hidden='true' data-file="/speech/es/yo no haya vivido"></i>
+                      </span>
+                    </li>
+                    <li>
+                      <span class="" title="you have not lived" data-tooltip>
+                        <span class='pron'>tú</span> no <span class='aux'>hayas</span> <span class='vReg'>vivido</span>
+                      </span>
+                      <span class='audio-button  pull-right' data-audio-button data-audio-restricted>
+                        <i class='icon-play' aria-hidden='true' data-file="/speech/es/tú no hayas vivido"></i>
+                      </span>
+                    </li>
+                    <li>
+                      <span class="" title="he/she/it has not lived" data-tooltip>
+                        <span class='pron'>él</span> no <span class='aux'>haya</span> <span class='vReg'>vivido</span>
+                      </span>
+                      <span class='audio-button  pull-right' data-audio-button data-audio-restricted>
+                        <i class='icon-play' aria-hidden='true' data-file="/speech/es/él no haya vivido"></i>
+                      </span>
+                    </li>
+                    <li>
+                      <span class="" title="we have not lived" data-tooltip>
+                        <span class='pron'>nosotros</span> no <span class='aux'>hayamos</span> <span class='vReg'>vivido</span>
+                      </span>
+                      <span class='audio-button  pull-right' data-audio-button data-audio-restricted>
+                        <i class='icon-play' aria-hidden='true' data-file="/speech/es/nosotros no hayamos vivido"></i>
+                      </span>
+                    </li>
+                    <li>
+                      <span class="" title="you have not lived" data-tooltip>
+                        <span class='pron'>vosotros</span> no <span class='aux'>hayáis</span> <span class='vReg'>vivido</span>
+                      </span>
+                      <span class='audio-button  pull-right' data-audio-button data-audio-restricted>
+                        <i class='icon-play' aria-hidden='true' data-file="/speech/es/vosotros no hayáis vivido"></i>
+                      </span>
+                    </li>
+                    <li>
+                      <span class="" title="they have not lived" data-tooltip>
+                        <span class='pron'>ellos</span> no <span class='aux'>hayan</span> <span class='vReg'>vivido</span>
+                      </span>
+                      <span class='audio-button  pull-right' data-audio-button data-audio-restricted>
+                        <i class='icon-play' aria-hidden='true' data-file="/speech/es/ellos no hayan vivido"></i>
+                      </span>
+                    </li>
+                  </ul>
+                  <a href="/spanish/verbs/quiz/?pn=neg&m=s&t=perfectpresent&v=vivir" class="btn btn-xs btn-default bold btn-block" role="button">Quiz</a>
+                </div>
+              </section>
+              <section class="verb-tense-section">
+                <h3>Future Perfect</h3>
+                <div class="vPos" data-positive-conjugation>
+                  <ul class="verb-conjugation-list">
+                    <li>
+                      <span class="" title="I will have lived" data-tooltip><span class='pron'>yo</span> <span class='aux'>hubiere</span> <span class='vReg'>vivido</span></span>
+                      <span class='audio-button  pull-right' data-audio-button data-audio-restricted>
+                        <i class='icon-play' aria-hidden='true' data-file="/speech/es/yo hubiere vivido"></i>
+                      </span>
+                    </li>
+                    <li>
+                      <span class="" title="you will have lived" data-tooltip><span class='pron'>tú</span> <span class='aux'>hubieres</span> <span class='vReg'>vivido</span></span>
+                      <span class='audio-button  pull-right' data-audio-button data-audio-restricted>
+                        <i class='icon-play' aria-hidden='true' data-file="/speech/es/tú hubieres vivido"></i>
+                      </span>
+                    </li>
+                    <li>
+                      <span class="" title="he/she/it will have lived" data-tooltip><span class='pron'>él</span> <span class='aux'>hubiere</span> <span class='vReg'>vivido</span></span>
+                      <span class='audio-button  pull-right' data-audio-button data-audio-restricted>
+                        <i class='icon-play' aria-hidden='true' data-file="/speech/es/él hubiere vivido"></i>
+                      </span>
+                    </li>
+                    <li>
+                      <span class="" title="we will have lived" data-tooltip><span class='pron'>nosotros</span> <span class='aux'>hubiéremos</span> <span class='vReg'>vivido</span></span>
+                      <span class='audio-button  pull-right' data-audio-button data-audio-restricted>
+                        <i class='icon-play' aria-hidden='true' data-file="/speech/es/nosotros hubiéremos vivido"></i>
+                      </span>
+                    </li>
+                    <li>
+                      <span class="" title="you will have lived" data-tooltip><span class='pron'>vosotros</span> <span class='aux'>hubiereis</span> <span class='vReg'>vivido</span></span>
+                      <span class='audio-button  pull-right' data-audio-button data-audio-restricted>
+                        <i class='icon-play' aria-hidden='true' data-file="/speech/es/vosotros hubiereis vivido"></i>
+                      </span>
+                    </li>
+                    <li>
+                      <span class="" title="they will have lived" data-tooltip><span class='pron'>ellos</span> <span class='aux'>hubieren</span> <span class='vReg'>vivido</span></span>
+                      <span class='audio-button  pull-right' data-audio-button data-audio-restricted>
+                        <i class='icon-play' aria-hidden='true' data-file="/speech/es/ellos hubieren vivido"></i>
+                      </span>
+                    </li>
+                  </ul>
+                  <a href="/spanish/verbs/quiz/?m=s&t=perfectfuture&v=vivir" class="btn btn-xs btn-default btn-block bold" role="button">Quiz</a>
+                </div>
+                <div class="vNeg" data-negative-conjugation>
+                  <ul class="verb-conjugation-list">
+                    <li>
+                      <span class="" title="I will not have lived" data-tooltip>
+                        <span class='pron'>yo</span> no <span class='aux'>hubiere</span> <span class='vReg'>vivido</span>
+                      </span>
+                      <span class='audio-button  pull-right' data-audio-button data-audio-restricted>
+                        <i class='icon-play' aria-hidden='true' data-file="/speech/es/yo no hubiere vivido"></i>
+                      </span>
+                    </li>
+                    <li>
+                      <span class="" title="you will not have lived" data-tooltip>
+                        <span class='pron'>tú</span> no <span class='aux'>hubieres</span> <span class='vReg'>vivido</span>
+                      </span>
+                      <span class='audio-button  pull-right' data-audio-button data-audio-restricted>
+                        <i class='icon-play' aria-hidden='true' data-file="/speech/es/tú no hubieres vivido"></i>
+                      </span>
+                    </li>
+                    <li>
+                      <span class="" title="he/she/it will not have lived" data-tooltip>
+                        <span class='pron'>él</span> no <span class='aux'>hubiere</span> <span class='vReg'>vivido</span>
+                      </span>
+                      <span class='audio-button  pull-right' data-audio-button data-audio-restricted>
+                        <i class='icon-play' aria-hidden='true' data-file="/speech/es/él no hubiere vivido"></i>
+                      </span>
+                    </li>
+                    <li>
+                      <span class="" title="we will not have lived" data-tooltip>
+                        <span class='pron'>nosotros</span> no <span class='aux'>hubiéremos</span> <span class='vReg'>vivido</span>
+                      </span>
+                      <span class='audio-button  pull-right' data-audio-button data-audio-restricted>
+                        <i class='icon-play' aria-hidden='true' data-file="/speech/es/nosotros no hubiéremos vivido"></i>
+                      </span>
+                    </li>
+                    <li>
+                      <span class="" title="you will not have lived" data-tooltip>
+                        <span class='pron'>vosotros</span> no <span class='aux'>hubiereis</span> <span class='vReg'>vivido</span>
+                      </span>
+                      <span class='audio-button  pull-right' data-audio-button data-audio-restricted>
+                        <i class='icon-play' aria-hidden='true' data-file="/speech/es/vosotros no hubiereis vivido"></i>
+                      </span>
+                    </li>
+                    <li>
+                      <span class="" title="they will not have lived" data-tooltip>
+                        <span class='pron'>ellos</span> no <span class='aux'>hubieren</span> <span class='vReg'>vivido</span>
+                      </span>
+                      <span class='audio-button  pull-right' data-audio-button data-audio-restricted>
+                        <i class='icon-play' aria-hidden='true' data-file="/speech/es/ellos no hubieren vivido"></i>
+                      </span>
+                    </li>
+                  </ul>
+                  <a href="/spanish/verbs/quiz/?pn=neg&m=s&t=perfectfuture&v=vivir" class="btn btn-xs btn-default bold btn-block" role="button">Quiz</a>
+                </div>
+              </section>
+              <section class="verb-tense-section">
+                <h3>Pluperfect</h3>
+                <div class="vPos" data-positive-conjugation>
+                  <ul class="verb-conjugation-list">
+                    <li>
+                      <span class="" title="I had lived" data-tooltip><span class='pron'>yo</span> <span class='aux'>hubiera</span> <span class='vReg'>vivido</span></span>
+                      <span class='audio-button  pull-right' data-audio-button data-audio-restricted>
+                        <i class='icon-play' aria-hidden='true' data-file="/speech/es/yo hubiera vivido"></i>
+                      </span>
+                    </li>
+                    <li>
+                      <span class="" title="you had lived" data-tooltip><span class='pron'>tú</span> <span class='aux'>hubieras</span> <span class='vReg'>vivido</span></span>
+                      <span class='audio-button  pull-right' data-audio-button data-audio-restricted>
+                        <i class='icon-play' aria-hidden='true' data-file="/speech/es/tú hubieras vivido"></i>
+                      </span>
+                    </li>
+                    <li>
+                      <span class="" title="he/she/it had lived" data-tooltip><span class='pron'>él</span> <span class='aux'>hubiera</span> <span class='vReg'>vivido</span></span>
+                      <span class='audio-button  pull-right' data-audio-button data-audio-restricted>
+                        <i class='icon-play' aria-hidden='true' data-file="/speech/es/él hubiera vivido"></i>
+                      </span>
+                    </li>
+                    <li>
+                      <span class="" title="we had lived" data-tooltip><span class='pron'>nosotros</span> <span class='aux'>hubiéramos</span> <span class='vReg'>vivido</span></span>
+                      <span class='audio-button  pull-right' data-audio-button data-audio-restricted>
+                        <i class='icon-play' aria-hidden='true' data-file="/speech/es/nosotros hubiéramos vivido"></i>
+                      </span>
+                    </li>
+                    <li>
+                      <span class="" title="you had lived" data-tooltip><span class='pron'>vosotros</span> <span class='aux'>hubierais</span> <span class='vReg'>vivido</span></span>
+                      <span class='audio-button  pull-right' data-audio-button data-audio-restricted>
+                        <i class='icon-play' aria-hidden='true' data-file="/speech/es/vosotros hubierais vivido"></i>
+                      </span>
+                    </li>
+                    <li>
+                      <span class="" title="they had lived" data-tooltip><span class='pron'>ellos</span> <span class='aux'>hubieran</span> <span class='vReg'>vivido</span></span>
+                      <span class='audio-button  pull-right' data-audio-button data-audio-restricted>
+                        <i class='icon-play' aria-hidden='true' data-file="/speech/es/ellos hubieran vivido"></i>
+                      </span>
+                    </li>
+                  </ul>
+                  <a href="/spanish/verbs/quiz/?m=s&t=perfectplu&v=vivir" class="btn btn-xs btn-default btn-block bold" role="button">Quiz</a>
+                </div>
+                <div class="vNeg" data-negative-conjugation>
+                  <ul class="verb-conjugation-list">
+                    <li>
+                      <span class="" title="I had not lived" data-tooltip>
+                        <span class='pron'>yo</span> no <span class='aux'>hubiera</span> <span class='vReg'>vivido</span>
+                      </span>
+                      <span class='audio-button  pull-right' data-audio-button data-audio-restricted>
+                        <i class='icon-play' aria-hidden='true' data-file="/speech/es/yo no hubiera vivido"></i>
+                      </span>
+                    </li>
+                    <li>
+                      <span class="" title="you had not lived" data-tooltip>
+                        <span class='pron'>tú</span> no <span class='aux'>hubieras</span> <span class='vReg'>vivido</span>
+                      </span>
+                      <span class='audio-button  pull-right' data-audio-button data-audio-restricted>
+                        <i class='icon-play' aria-hidden='true' data-file="/speech/es/tú no hubieras vivido"></i>
+                      </span>
+                    </li>
+                    <li>
+                      <span class="" title="he/she/it had not lived" data-tooltip>
+                        <span class='pron'>él</span> no <span class='aux'>hubiera</span> <span class='vReg'>vivido</span>
+                      </span>
+                      <span class='audio-button  pull-right' data-audio-button data-audio-restricted>
+                        <i class='icon-play' aria-hidden='true' data-file="/speech/es/él no hubiera vivido"></i>
+                      </span>
+                    </li>
+                    <li>
+                      <span class="" title="we had not lived" data-tooltip>
+                        <span class='pron'>nosotros</span> no <span class='aux'>hubiéramos</span> <span class='vReg'>vivido</span>
+                      </span>
+                      <span class='audio-button  pull-right' data-audio-button data-audio-restricted>
+                        <i class='icon-play' aria-hidden='true' data-file="/speech/es/nosotros no hubiéramos vivido"></i>
+                      </span>
+                    </li>
+                    <li>
+                      <span class="" title="you had not lived" data-tooltip>
+                        <span class='pron'>vosotros</span> no <span class='aux'>hubierais</span> <span class='vReg'>vivido</span>
+                      </span>
+                      <span class='audio-button  pull-right' data-audio-button data-audio-restricted>
+                        <i class='icon-play' aria-hidden='true' data-file="/speech/es/vosotros no hubierais vivido"></i>
+                      </span>
+                    </li>
+                    <li>
+                      <span class="" title="they had not lived" data-tooltip>
+                        <span class='pron'>ellos</span> no <span class='aux'>hubieran</span> <span class='vReg'>vivido</span>
+                      </span>
+                      <span class='audio-button  pull-right' data-audio-button data-audio-restricted>
+                        <i class='icon-play' aria-hidden='true' data-file="/speech/es/ellos no hubieran vivido"></i>
+                      </span>
+                    </li>
+                  </ul>
+                  <a href="/spanish/verbs/quiz/?pn=neg&m=s&t=perfectplu&v=vivir" class="btn btn-xs btn-default bold btn-block" role="button">Quiz</a>
+                </div>
+              </section>
+              <section class="verb-tense-section">
+                <h3>Pluperfect 2</h3>
+                <div class="vPos" data-positive-conjugation>
+                  <ul class="verb-conjugation-list">
+                    <li>
+                      <span class="" title="I had lived" data-tooltip><span class='pron'>yo</span> <span class='aux'>hubiese</span> <span class='vReg'>vivido</span></span>
+                      <span class='audio-button  pull-right' data-audio-button data-audio-restricted>
+                        <i class='icon-play' aria-hidden='true' data-file="/speech/es/yo hubiese vivido"></i>
+                      </span>
+                    </li>
+                    <li>
+                      <span class="" title="you had lived" data-tooltip><span class='pron'>tú</span> <span class='aux'>hubieses</span> <span class='vReg'>vivido</span></span>
+                      <span class='audio-button  pull-right' data-audio-button data-audio-restricted>
+                        <i class='icon-play' aria-hidden='true' data-file="/speech/es/tú hubieses vivido"></i>
+                      </span>
+                    </li>
+                    <li>
+                      <span class="" title="he/she/it had lived" data-tooltip><span class='pron'>él</span> <span class='aux'>hubiese</span> <span class='vReg'>vivido</span></span>
+                      <span class='audio-button  pull-right' data-audio-button data-audio-restricted>
+                        <i class='icon-play' aria-hidden='true' data-file="/speech/es/él hubiese vivido"></i>
+                      </span>
+                    </li>
+                    <li>
+                      <span class="" title="we had lived" data-tooltip><span class='pron'>nosotros</span> <span class='aux'>hubiésemos</span> <span class='vReg'>vivido</span></span>
+                      <span class='audio-button  pull-right' data-audio-button data-audio-restricted>
+                        <i class='icon-play' aria-hidden='true' data-file="/speech/es/nosotros hubiésemos vivido"></i>
+                      </span>
+                    </li>
+                    <li>
+                      <span class="" title="you had lived" data-tooltip><span class='pron'>vosotros</span> <span class='aux'>hubieseis</span> <span class='vReg'>vivido</span></span>
+                      <span class='audio-button  pull-right' data-audio-button data-audio-restricted>
+                        <i class='icon-play' aria-hidden='true' data-file="/speech/es/vosotros hubieseis vivido"></i>
+                      </span>
+                    </li>
+                    <li>
+                      <span class="" title="they had lived" data-tooltip><span class='pron'>ellos</span> <span class='aux'>hubiesen</span> <span class='vReg'>vivido</span></span>
+                      <span class='audio-button  pull-right' data-audio-button data-audio-restricted>
+                        <i class='icon-play' aria-hidden='true' data-file="/speech/es/ellos hubiesen vivido"></i>
+                      </span>
+                    </li>
+                  </ul>
+                  <a href="/spanish/verbs/quiz/?m=s&t=perfectplu2&v=vivir" class="btn btn-xs btn-default btn-block bold" role="button">Quiz</a>
+                </div>
+                <div class="vNeg" data-negative-conjugation>
+                  <ul class="verb-conjugation-list">
+                    <li>
+                      <span class="" title="I had not lived" data-tooltip>
+                        <span class='pron'>yo</span> no <span class='aux'>hubiese</span> <span class='vReg'>vivido</span>
+                      </span>
+                      <span class='audio-button  pull-right' data-audio-button data-audio-restricted>
+                        <i class='icon-play' aria-hidden='true' data-file="/speech/es/yo no hubiese vivido"></i>
+                      </span>
+                    </li>
+                    <li>
+                      <span class="" title="you had not lived" data-tooltip>
+                        <span class='pron'>tú</span> no <span class='aux'>hubieses</span> <span class='vReg'>vivido</span>
+                      </span>
+                      <span class='audio-button  pull-right' data-audio-button data-audio-restricted>
+                        <i class='icon-play' aria-hidden='true' data-file="/speech/es/tú no hubieses vivido"></i>
+                      </span>
+                    </li>
+                    <li>
+                      <span class="" title="he/she/it had not lived" data-tooltip>
+                        <span class='pron'>él</span> no <span class='aux'>hubiese</span> <span class='vReg'>vivido</span>
+                      </span>
+                      <span class='audio-button  pull-right' data-audio-button data-audio-restricted>
+                        <i class='icon-play' aria-hidden='true' data-file="/speech/es/él no hubiese vivido"></i>
+                      </span>
+                    </li>
+                    <li>
+                      <span class="" title="we had not lived" data-tooltip>
+                        <span class='pron'>nosotros</span> no <span class='aux'>hubiésemos</span> <span class='vReg'>vivido</span>
+                      </span>
+                      <span class='audio-button  pull-right' data-audio-button data-audio-restricted>
+                        <i class='icon-play' aria-hidden='true' data-file="/speech/es/nosotros no hubiésemos vivido"></i>
+                      </span>
+                    </li>
+                    <li>
+                      <span class="" title="you had not lived" data-tooltip>
+                        <span class='pron'>vosotros</span> no <span class='aux'>hubieseis</span> <span class='vReg'>vivido</span>
+                      </span>
+                      <span class='audio-button  pull-right' data-audio-button data-audio-restricted>
+                        <i class='icon-play' aria-hidden='true' data-file="/speech/es/vosotros no hubieseis vivido"></i>
+                      </span>
+                    </li>
+                    <li>
+                      <span class="" title="they had not lived" data-tooltip>
+                        <span class='pron'>ellos</span> no <span class='aux'>hubiesen</span> <span class='vReg'>vivido</span>
+                      </span>
+                      <span class='audio-button  pull-right' data-audio-button data-audio-restricted>
+                        <i class='icon-play' aria-hidden='true' data-file="/speech/es/ellos no hubiesen vivido"></i>
+                      </span>
+                    </li>
+                  </ul>
+                  <a href="/spanish/verbs/quiz/?pn=neg&m=s&t=perfectplu2&v=vivir" class="btn btn-xs btn-default bold btn-block" role="button">Quiz</a>
+                </div>
+              </section>
+            </div>
+          </section>
+          <section class="verb-mood-section">
+            <div class="verb-polarity-buttons hidden-xs">
+              <button class="btn btn-xs btn-positive btn-active" data-positive-button>Positive</button>
+              <button class="btn btn-xs btn-negative" data-negative-button>Negative</button>
+            </div>
+            <h2>Vivir - Commands (Imperative)</h2>
+            <div class="verb-polarity-buttons-mobile visible-xs-block">
+              <button class="btn btn-xs btn-positive btn-active" data-positive-button>Positive</button>
+              <button class="btn btn-xs btn-negative" data-negative-button>Negative</button>
+            </div>
+            <div class="conjugation-tense-container">
+              <section class="verb-tense-section">
+                <h3></h3>
+                <div class="vPos" data-positive-conjugation>
+                  <ul class="verb-conjugation-list">
+                    <li>
+                      <span class="" title="(you) live" data-tooltip><span class='pron'>(tú)</span> <span class='vReg'>vive</span></span>
+                      <span class='audio-button  pull-right' data-audio-button data-audio-restricted>
+                        <i class='icon-play' aria-hidden='true' data-file="/speech/es/vive"></i>
+                      </span>
+                    </li>
+                    <li>
+                      <span class="" title="(he/she/it) live" data-tooltip><span class='pron'>(él)</span> <span class='vReg'>viva</span></span>
+                      <span class='audio-button  pull-right' data-audio-button data-audio-restricted>
+                        <i class='icon-play' aria-hidden='true' data-file="/speech/es/viva"></i>
+                      </span>
+                    </li>
+                    <li>
+                      <span class="" title="(we) let&#39;s live" data-tooltip><span class='pron'>(nosotros)</span> <span class='vReg'>vivamos</span></span>
+                      <span class='audio-button  pull-right' data-audio-button data-audio-restricted>
+                        <i class='icon-play' aria-hidden='true' data-file="/speech/es/vivamos"></i>
+                      </span>
+                    </li>
+                    <li>
+                      <span class="" title="(you) live" data-tooltip><span class='pron'>(vosotros)</span> <span class='vReg'>vivid</span></span>
+                      <span class='audio-button  pull-right' data-audio-button data-audio-restricted>
+                        <i class='icon-play' aria-hidden='true' data-file="/speech/es/vivid"></i>
+                      </span>
+                    </li>
+                    <li>
+                      <span class="" title="(they) live" data-tooltip><span class='pron'>(ellos)</span> <span class='vReg'>vivan</span></span>
+                      <span class='audio-button  pull-right' data-audio-button data-audio-restricted>
+                        <i class='icon-play' aria-hidden='true' data-file="/speech/es/vivan"></i>
+                      </span>
+                    </li>
+                  </ul>
+                  <a href="/spanish/verbs/quiz/?m=im&t=affirmative&v=vivir" class="btn btn-xs btn-default btn-block bold" role="button">Quiz</a>
+                </div>
+                <div class="vNeg" data-negative-conjugation>
+                  <ul class="verb-conjugation-list">
+                    <li>
+                      <span class="" title="(you) do not live" data-tooltip>
+                        <span class='pron'>(tú)</span> no <span class='vReg'>vivas</span>
+                      </span>
+                      <span class='audio-button  pull-right' data-audio-button data-audio-restricted>
+                        <i class='icon-play' aria-hidden='true' data-file="/speech/es/no vivas"></i>
+                      </span>
+                    </li>
+                    <li>
+                      <span class="" title="(he/she/it) do not live" data-tooltip>
+                        <span class='pron'>(él)</span> no <span class='vReg'>viva</span>
+                      </span>
+                      <span class='audio-button  pull-right' data-audio-button data-audio-restricted>
+                        <i class='icon-play' aria-hidden='true' data-file="/speech/es/no viva"></i>
+                      </span>
+                    </li>
+                    <li>
+                      <span class="" title="(we) let&#39;s not live" data-tooltip>
+                        <span class='pron'>(nosotros)</span> no <span class='vReg'>vivamos</span>
+                      </span>
+                      <span class='audio-button  pull-right' data-audio-button data-audio-restricted>
+                        <i class='icon-play' aria-hidden='true' data-file="/speech/es/no vivamos"></i>
+                      </span>
+                    </li>
+                    <li>
+                      <span class="" title="(you) do not live" data-tooltip>
+                        <span class='pron'>(vosotros)</span> no <span class='vReg'>viváis</span>
+                      </span>
+                      <span class='audio-button  pull-right' data-audio-button data-audio-restricted>
+                        <i class='icon-play' aria-hidden='true' data-file="/speech/es/no viváis"></i>
+                      </span>
+                    </li>
+                    <li>
+                      <span class="" title="(they) do not live" data-tooltip>
+                        <span class='pron'>(ellos)</span> no <span class='vReg'>vivan</span>
+                      </span>
+                      <span class='audio-button  pull-right' data-audio-button data-audio-restricted>
+                        <i class='icon-play' aria-hidden='true' data-file="/speech/es/no vivan"></i>
+                      </span>
+                    </li>
+                  </ul>
+                  <a href="/spanish/verbs/quiz/?pn=neg&m=im&t=affirmative&v=vivir" class="btn btn-xs btn-default bold btn-block" role="button">Quiz</a>
+                </div>
+              </section>
+            </div>
+          </section>
+          <div class="content-bottom-bonus-box">
+            <h2>Learn the 250 most common Spanish verbs</h2>
+            <p>Get the full list, with links to full conjugations and quizzes for all tenses.</p>
+            <a href="https://www.getdrip.com/forms/782308869/submissions/new" data-drip-show-form="782308869" class="btn btn-lg btn-warning" onclick="ga('send', 'event', 'Lead Box', 'Click', 'Learn the 250 most common Spanish verbs Bottom');">Yes
+              please!</a>
+          </div>
+        </div>
+        <div class="featured-product-bottom">
+          <div class="featured-product-text">
+            <h1><a href="https://courses.linguasorb.com/s/spanish-verbs-123">Need help with Spanish verbs?</a></h1>
+            <p>Spanish Verbs 123 is a new course from Linguasorb covering all aspects of verbs, featuring over 40 lessons with practice activities.</p>
+            <p><b><a href="https://courses.linguasorb.com/s/spanish-verbs-123">Learn more here.</a></b></p>
+          </div>
+          <div class="featured-product-image">
+            <a href="https://courses.linguasorb.com/s/spanish-verbs-123"><img src="https://courses.linguasorb.com/content/images/courses/spanish-verbs-123.png" /></a>
+          </div>
+        </div>
+        <div class="egg egg-section-empty">
+          <div class="remove-egg"><a href="/removeads/">Remove ads</a></div>
+        </div>
+        <div class="visible-xs">
+        </div>
+        <div class="egg egg-section-empty">
+          <div class="remove-egg"><a href="/removeads/">Remove ads</a></div>
+        </div>
+      </div>
+      <aside class="body-sidebar hidden-xs">
+        <div class="egg egg-section-sidebar">
+          <div id='div-gpt-ad-1497364720028-4'>
+            <script>
+              googletag.cmd.push(function() {
+                googletag.defineSlot('/311823076/linguasorb_spanish_sidebar_top_300x250', [300, 250], 'div-gpt-ad-1497364720028-4').addService(googletag.pubads());
+                googletag.pubads().collapseEmptyDivs();
+                googletag.enableServices();
+                googletag.display('div-gpt-ad-1497364720028-4');
+              });
+            </script>
+          </div>
+          <div class="remove-egg"><a href="/removeads/">Remove ads</a></div>
+        </div>
+        <div class="sidebar-box sidebar-popular-content">
+          <h3>Most Popular</h3>
+          <ul>
+            <li><a href="/spanish/recommendations/">Spanish course reviews</a></li>
+            <li><a href="/spanish/verbs/most-common-verbs/">100 Spanish verbs you need to know</a></li>
+            <li><a href="/spanish/cognates/">Learn 1000 Spanish words in 5 minutes</a></li>
+            <li><a href="/spanish/food-word-list/">Ultimate Spanish food word list</a></li>
+          </ul>
+        </div>
+        <div class="egg egg-section-sidebar">
+          <div id='div-gpt-ad-1497364720028-3'>
+            <script>
+              googletag.cmd.push(function() {
+                googletag.defineSlot('/311823076/linguasorb_spanish_sidebar_middle_300x250', [300, 250], 'div-gpt-ad-1497364720028-3').addService(googletag.pubads());
+                googletag.pubads().collapseEmptyDivs();
+                googletag.enableServices();
+                googletag.display('div-gpt-ad-1497364720028-3');
+              });
+            </script>
+          </div>
+          <div class="remove-egg"><a href="/removeads/">Remove ads</a></div>
+        </div>
+        <div class="hidden-xs" data-sticky-item>
+          <div class="egg-section-sidebar">
+          </div>
+        </div>
+      </aside>
+    </div>
+  </div>
+  <footer id="footer">
+    <div class="egg egg-section-footer">
+      <div id='div-gpt-ad-1497364720028-1'>
+        <script>
+          googletag.cmd.push(function() {
+            googletag.defineSlot('/311823076/linguasorb_spanish_below_content_728x90', [728, 90], 'div-gpt-ad-1497364720028-1').addService(googletag.pubads());
+            googletag.pubads().collapseEmptyDivs();
+            googletag.enableServices();
+            googletag.display('div-gpt-ad-1497364720028-1');
+          });
+        </script>
+      </div>
+      <div class="remove-egg"><a href="/removeads/">Remove ads</a></div>
+    </div>
+    <div id="footer-bottom">
+      <ul>
+        <li><a href="https://www.linguasorb.com/about">About</a></li>
+        <li><a href="https://www.linguasorb.com/blog/">Blog</a></li>
+        <li><a href="https://www.linguasorb.com/content/docs/privacy.pdf">Privacy Policy</a></li>
+        <li><a href="#" class="change-consent" onclick="window.__cmp('displayConsentUi'); return false;">Change Consent</a></li>
+        <li><a href="https://www.linguasorb.com/contact">Contact</a></li>
+        <li>&copy; Linguasorb.com 2021</li>
+      </ul>
+    </div>
+  </footer>
+  <div class="modal fade" tabindex="-1" role="dialog" id="adblock-modal">
+    <div class="modal-dialog" role="document">
+      <div class="modal-content">
+        <div class="modal-body">
+          <button type="button" class="close" data-dismiss="modal" aria-label="Close"><i class="icon-cancel" aria-hidden="true"></i></button>
+          <h1>Hi there,</h1>
+          <p>
+            We notice you're using an ad blocker.
+          </p>
+          <p>
+            Linguasorb is free and ad supported, without ad revenue we can't exist. Certain features such as audio,
+            directly cost us money and so are disabled for ad block users.
+          </p>
+          <p>
+            Please <a href="/disable-ad-blocker/">disable your ad blocker</a> for this site if you wish to use the premium features.
+          </p>
+          <p>Alternatively you can become a supporter and <a href="/removeads/">remove the ads completely</a>.
+          </p>
+        </div>
+      </div>
+    </div>
+  </div>
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
+  <script>
+    window.jQuery || document.write('<script src="https://www.linguasorb.com/content/scripts/jquery.js?v=Z_3sx_Om2qdGQNW4A5Csgy0WZLaXSa4Eg8ukUl26_Qw1"><\/script>')
+  </script>
+  <script src="https://www.linguasorb.com/content/scripts/global?v=ej1sijH9NGQHEDd6JrWrSQNpXbEY40-C66NSpir0V5M1"></script>
+  <script>
+    $(function() {
+      Linguasorb.Views.Global.init();
+    });
+  </script>
+  <script>
+    $(Linguasorb.Views.LanguageSection.init('spanish'));
+  </script>
+  <script>
+    $(Linguasorb.Views.SpanishConjugation.init);
+  </script>
+
+</body>
+
+</html>

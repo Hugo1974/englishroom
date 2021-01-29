@@ -4,14 +4,28 @@ use strict;
 use warnings;
 use feature qw(say switch :5.10);
 use Carp qw(croak carp);
+
 use Web::Query qw();
+use Time::HiRes qw(usleep nanosleep);
 use Gtk3 -init;
 use Glib qw(TRUE FALSE);    #use Gtk3::WebKit2;
-use lib '.';
 use Gtk3::WebKit2;
 use File::Find qw(find);
-use EnglishRoom::Config qw(UI_path Books_path);
-use EnglishRoom::BookViewerGUI;
+use lib '../';
+use lib '.';
+
+use EnglishRoom::Config qw(
+  EnglishRoomUI
+  UserFiles
+  BooksPath
+  BooksURI
+  BooksPath
+  EnglishRoomLibs
+);
+use EnglishRoom::Functions qw(
+  get_categories
+  PDF2HTML
+  );
 
 BEGIN {
     require Exporter;
@@ -41,31 +55,42 @@ BEGIN {
 }
 
 ###
+my $BooksListStore;
 
 # my $glade_file_path = UI_path;
-my $BooksView = UI_path . "/FrameBooks.glade";
-my $BooksPath = 'file://' . Books_path();
+my $BooksView = EnglishRoomUI . "/FrameBooks.glade";
+my $BooksURI  = BooksURI();
+my $BooksPath = BooksPath();
 my @my_books;
 my $n = '0';
 
-for my $file ( glob Books_path . '/*' ) {
-    say "\"$file\"";
-    my ( $path, $dir ) = split( /html\//, $file );
-    my $index = "$path" . 'html/' . "$dir/" . "$dir" . '.html';
-    my $title = $dir;
-    $title =~ s/_englishroom_book//;
+say $BooksURI;
+say $BooksPath;
 
+sub update_frame_book_list {
+my ( $path, $books, $cfg, $cats, $bdb ) = UserFiles;
+open (BDB, "<", "$bdb") or die "Error: $!\n";
+
+while  (my $l=<BDB>)
+  {
+    chomp $l;
+    say $l;
+    my ($id, $title, $age, $cat, $index) = split("::", $l);
     push @my_books,
       {
         'title' => $title,
-        'path'  => $path . "html/" . $dir,
-        'index' => $index
+        'path'  => $books . "$title/",
+        'index' => $index,
+        'uri'   => 'file://' . $books . "$title/" . $index
       };
-    $n++;
-}
+  }
 
 use Data::Dumper;
 say Dumper @my_books;
+return;
+}
+
+&update_frame_book_list;
 
 # starting Builder
 my $builder_main = Gtk3::Builder->new();
@@ -82,9 +107,9 @@ sub FrameBooks {
 sub BookViewer {
     my $AlignViewerBooks = $builder_main->get_object("AlignViewerBooks")
       or die "Error: no se encuentra el widget AlignViewerBooks";
-    my $v = EnglishRoom::BookViewerGUI->new( 'opt01' => 'hola mundo' );
+    my $v      = EnglishRoom::BookViewerGUI->new( 'opt01' => 'hola mundo' );
     my $viewer = $v->get_viewer;
-    $viewer->load_uri($BooksPath);
+    $viewer->load_uri($BooksURI);
     say $viewer;
     $AlignViewerBooks->add($viewer);
     return $AlignViewerBooks;
@@ -189,22 +214,71 @@ sub BooksViewerSettings {
 }
 
 sub BooksListStore {
-    my $BooksListStore = $builder_main->get_object("BooksListStore")
+
+    # my ( $title, $file ) = @_;
+    $BooksListStore = $builder_main->get_object("BooksListStore")
       or die "Error: no se encuentra el widget BooksListStore";
-    for my $item (@my_books) {
+
+#    my ( $path, undef, $cfg, $db, $cats ) = UserFiles;
+    my ( $path, $books, $cfg, $cats, $bdb ) = UserFiles;
+
+    #say "Formando lista de libros $path $bdb $cfg";
+
+    open( FILEHANDLER, "<", $bdb )
+      or die "Error $bdb: $!";
+    while ( my $l = <FILEHANDLER> ) {
+        my ( $id, $title, $age, $cat, $uri ) = split( "::", $l );
         my $iter = $BooksListStore->append();
-        $item->{title} =~ s/.*html\///;
         $BooksListStore->set(
             $iter,
-            0 => $item->{title},
-            1 => $item->{path},
-            2 => $item->{index}
+            0 => "$title",
+            1 => "$uri",
 
+            # 2 => 'index'
         );
     }
+    close FILEHANDLER;
+
     return $BooksListStore;
 }
 
-BooksListStore();
+BookMenuFileOpen->signal_connect(
+    'activate' => sub {
+        system('echo 0 > status');
+        FrameBooks->set_sensitive('0');
+        MenuBooks->set_sensitive('0');
+        say EnglishRoomLibs . "/AddBookAssistantGUI.pm";
+         system( "perl " . EnglishRoomLibs . "/BookAssistantGUI.pm&" );
+        for ( 1 .. 100000000000 ) {
+            my $l = 0;
+
+            Gtk3::main_iteration while Gtk3::events_pending;
+
+            open( FILEHANDLER, "<", 'status' ) or die "Error status: $!";
+            while ( $l = <FILEHANDLER> ) {
+                chomp $l;
+                if ( $l ne 1 ) {
+                    say $l;
+                    next;
+                }
+                else {
+                    say $l;
+                    $BooksListStore->clear;
+                    &BooksListStore;
+                    FrameBooks->set_sensitive('1');
+                    MenuBooks->set_sensitive('1');
+                    return;
+                }
+            }
+            close FILEHANDLER;
+
+            usleep(100000);
+
+            Gtk3::main_iteration while Gtk3::events_pending;
+        }
+
+    }
+);
+
 
 1;

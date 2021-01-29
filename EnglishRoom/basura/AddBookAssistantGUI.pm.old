@@ -1,0 +1,382 @@
+#!/user/bin/perl
+
+use strict;
+use warnings;
+use feature qw(say switch :5.10);
+use Carp qw(croak carp);
+use Gtk3 -init;
+use Glib qw(TRUE FALSE);
+use Gtk3::Helper;
+use FileHandle;
+use utf8;
+use Encode;
+use open 'locale';
+use File::Path qw(mkpath);
+use File::Copy qw(copy move);
+use lib '../';
+use EnglishRoom::Config qw(UI_path
+  Books_path
+  Books_uri
+  EnglishRoomUserFiles
+  PDFTOHTML
+  EnglishRoomHtmlFiles
+);
+
+my $glade_file    = 'AddBookAssistant.glade';
+my $BookAssistant = UI_path . "/$glade_file";
+my $BooksURI      = Books_uri();
+my $BooksPath     = Books_path();
+my @my_books;
+my $n = '0';
+
+# starting Builder
+my $builder_main = Gtk3::Builder->new();
+$builder_main->add_from_file("$BookAssistant")
+  or die "Error: no se encuentra el archivo AddBookAssistant.glade";
+
+my %widgets = {
+    Status => [
+        Entry         => '0',
+        ComboAge      => '0',
+        ComboCategory => '0'
+    ],
+    Value => [
+        Entry         => undef,
+        ComboAge      => undef,
+        ComboCategory => undef,
+        EntryBookFile => undef
+    ]
+};
+
+my $AddBookAssistantWindow = ();
+
+sub AddBookAssistantWindow {
+    $AddBookAssistantWindow =
+      $builder_main->get_object("AddBookAssistantWindow")
+      or die "Error: no se encuentra el widget AddBookAssistantWindow";
+
+    # $AddBookAssistantWindow->signal_connect( apply => \&on_assistant_apply );
+
+    return $AddBookAssistantWindow;
+}
+
+AddBookAssistantWindow->signal_connect( close => \&on_assistant_close_cancel );
+
+AddBookAssistantWindow->signal_connect( cancel => \&on_assistant_close_cancel );
+
+AddBookAssistantWindow->signal_connect( apply => \&make_books_db );
+
+AddBookAssistantWindow->signal_connect(
+    destroy => sub { Gtk3->main_quit(); return; } );
+
+sub AddBookEntry {
+    my $AddBookEntry = $builder_main->get_object("AddBookEntry")
+      or die "Error: no se encuentra el widget AddBookEntry";
+    return $AddBookEntry;
+}
+
+sub AddBookComboAge {
+    my $AddBookComboAge = $builder_main->get_object("AddBookComboAge")
+      or die "Error: no se encuentra el widget AddBookComboAge";
+    return $AddBookComboAge;
+}
+
+sub AddBookComboCategory {
+    my $AddBookComboCategory = $builder_main->get_object("AddBookComboCategory")
+      or die "Error: no se encuentra el widget AddBookComboCategory";
+    return $AddBookComboCategory;
+}
+
+sub AddBookLabelConfirmPage {
+    my $AddBookLabelConfirmPage =
+      $builder_main->get_object("AddBookLabelConfirmPage")
+      or die "Error: no se encuentra el widget AddBookLabelConfirmPage";
+    return $AddBookLabelConfirmPage;
+}
+
+sub EntryBookFile {
+    my $EntryBookFile = $builder_main->get_object("EntryBookFile")
+      or die "Error: no se encuentra el widget EntryBookFile";
+    return $EntryBookFile;
+
+}
+
+sub FileChooserBtn {
+    my $FileChooserBtn = $builder_main->get_object("FileChooserBtn")
+      or die "Error: no se encuentra el widget FileChooserBtn";
+
+    return $FileChooserBtn;
+}
+
+sub Progressbar {
+    my $Progressbar = $builder_main->get_object("Progressbar")
+      or die "Error: no se encuentra el widget Progressbar";
+
+    return $Progressbar;
+}
+
+$_->signal_connect( 'changed', \&widget_stat )
+  for ( AddBookEntry, AddBookComboAge, AddBookComboCategory );
+
+FileChooserBtn->signal_connect( 'clicked', \&open_file_chooser );
+
+sub widget_stat {
+    my ( $widget, $event ) = @_;
+    my ( $sub_get, $id );
+    my ( $titlr_ok, $age_ok, $cat_ok );
+
+    if ( $widget->Gtk3::Buildable::get_name() eq 'AddBookEntry' ) {
+        $id = 'Entry';
+        $widgets{Status}{$id} = 1 if ( length( $widget->get_text ) >= 6 );
+        $widgets{Status}{$id} = 0 if ( length( $widget->get_text ) <= 5 );
+        $sub_get              = $widget->get_text;
+    }
+    else {
+        $sub_get = $widget->get_active_text;
+    }
+
+    $id = 'ComboAge', $widgets{Status}{$id} = 1
+      if ( $widget->Gtk3::Buildable::get_name() eq 'AddBookComboAge' );
+
+    $id = 'ComboCategory', $widgets{Status}{$id} = 1
+      if ( $widget->Gtk3::Buildable::get_name() eq 'AddBookComboCategory' );
+
+    $widgets{Value}{$id} = $sub_get;
+    say "$id Status: " . $widgets{Status}{$id};
+    say "$id Value: " . $widgets{Value}{$id};
+
+    my $page_num     = AddBookAssistantWindow->get_current_page();
+    my $current_page = AddBookAssistantWindow->get_nth_page($page_num);
+
+    if ( defined( $widgets{Status}{ComboCategory} ) ) {
+        if (    ( $widgets{Status}{Entry} == 1 )
+            and ( $widgets{Status}{ComboAge} == 1 )
+            and ( $widgets{Status}{ComboCategory} == 1 ) )
+        {
+            AddBookAssistantWindow->set_page_complete( $current_page, TRUE );
+            &build_label_confirm;
+        }
+    }
+    return;
+}
+
+sub build_label_confirm {
+    my $label    = AddBookLabelConfirmPage;
+    my $entry    = $widgets{Value}{Entry};        #$widgets{Value}{AddBookEntry}
+    my $age      = $widgets{Value}{ComboAge};
+    my $category = $widgets{Value}{ComboCategory};
+    return unless ( defined($entry) );
+    return unless ( defined($age) );
+    return unless ( defined($category) );
+
+    $label->set_markup(
+"<span foreground='DarkRed' size='x-large'><b><u>ADD TO LIBRARY</u></b></span>\n
+<span foreground='DarkRed' size='large'>Title:   "
+          . "</span><span foreground='DarkBlue' size='large'>$entry</span>
+<span foreground='DarkRed' size='large'>Age:  "
+          . "</span><span foreground='DarkBlue' size='large'>$age</span>
+<span foreground='DarkRed' size='large'>Category:  "
+          . "</span><span foreground='DarkBlue' size='large'>$category</span>\n\n
+Pulse <b>[aplicar]</b> para registrar el libro."
+    );
+
+    return;
+}
+
+# sub apply_changes_gradually {
+#     my $fraction = $pb->get_fraction();
+#     $fraction += 0.05;
+#
+#     if ( $fraction < 1.0 ) {
+#         $pb->set_fraction($fraction);
+#         return TRUE;
+#     }
+#     else {
+#         $assistant->destroy();
+#         system('echo "1" > status');
+#         return FALSE;
+#     }
+# }
+#
+# sub on_assistant_apply {
+#     Glib::Timeout->add( 100, \&apply_changes_gradually );
+# }
+
+sub make_books_db {
+    &build_form;
+
+}
+
+sub on_assistant_close_cancel {
+    AddBookAssistantWindow->destroy;
+    return;
+}
+
+sub open_file_chooser {
+    my $filter = Gtk3::FileFilter->new();
+    $filter->set_name('PDF files');
+    $filter->add_pattern('*.pdf');
+    $filter->add_pattern('*.PDF');
+
+    my $open_dialog =
+      Gtk3::FileChooserDialog->new( 'Pick a file', $AddBookAssistantWindow,
+        'open', ( 'gtk-cancel', 'cancel', 'gtk-open', 'accept' ) );
+    $open_dialog->set_local_only(FALSE);
+    $open_dialog->set_modal(TRUE);
+    $open_dialog->signal_connect( 'response' => \&open_response_cb );
+    $open_dialog->show();
+
+    $open_dialog->add_filter($filter);
+    $open_dialog->show_all;
+}
+
+# callback function for the dialog open_dialog
+sub open_response_cb {
+    my ( $dialog, $response_id ) = @_;
+    my $open_dialog = $dialog;
+
+    # if response id is 'ACCEPTED' (the button 'Open' has been clicked)
+    if ( $response_id eq 'accept' ) {
+        print "accept was clicked \n";
+
+        my $filename = $open_dialog->get_filename();
+
+        print "opened: $filename \n";
+        EntryBookFile->set_text("$filename");
+        $widgets{Value}{EntryBookFile} = $filename;
+        $dialog->destroy();
+    }
+
+    # if response id is 'CANCEL' (the button 'Cancel' has been clicked)
+    elsif ( $response_id eq 'cancel' ) {
+        print "cancelled: Gtk3::FileChooserAction::OPEN \n";
+        $dialog->destroy();
+    }
+}
+
+sub toHtml {
+    Glib::Timeout->add(
+        100,
+        \&on_assistant_apply(
+            $widgets{Value}{Entry},
+            $widgets{Value}{EntryBookFile}
+        )
+    );
+}
+
+sub on_assistant_apply {
+
+    # Obtenemos el nombre del archivo y creamos una carpeta en sin extension
+    my ( $title, $file ) = @_;
+    my $path = EnglishRoomHtmlFiles;
+
+    say "Creando $path";
+
+    mkpath( "$path" . "$title" );
+
+    say "Creando $path" . "$title";
+
+    my $pdf = "$path" . "$title/" . "index.pdf";
+
+    # Copiamos el archivo a esa carpeta con el nombre index.html
+    say "Copiando $file en $path" . "$title";
+
+    copy $file, "$pdf";
+
+    my $fh = FileHandle->new;
+
+    # Creamos los archivos html
+    open( $fh, "pdftohtml -c -zoom 1.6 -enc UTF-8 \"./ch1.pdf\" |" )
+      or die "can't fork";
+
+    my $tag;
+    $tag = Gtk3::Helper->add_watch(
+        $fh->fileno,
+        'in',
+        sub {
+            watcher_callback( $fh, $tag );
+        }
+    );
+
+    # system("$pdftohtml -c  -zoom 1.6 -enc UTF-8 \"$pdf\"&");
+
+    unlink "$pdf";
+
+    return;
+
+}
+
+sub watcher_callback {
+    my ( $fh, $tag ) = @_;
+
+    my $buffer;
+    my $fraction = Progressbar->get_fraction();
+    $fraction += 0.05;
+    if ( not sysread( $fh, $buffer, 4096 ) ) {
+
+        Gtk3::Helper->remove_watch($tag)
+          or die "couldn't remove watcher";
+        close($fh);
+
+        # system('echo "1" > status');
+        return 1;
+    }
+
+    print $buffer;
+    system('echo "1" > status');
+    $fraction = '1.0';
+    return 0;
+}
+
+sub build_form {
+    my ( $path, $books_db, $conf ) = EnglishRoomUserFiles;
+
+    open( FILEHANDLER, ">>", $books_db ) or die "Error $books_db: $!";
+    say FILEHANDLER ( "$widgets{Value}{Entry}"
+          . "::$widgets{Value}{EntryBookFile}"
+          . "::$widgets{Value}{ComboAge}"
+          . "::$widgets{Value}{ComboCategory}" );
+    close FILEHANDLER;
+
+    toHtml( $widgets{Value}{Entry}, $widgets{Value}{EntryBookFile} );
+
+    # &on_assistant_apply(  );
+    return;
+}
+
+# TODO
+# # open a pipe to a ls command
+# use FileHandle;
+# my $fh = FileHandle->new;
+# open ($fh, "ls -l |") or die "can't fork";
+#
+# # install a read watcher for this pipe
+# my $tag;
+# $tag = Gtk3::Helper->add_watch ( $fh->fileno, 'in', sub {
+#   watcher_callback( $fh, $tag );
+# });
+#
+# sub watcher_callback {
+#     my ($fh, $tag) = @_;
+#
+#     # we safely can read a chunk into $buffer
+#     my $buffer;
+#
+#     if ( not sysread($fh, $buffer, 4096) ) {
+#       # obviously the connected pipe was closed
+#       Gtk3::Helper->remove_watch ($tag)
+#           or die "couldn't remove watcher";
+#       close($fh);
+#       return 1;
+#     }
+#
+#     # do something with $buffer ...
+#     print $buffer;
+#
+#     # *always* return true
+#     return 1;
+# }
+
+&AddBookAssistantWindow->show_all;
+Gtk3::main;
+

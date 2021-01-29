@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<!-- Generated with glade 3.22.1 -->
+<!-- Generated with glade 3.22.2 -->
 <interface>
   <requires lib="gtk+" version="3.20"/>
   <requires lib="webkit2gtk" version="2.12"/>
@@ -7,14 +7,11 @@
     <columns>
       <!-- column-name Book -->
       <column type="gchararray"/>
-      <!-- column-name Path -->
-      <column type="gchararray"/>
       <!-- column-name Index -->
       <column type="gchararray"/>
+      <!-- column-name path -->
+      <column type="gchararray"/>
     </columns>
-  </object>
-  <object class="WebKitSettings" id="BooksViewerSettings">
-    <property name="user_agent">Mozilla/5.0 (X11; Ubuntu; Linux x86_64) AppleWebKit/605.1.15 (KHTML, like Gecko) Version/13.0 Safari/605.1.15</property>
   </object>
   <object class="GtkBox" id="FrameBooks">
     <property name="visible">True</property>
@@ -145,6 +142,8 @@
                         <property name="width_request">300</property>
                         <property name="visible">True</property>
                         <property name="can_focus">False</property>
+                        <property name="hhomogeneous">False</property>
+                        <property name="vhomogeneous">False</property>
                         <property name="transition_duration">100</property>
                         <property name="transition_type">crossfade</property>
                         <property name="interpolate_size">True</property>
@@ -168,6 +167,8 @@
                                         <property name="visible">True</property>
                                         <property name="app_paintable">True</property>
                                         <property name="can_focus">True</property>
+                                        <property name="hexpand">False</property>
+                                        <property name="vexpand">True</property>
                                         <property name="model">BooksListStore</property>
                                         <property name="search_column">0</property>
                                         <property name="show_expanders">False</property>
@@ -188,6 +189,7 @@
                                             <child>
                                               <object class="GtkCellRendererText" id="TWCellBooks"/>
                                               <attributes>
+                                                <attribute name="visible">0</attribute>
                                                 <attribute name="text">0</attribute>
                                               </attributes>
                                             </child>
@@ -454,5 +456,8 @@
     <widgets>
       <widget name="NoteBookBooks"/>
     </widgets>
+  </object>
+  <object class="WebKitSettings" id="BooksViewerSettings">
+    <property name="user_agent">Mozilla/5.0 (X11; Ubuntu; Linux x86_64) AppleWebKit/605.1.15 (KHTML, like Gecko) Version/13.0 Safari/605.1.15</property>
   </object>
 </interface>

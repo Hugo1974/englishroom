@@ -48,8 +48,8 @@ my $box_book = $builder_main->get_object("BoxBook")
 
 my $revealer_book_list = $builder_frame_books->get_object("RevealerBookList")
   or die "Error: no se encuentra el widget RevealerBookList";
-my $books_menu_lista = $builder_frame_books->get_object("BooksMenuVerID")
-  or die "Error: no se encuentra el widget BooksMenuVerID";
+my $books_menu_lista = $builder_frame_books->get_object("BooksMenuShowList")
+  or die "Error: no se encuentra el widget BooksMenuShowList";
 $books_menu_lista->set_draw_as_radio(1);
 $books_menu_lista->set_active(1);
 $books_menu_lista->signal_connect(

@@ -7,85 +7,120 @@ use Carp qw(croak carp);
 use utf8;
 use Encode;
 use open 'locale';
+use lib ".";
+use lib $ENV{'HOME'} . "/.atom/github/englishroom/data/config";
+use lib $ENV{'HOME'} . "/.config/englishroom";
+use Data::Dumper;
 
 BEGIN {
     require Exporter;
 
-    # establecer la versión para la comprobación de versión
-    our $VERSION = 0.01;
+    our $VERSION = '0.0';
 
-    # heredar de Exporter para exportar funciones y variables
     our @ISA = qw(Exporter);
 
-    # funciones y variables que se exportan de forma predeterminada
     our @EXPORT = qw(
-      agent
-      proxy
-      html_response_file
-      html_formated_file
-      html_formated_file_uri
-      css_uri
-      js_uri
-      pretty
-      UI_path
-      Books_path
-      html_english_words_path
+      EnglishRoomUI
+      EnglishRoomLibs
+      Categories
+      UserFiles
+      BooksURI
+      BooksPath
     );
-
-    # funciones y variables que se exportan de forma opcional
 }
 
-my $ER_PATH = "/home/hugo/.atom/github/englishroom/";
+sub new {
+    use config qw(
+      UserConfig
+    );
+    use englishroom_config qw(
+      EnglishRoomConfig
+    );
+    my $clase = shift;
+    my $self  = {@_};
 
-sub agent {
+    $self->{opt01} ||= '';
+    $self->{opt02} ||= '';
+    $self->{opt03} ||= '';
+    $self->{opt04} ||= '';
+    $self->{opt05} ||= '';
+    $self->{UserConfig}        = UserConfig();
+    $self->{EnglishRoomConfig} = EnglishRoomConfig();
+
+    #GetUserConf();
+
+    return bless $self, $clase;
+
+}
+
+my $conf = EnglishRoom::Config->new();
+
+# my $user =  $conf->GetUserConf;
+# my $er   = $conf->GetEnglishRoomConf;
+
+# Funciones no exportables
+
+# Obtener configuración de usuario
+sub GetUserConf {
+    say "Exec GetUserConf";
+    say Dumper $_[-1]->{UserConfig};
+    return $_[-1]->{UserConfig};
+}
+
+sub GetEnglishRoomConf {
+    say "Exec GetEnglishRoomConf";
+    say Dumper $_[-1]->{EnglishRoomConfig};
+    return $_[-1]->{EnglishRoomConfig};
+}
+
+# Exportables
+sub EnglishRoomLibs {
+    say "Exec EnglishRoomLibs";
+    say $conf->{EnglishRoomConfig}->{EnglishRoomLibs};
+    return $conf->{EnglishRoomConfig}->{EnglishRoomLibs};
+}
+
+sub CategoriesFile {
+    say "Exec RegisterNewCategory";
+    say $conf->{UserConfig}->{UserCategories};
+    return $conf->{UserConfig}->{UserCategories};
+}
+
+sub BooksPath {
+    say "Exec BooksPath";
+    say $conf->{UserConfig}->{UserHTMLPath};
+    return $conf->{UserConfig}->{UserHTMLPath};
+}
+
+sub BooksURI {
+    say "Exec BooksUTI";
+    say "file://" . $conf->{UserConfig}->{UserHTMLPath};
+    return "file://" . $conf->{UserConfig}->{UserHTMLPath};
+}
+
+sub EnglishRoomUI {
+    say "Exec EnglishRoomUI";
+    say $conf->{EnglishRoomConfig}->{EnglishRoomUI};
+    return $conf->{EnglishRoomConfig}->{EnglishRoomUI};
+}
+
+sub UserFiles {
+    say "Exec UserFiles";
+
     return (
-'"Mozilla/5.0 (X11; Ubuntu; Linux x86_64; rv:59.0) Gecko/20100101 Firefox/59.0"'
+        $conf->{UserConfig}->{UserPathData},
+        $conf->{UserConfig}->{UserHTMLPath},
+        $conf->{UserConfig}->{UserConfigFile},
+        $conf->{UserConfig}->{UserCategories},
+        $conf->{UserConfig}->{UserBooksDB},
+        $conf->{UserConfig}->{UserCategories},
+        $conf->{UserConfig}->{UserAgeRange},
+        $conf->{UserConfig}->{UserTranslations},
+        $conf->{UserConfig}->{UserNotes}
     );
 }
 
-sub proxy {
-    return ('socks://127.0.0.1:9050');
-}
-
-sub html_response_file {
-    return ('/tmp/response.html');
-}
-
-sub html_formated_file_uri {
-    return ('file:///tmp/formated.html');
-}
-
-sub html_formated_file {
-    return ("/tmp/formated.html");
-}
-
-sub css_uri {
-    return ( "file://" . $ER_PATH . "data/styles/style.css" );
-}
-
-sub js_uri {
-    return ( "file://" . $ER_PATH . "EnglishRoom/play_audio.js" );
-}
-
-sub pretty {
-    my ( undef, undef, $hpp ) = split( /\s/, `which html5-print` );
-    return "/home/hugo/.config/.local/bin/html5-print";
-}
-
-sub linguasorb_html_response_file {
-    return "/tmp/";
-}
-
-sub UI_path {
-    return "$ER_PATH" . "data/UI/";
-}
-
-sub Books_path {
-    return $ER_PATH . "data/books/html";
-}
-
-sub html_english_words_path {
-    return $ER_PATH . "data/dicts/english/html/";
-}
+# say Dumper UserFiles();
+# EnglishRoomUI();
 
 1;

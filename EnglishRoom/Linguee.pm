@@ -130,7 +130,7 @@ sub get {
     say "GETTING> " . $self->{search_url} . $self->{query};
 
     my $ua = new LWP::UserAgent( 'agent' => $self->{agent} );
-    $ua->proxy( [qw(http https)] => $self->{proxy} );
+#    $ua->proxy( [qw(http https)] => $self->{proxy} );
     my $response = $ua->get( $self->{search_url} . $self->{query} );
     print $response->code, ' ', $response->message, "\n" if DEBUG;
 

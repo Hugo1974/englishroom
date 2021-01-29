@@ -13,44 +13,8 @@ use open 'locale';
 use lib '../';
 use Data::Dumper;
 
-use EnglishRoom::MainWindowGUI qw(
-  MainWindow
-  RevSearchEntry
-  StackSearch
-  find_menu_page1
-  find_menu_page2
-  EntrySearch
-  BtnSearch
-  BtnMenu
-  RevMain
-  StackMainMenu
-  MainMenuPage1
-  MainMenuPage2
-  RoomsPage1
-  RoomsPage2
-  RoomBox
-);
-
-use EnglishRoom::FrameBooksGUI qw(
-  FrameBooks
-  MenuBooks
-  BookMenuFileOpen
-  BookMenuFileClose
-  BooksMenuShowList
-  BooksMenuHelpAbout
-  RevealerBookList
-  StackBookList
-  TWBooks
-  TWColumnBooks
-  TWCellBooks
-  NoteBookBooks
-  BookViewer
-  BookTabLabel_book
-  BookTabLabel_translations
-  BookTabLabel_notes
-  BookTabLabel_exercises
-  BooksViewerSettings
-);
+use EnglishRoom::MainWindowGUI;
+use EnglishRoom::FrameBooksGUI;
 
 ##
 MainWindow->set_title('English Room 0.01');
@@ -74,7 +38,7 @@ TglBook->signal_connect(
     'clicked',
     sub {
         BookViewer;
-        StackRooms->set_visible_child( RoomsPage2() );
+        StackRooms()->set_visible_child( RoomsPage2() );
         StackMainMenu->set_visible_child( MainMenuPage1() );
         MainWindow->show_all;
 

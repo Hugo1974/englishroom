@@ -10,7 +10,8 @@ use Web::Query qw();
 use Gtk3 -init;
 use Glib qw(TRUE FALSE);    #use Gtk3::WebKit2;
 use lib '.';
-use EnglishRoom::Config qw(UI_path);
+use lib '..';
+use EnglishRoom::Config qw(EnglishRoomUI);
 use EnglishRoom::FrameBooksGUI qw(FrameBooks);
 
 BEGIN {
@@ -42,7 +43,7 @@ BEGIN {
 ###
 
 # my $glade_file_path = UI_path;
-my $WordsView = UI_path . "/MainWindow.glade";
+my $WordsView = EnglishRoomUI . "/MainWindow.glade";
 
 # starting Builder
 my $builder_main = Gtk3::Builder->new();
@@ -165,10 +166,14 @@ sub RoomBox {
     return $RoomBox;
 }
 
-StackRooms->set_visible_child( RoomsPage1() );
+# StackRooms->set_visible_child( RoomsPage1() );
 
 # adding books to liststore (FrameBooksGUI)
 # BooksListStore();
+
+my $FrameBooks = FrameBooks();
+BooksListStore();
+RoomsPage1->add($FrameBooks);
 
 TglBook->signal_connect(
     'toggled',
