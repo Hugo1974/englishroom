@@ -26,6 +26,14 @@ BEGIN {
       UserFiles
       BooksURI
       BooksPath
+      agent
+      proxy
+      html_response_file
+      html_formated_file
+      html_formated_file_uri
+      css_uri
+      js_uri
+      pretty
     );
 }
 
@@ -118,6 +126,55 @@ sub UserFiles {
         $conf->{UserConfig}->{UserTranslations},
         $conf->{UserConfig}->{UserNotes}
     );
+}
+
+sub agent {
+    say "Exex agent";
+    say $conf->{EnglishRoomConfig}->{AGENT};
+    return $conf->{EnglishRoomConfig}->{AGENT};
+}
+
+sub proxy {
+    say "Exex proxy";
+    say $conf->{EnglishRoomConfig}->{PROXY};
+    return $conf->{EnglishRoomConfig}->{PROXY};
+}
+
+sub html_response_file {
+    say "Exex html_response_file";
+    say $conf->{EnglishRoomConfig}->{HtmlResponseFile};
+    return $conf->{EnglishRoomConfig}->{HtmlResponseFile};
+}
+
+sub html_formated_file {
+    say "Exex html_formated_file";
+    say $conf->{EnglishRoomConfig}->{HtmlFormatedFile};
+    return $conf->{EnglishRoomConfig}->{HtmlFormatedFile};
+}
+
+sub html_formated_file_uri {
+    say "Exex html_formated_file_uri";
+    say $conf->{EnglishRoomConfig}->{HtmlFormatedFileUri};
+    return $conf->{EnglishRoomConfig}->{HtmlFormatedFileUri};
+}
+
+sub css_uri {
+    say "Exex css_uri";
+    say $conf->{EnglishRoomConfig}->{CssUri};
+    return $conf->{EnglishRoomConfig}->{CssUri};
+}
+
+sub js_uri {
+    say "Exex js_uri";
+    say $conf->{EnglishRoomConfig}->{JsUri};
+    return $conf->{EnglishRoomConfig}->{JsUri};
+}
+
+sub pretty {
+    say "Exex pretty";
+    
+    say $conf->{EnglishRoomConfig}->{PRETTY};
+    return $conf->{EnglishRoomConfig}->{PRETTY};
 }
 
 # say Dumper UserFiles();

@@ -87,4 +87,11 @@ sub CreateUserFiles {
     #To do
     return;
 }
+
+# sub pretty {
+#     my ( undef, undef, $hpp ) = split( /\s/, `which html5-print` );
+
+#     # return "/home/hugo/.config/.local/bin/html5-print"; # Ubuntu 18.04
+#     return "/usr/local/bin/html5-print";    # Ubuntu 18.04
+# }
 1;

@@ -244,7 +244,7 @@ sub BooksListStore {
 
 BookMenuFileOpen->signal_connect(
     'activate' => sub {
-        system('echo 0 > status');
+        system('echo 0 > /tmp/status');
         FrameBooks->set_sensitive('0');
         MenuBooks->set_sensitive('0');
         say EnglishRoomLibs . "/AddBookAssistantGUI.pm";
@@ -254,7 +254,7 @@ BookMenuFileOpen->signal_connect(
 
             Gtk3::main_iteration while Gtk3::events_pending;
 
-            open( FILEHANDLER, "<", 'status' ) or die "Error status: $!";
+            open( FILEHANDLER, "<", '/tmp/status' ) or die "Error /tmp/status: $!";
             while ( $l = <FILEHANDLER> ) {
                 chomp $l;
                 if ( $l ne 1 ) {
