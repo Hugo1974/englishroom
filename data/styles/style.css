@@ -17,12 +17,8 @@ height:100%
 .dict_headline_for_1.bothsides.wide_in_main {
   display: none;
 }
-#outer_div{max-width:1090px;
-min-width:620px;
-margin-left:auto;
-margin-right:auto;
-position:relative
-}
+
+
 #ip_page_wrapper,#l_page_wrapper,#ip_content_wrapper,#outer_div{min-height:100%;
 height:100%}img{display:block;
 border:0}a{color:inherit}a[href],a[onclick],a[href] b{cursor:pointer}a:link,a:visited{text-decoration:none}.bold{font-weight:bold}td{padding:0;

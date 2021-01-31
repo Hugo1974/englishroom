@@ -6,3 +6,6 @@ books/
 data/dicts/
 data/doc/
 bin/status
+data/config/basura/config.pm
+basura/
+.vstags
