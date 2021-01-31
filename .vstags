@@ -425,6 +425,7 @@ TglBook	EnglishRoom/MainWindowGUI.pm	121;"	s
 TglConjugations	EnglishRoom/MainWindowGUI.pm	133;"	s
 TglTranslate	EnglishRoom/MainWindowGUI.pm	127;"	s
 UI_path	EnglishRoom/basura/Config_old.pm	106;"	s
+UserConfig	data/config/config.pm	25;"	s
 UserFiles	EnglishRoom/Config.pm	117;"	s
 VISIBLE_COLUMN	pruebas/Gtk2/examples/tree_store.pl	25;"	c
 WORLD_COLUMN	pruebas/Gtk2/examples/tree_store.pl	26;"	c
@@ -583,6 +584,8 @@ combobox::fill_combo_entry	pruebas/Gtk2/examples/combobox.pl	152;"	s
 combobox::is_capital_sensitive	pruebas/Gtk2/examples/combobox.pl	144;"	s
 combobox::is_separator	pruebas/Gtk2/examples/combobox.pl	92;"	s
 combobox::set_sensitive	pruebas/Gtk2/examples/combobox.pl	75;"	s
+config	data/config/config.pm	1;"	p
+config::UserConfig	data/config/config.pm	25;"	s
 configure_event	pruebas/Gtk2/examples/histogramplot.pl	261;"	s
 configure_event	pruebas/Gtk2/examples/scribble.pl	38;"	s
 create_bbox	pruebas/Gtk2/examples/button_box.pl	13;"	s
