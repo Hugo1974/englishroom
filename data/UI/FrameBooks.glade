@@ -14,29 +14,24 @@
     </columns>
   </object>
   <object class="GtkBox" id="FrameBooks">
-    <property name="visible">True</property>
     <property name="can_focus">False</property>
     <property name="orientation">vertical</property>
     <child>
       <object class="GtkMenuBar" id="MenuBooks">
         <property name="name">MenuBooks</property>
-        <property name="visible">True</property>
         <property name="can_focus">False</property>
         <child>
           <object class="GtkMenuItem">
-            <property name="visible">True</property>
-            <property name="can_focus">False</property>
+            <property name="can_focus">True</property>
             <property name="label" translatable="yes">_Archivo</property>
             <property name="use_underline">True</property>
             <child type="submenu">
               <object class="GtkMenu">
-                <property name="visible">True</property>
                 <property name="can_focus">False</property>
                 <child>
                   <object class="GtkImageMenuItem" id="BookMenuFileOpen">
                     <property name="label">gtk-open</property>
                     <property name="name">BookMenuFileOpen</property>
-                    <property name="visible">True</property>
                     <property name="can_focus">False</property>
                     <property name="use_underline">True</property>
                     <property name="use_stock">True</property>
@@ -44,14 +39,12 @@
                 </child>
                 <child>
                   <object class="GtkSeparatorMenuItem">
-                    <property name="visible">True</property>
                     <property name="can_focus">False</property>
                   </object>
                 </child>
                 <child>
                   <object class="GtkImageMenuItem" id="BookMenuFileClose">
                     <property name="label">gtk-close</property>
-                    <property name="visible">True</property>
                     <property name="can_focus">False</property>
                     <property name="use_underline">True</property>
                     <property name="use_stock">True</property>
@@ -63,18 +56,15 @@
         </child>
         <child>
           <object class="GtkMenuItem">
-            <property name="visible">True</property>
-            <property name="can_focus">False</property>
+            <property name="can_focus">True</property>
             <property name="label" translatable="yes">_Ver</property>
             <property name="use_underline">True</property>
             <child type="submenu">
               <object class="GtkMenu">
-                <property name="visible">True</property>
                 <property name="can_focus">False</property>
                 <child>
                   <object class="GtkCheckMenuItem" id="BooksMenuShowList">
                     <property name="name">BooksMenuShowList</property>
-                    <property name="visible">True</property>
                     <property name="can_focus">False</property>
                     <property name="tooltip_text" translatable="yes">Lista de libros</property>
                     <property name="label" translatable="yes">Lista de libros</property>
@@ -88,13 +78,11 @@
         </child>
         <child>
           <object class="GtkMenuItem">
-            <property name="visible">True</property>
-            <property name="can_focus">False</property>
+            <property name="can_focus">True</property>
             <property name="label" translatable="yes">Ay_uda</property>
             <property name="use_underline">True</property>
             <child type="submenu">
               <object class="GtkMenu">
-                <property name="visible">True</property>
                 <property name="can_focus">False</property>
                 <child>
                   <object class="GtkImageMenuItem" id="BooksMenuHelpAbout">
@@ -119,134 +107,87 @@
     <child>
       <object class="GtkPaned">
         <property name="visible">True</property>
+        <property name="app_paintable">True</property>
         <property name="can_focus">True</property>
+        <property name="position">250</property>
+        <property name="position_set">True</property>
         <child>
           <object class="GtkBox">
             <property name="visible">True</property>
             <property name="can_focus">False</property>
             <child>
-              <object class="GtkBox">
+              <object class="GtkViewport">
                 <property name="visible">True</property>
                 <property name="can_focus">False</property>
+                <property name="shadow_type">none</property>
                 <child>
-                  <object class="GtkRevealer" id="RevealerBookList">
-                    <property name="name">RevealerBookList</property>
+                  <object class="GtkScrolledWindow">
                     <property name="visible">True</property>
-                    <property name="can_focus">False</property>
-                    <property name="transition_type">slide-left</property>
-                    <property name="transition_duration">50</property>
-                    <property name="reveal_child">True</property>
+                    <property name="can_focus">True</property>
+                    <property name="shadow_type">in</property>
                     <child>
-                      <object class="GtkStack" id="StackBookList">
-                        <property name="name">StackBookList</property>
-                        <property name="width_request">300</property>
+                      <object class="GtkTreeView" id="TWBooks">
+                        <property name="name">TWBooks</property>
                         <property name="visible">True</property>
-                        <property name="can_focus">False</property>
-                        <property name="hhomogeneous">False</property>
-                        <property name="vhomogeneous">False</property>
-                        <property name="transition_duration">100</property>
-                        <property name="transition_type">crossfade</property>
-                        <property name="interpolate_size">True</property>
+                        <property name="app_paintable">True</property>
+                        <property name="can_focus">True</property>
+                        <property name="hexpand">True</property>
+                        <property name="vexpand">True</property>
+                        <property name="model">BooksListStore</property>
+                        <property name="search_column">0</property>
+                        <property name="show_expanders">False</property>
+                        <property name="level_indentation">5</property>
+                        <property name="activate_on_single_click">True</property>
+                        <child internal-child="selection">
+                          <object class="GtkTreeSelection"/>
+                        </child>
                         <child>
-                          <object class="GtkBox">
-                            <property name="visible">True</property>
-                            <property name="can_focus">False</property>
-                            <property name="orientation">vertical</property>
+                          <object class="GtkTreeViewColumn" id="TWColumnBooks">
+                            <property name="title" translatable="yes">Books</property>
+                            <property name="expand">True</property>
+                            <property name="clickable">True</property>
+                            <property name="reorderable">True</property>
+                            <property name="sort_indicator">True</property>
+                            <property name="sort_order">descending</property>
+                            <property name="sort_column_id">0</property>
                             <child>
-                              <object class="GtkScrolledWindow">
-                                <property name="visible">True</property>
-                                <property name="can_focus">True</property>
-                                <child>
-                                  <object class="GtkViewport">
-                                    <property name="visible">True</property>
-                                    <property name="can_focus">False</property>
-                                    <property name="shadow_type">none</property>
-                                    <child>
-                                      <object class="GtkTreeView" id="TWBooks">
-                                        <property name="name">TWBooks</property>
-                                        <property name="visible">True</property>
-                                        <property name="app_paintable">True</property>
-                                        <property name="can_focus">True</property>
-                                        <property name="hexpand">False</property>
-                                        <property name="vexpand">True</property>
-                                        <property name="model">BooksListStore</property>
-                                        <property name="search_column">0</property>
-                                        <property name="show_expanders">False</property>
-                                        <property name="level_indentation">5</property>
-                                        <property name="activate_on_single_click">True</property>
-                                        <child internal-child="selection">
-                                          <object class="GtkTreeSelection"/>
-                                        </child>
-                                        <child>
-                                          <object class="GtkTreeViewColumn" id="TWColumnBooks">
-                                            <property name="title" translatable="yes">Books</property>
-                                            <property name="expand">True</property>
-                                            <property name="clickable">True</property>
-                                            <property name="reorderable">True</property>
-                                            <property name="sort_indicator">True</property>
-                                            <property name="sort_order">descending</property>
-                                            <property name="sort_column_id">0</property>
-                                            <child>
-                                              <object class="GtkCellRendererText" id="TWCellBooks"/>
-                                              <attributes>
-                                                <attribute name="visible">0</attribute>
-                                                <attribute name="text">0</attribute>
-                                              </attributes>
-                                            </child>
-                                          </object>
-                                        </child>
-                                        <child>
-                                          <object class="GtkTreeViewColumn" id="TWColumnBookPath">
-                                            <property name="visible">False</property>
-                                            <property name="sizing">fixed</property>
-                                            <property name="fixed_width">0</property>
-                                            <property name="max_width">0</property>
-                                            <property name="title" translatable="yes">Path</property>
-                                            <child>
-                                              <object class="GtkCellRendererText" id="TWCellPath"/>
-                                              <attributes>
-                                                <attribute name="text">1</attribute>
-                                              </attributes>
-                                            </child>
-                                          </object>
-                                        </child>
-                                        <child>
-                                          <object class="GtkTreeViewColumn" id="TWColumnIndex">
-                                            <property name="visible">False</property>
-                                            <property name="title" translatable="yes">Index</property>
-                                            <child>
-                                              <object class="GtkCellRendererText" id="TWCellIndex"/>
-                                              <attributes>
-                                                <attribute name="text">2</attribute>
-                                              </attributes>
-                                            </child>
-                                          </object>
-                                        </child>
-                                      </object>
-                                    </child>
-                                  </object>
-                                </child>
-                              </object>
-                              <packing>
-                                <property name="expand">True</property>
-                                <property name="fill">True</property>
-                                <property name="position">0</property>
-                              </packing>
+                              <object class="GtkCellRendererText" id="TWCellBooks"/>
+                              <attributes>
+                                <attribute name="text">0</attribute>
+                              </attributes>
                             </child>
                           </object>
-                          <packing>
-                            <property name="name">page0</property>
-                            <property name="title" translatable="yes">page0</property>
-                          </packing>
+                        </child>
+                        <child>
+                          <object class="GtkTreeViewColumn" id="TWColumnBookPath">
+                            <property name="visible">False</property>
+                            <property name="sizing">fixed</property>
+                            <property name="fixed_width">0</property>
+                            <property name="max_width">0</property>
+                            <property name="title" translatable="yes">Path</property>
+                            <child>
+                              <object class="GtkCellRendererText" id="TWCellPath"/>
+                              <attributes>
+                                <attribute name="text">2</attribute>
+                              </attributes>
+                            </child>
+                          </object>
+                        </child>
+                        <child>
+                          <object class="GtkTreeViewColumn" id="TWColumnIndex">
+                            <property name="visible">False</property>
+                            <property name="title" translatable="yes">Index</property>
+                            <child>
+                              <object class="GtkCellRendererText" id="TWCellIndex"/>
+                              <attributes>
+                                <attribute name="text">1</attribute>
+                              </attributes>
+                            </child>
+                          </object>
                         </child>
                       </object>
                     </child>
                   </object>
-                  <packing>
-                    <property name="expand">True</property>
-                    <property name="fill">True</property>
-                    <property name="position">0</property>
-                  </packing>
                 </child>
               </object>
               <packing>
@@ -257,7 +198,7 @@
             </child>
           </object>
           <packing>
-            <property name="resize">False</property>
+            <property name="resize">True</property>
             <property name="shrink">True</property>
           </packing>
         </child>
@@ -278,12 +219,21 @@
                     <property name="can_focus">True</property>
                     <property name="show_border">False</property>
                     <child>
-                      <object class="GtkAlignment" id="AlignViewerBooks">
+                      <object class="GtkAlignment">
                         <property name="name">AlignViewerBooks</property>
                         <property name="visible">True</property>
                         <property name="can_focus">False</property>
                         <child>
-                          <placeholder/>
+                          <object class="GtkAlignment" id="AlignViewerBooks">
+                            <property name="visible">True</property>
+                            <property name="can_focus">False</property>
+                            <property name="top_padding">5</property>
+                            <property name="left_padding">5</property>
+                            <property name="right_padding">5</property>
+                            <child>
+                              <placeholder/>
+                            </child>
+                          </object>
                         </child>
                       </object>
                     </child>

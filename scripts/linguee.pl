@@ -58,6 +58,7 @@ $web_align->add($scrolls);
 $web_align->show_all();
 $view->show_all();
 $view->signal_connect( 'context-menu', \&append_item );
+
 $entry_search->signal_connect(
     'activate',
     sub {

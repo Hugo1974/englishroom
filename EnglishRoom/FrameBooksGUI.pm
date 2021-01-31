@@ -25,7 +25,7 @@ use EnglishRoom::Config qw(
 use EnglishRoom::Functions qw(
   get_categories
   PDF2HTML
-  );
+);
 
 BEGIN {
     require Exporter;
@@ -68,26 +68,25 @@ say $BooksURI;
 say $BooksPath;
 
 sub update_frame_book_list {
-my ( $path, $books, $cfg, $cats, $bdb ) = UserFiles;
-open (BDB, "<", "$bdb") or die "Error: $!\n";
+    my ( $path, $books, $cfg, $cats, $bdb ) = UserFiles;
+    open( BDB, "<", "$bdb" ) or die "Error: $!\n";
 
-while  (my $l=<BDB>)
-  {
-    chomp $l;
-    say $l;
-    my ($id, $title, $age, $cat, $index) = split("::", $l);
-    push @my_books,
-      {
-        'title' => $title,
-        'path'  => $books . "$title/",
-        'index' => $index,
-        'uri'   => 'file://' . $books . "$title/" . $index
-      };
-  }
+    while ( my $l = <BDB> ) {
+        chomp $l;
+        say $l;
+        my ( $id, $title, $age, $cat, $index ) = split( "::", $l );
+        push @my_books,
+          {
+            'title' => $title,
+            'path'  => $books . "$title/",
+            'index' => $index,
+            'uri'   => 'file://' . $books . "$title/" . $index
+          };
+    }
 
-use Data::Dumper;
-say Dumper @my_books;
-return;
+    use Data::Dumper;
+    say Dumper @my_books;
+    return;
 }
 
 &update_frame_book_list;
@@ -102,17 +101,6 @@ sub FrameBooks {
     my $FrameBooks = $builder_main->get_object("FrameBooks")
       or die "Error: no se encuentra el widget FrameBooks";
     return $FrameBooks;
-}
-
-sub BookViewer {
-    my $AlignViewerBooks = $builder_main->get_object("AlignViewerBooks")
-      or die "Error: no se encuentra el widget AlignViewerBooks";
-    my $v      = EnglishRoom::BookViewerGUI->new( 'opt01' => 'hola mundo' );
-    my $viewer = $v->get_viewer;
-    $viewer->load_uri($BooksURI);
-    say $viewer;
-    $AlignViewerBooks->add($viewer);
-    return $AlignViewerBooks;
 }
 
 sub MenuBooks {
@@ -219,7 +207,7 @@ sub BooksListStore {
     $BooksListStore = $builder_main->get_object("BooksListStore")
       or die "Error: no se encuentra el widget BooksListStore";
 
-#    my ( $path, undef, $cfg, $db, $cats ) = UserFiles;
+    #    my ( $path, undef, $cfg, $db, $cats ) = UserFiles;
     my ( $path, $books, $cfg, $cats, $bdb ) = UserFiles;
 
     #say "Formando lista de libros $path $bdb $cfg";
@@ -242,19 +230,22 @@ sub BooksListStore {
     return $BooksListStore;
 }
 
+TWBooks->signal_connect( "row-activated" => sub { &GetBookListStoreValues(@_); }
+);
+
 BookMenuFileOpen->signal_connect(
     'activate' => sub {
-        system('echo 0 > /tmp/status');
+        system('echo 0 > status');
         FrameBooks->set_sensitive('0');
         MenuBooks->set_sensitive('0');
         say EnglishRoomLibs . "/AddBookAssistantGUI.pm";
-         system( "perl " . EnglishRoomLibs . "/BookAssistantGUI.pm&" );
+        system( "perl " . EnglishRoomLibs . "/BookAssistantGUI.pm&" );
         for ( 1 .. 100000000000 ) {
             my $l = 0;
 
             Gtk3::main_iteration while Gtk3::events_pending;
 
-            open( FILEHANDLER, "<", '/tmp/status' ) or die "Error /tmp/status: $!";
+            open( FILEHANDLER, "<", './status' ) or die "Error /tmp/status: $!";
             while ( $l = <FILEHANDLER> ) {
                 chomp $l;
                 if ( $l ne 1 ) {
@@ -280,5 +271,51 @@ BookMenuFileOpen->signal_connect(
     }
 );
 
+my $book_viewer = &BookViewer();
+
+sub GetBookListStoreValues {
+
+    my $treeselection = TWBooks->get_selection;
+    my ( $model, $iter ) = $treeselection->get_selected;
+
+    say $model->get( $iter, 0 );
+    say $model->get( $iter, 1 );
+
+    my $url = $model->get( $iter, 1 );
+    chomp $url;
+
+    &LoadBook( $book_viewer, $url );
+
+    return;
+}
+
+sub LoadBook {
+
+    my ( $book_viewer, $url ) = @_;
+
+    chomp $book_viewer;
+    chomp $url;
+
+    say $book_viewer;
+    say "Reading file://$url";
+
+    $book_viewer->load_uri("file://$url");
+
+    $book_viewer->show_all();
+
+    return;
+
+}
+
+sub BookViewer {
+    my $AlignViewerBooks = $builder_main->get_object("AlignViewerBooks")
+      or die "Error: no se encuentra el widget AlignViewerBooks";
+
+    my $book_viewer = Gtk3::WebKit2::WebView->new();
+    my $scrolls     = Gtk3::ScrolledWindow->new();
+    $scrolls->add($book_viewer);
+    $AlignViewerBooks->add($scrolls);
+    return $book_viewer;
+}
 
 1;

@@ -37,10 +37,12 @@ sub EnglishRoomConfig {
     $config->{HtmlResponseFile}    = '/tmp/response.html';
     $config->{HtmlFormatedFile}    = "/tmp/formated.html";
     $config->{HtmlFormatedFileUri} = 'file:///tmp/formated.html';
-    $config->{CssUri} = "file://" . $config->{EnglishRoomPath} . "data/styles/style.css";
+    $config->{CssUri} =
+      "file://" . $config->{EnglishRoomPath} . "data/styles/style.css";
     $config->{JsUri} = "file://" . $config->{EnglishRoomLibs} . "play_audio.js";
     $config->{PRETTY} = "/usr/local/bin/html5-print";
-
+    $config->{NewIdentityExec} =
+      "/home/hugo/.atom/github/englishroom/bin/new_identity.sh";
     return $config;
 }
 

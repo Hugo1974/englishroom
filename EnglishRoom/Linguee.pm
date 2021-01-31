@@ -38,6 +38,9 @@ use EnglishRoom::Config qw(
   js_uri
   pretty
 );
+use EnglishRoom::Functions qw(
+  NewTorIdentity
+);
 use Data::Dumper;
 binmode( STDOUT, "encoding(UTF-8)" );
 
@@ -115,6 +118,8 @@ sub query {
 sub get {
     my $self = shift;
 
+    NewTorIdentity();
+
     if ( $self->{localfile} ) {
         open( LOCALFILE, "<", $self->{localfile} )
           or die "Error: $self->{localfile}: $!\n";
@@ -129,22 +134,25 @@ sub get {
 
     say "GETTING> " . $self->{search_url} . $self->{query};
 
-    my $ua = new LWP::UserAgent::Tor(
-        'agent'            => $self->{agent},
-        'tor_control_port' => 9051,
-        'tor_port'         => 9050,
-        'tor_config'       => '/etc/tor/torrc'
-    );
-    say `sudo service tor restart`;
-    if ( $ua->rotate_ip ) {
-        say 'got another ip';
-    }
-    else {
-        say 'try again?';
-    }
+    my $ua = new LWP::UserAgent::Tor( 'agent' => $self->{agent} );
 
-    # $ua -> proxy([qw(http https)] => 'socks://127.0.0.1:9050');
-    $ua->proxy( [qw(http https)] => $self->{proxy} );
+    $ua -> proxy([qw(http https)] => 'socks://127.0.0.1:9050');
+
+    # $ua->proxy( [qw(http https)] => $self->{proxy} );
+    # my $ua = new LWP::UserAgent::Tor(
+    #     'agent'            => $self->{agent},
+    #     'tor_control_port' => 9051,
+    #     'tor_port'         => 9050,
+    # );
+
+    # # say `sudo service tor restart`;
+    # if ( $ua->rotate_ip ) {
+    #     say 'got another ip';
+    # }
+    # else {
+    #     say 'try again?';
+    # }
+
     my $response = $ua->get( $self->{search_url} . $self->{query} );
     print $response->code, ' ', $response->message, "\n" if DEBUG;
 

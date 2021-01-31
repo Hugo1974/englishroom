@@ -54,6 +54,7 @@ $builder_main->add_from_file("$WordsView")
 sub MainWindow {
     my $MainWindow = $builder_main->get_object("MainWindow")
       or die "Error: no se encuentra el widget MainWindow";
+    $MainWindow->signal_connect( destroy => sub { Gtk3->main_quit } );
     return $MainWindow;
 }
 

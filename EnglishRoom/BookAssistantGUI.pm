@@ -20,6 +20,7 @@ use Data::Dumper;
 use EnglishRoom::Config qw(
   EnglishRoomUI
   UserFiles
+  BooksPath
 );
 
 use EnglishRoom::Functions qw(
@@ -205,17 +206,18 @@ sub watch_callback {
 
         my @index_file = split( "/", $widgets{Value}{EntryBookFile} );
         $index_file[-1] =~ s/\.pdf/\.html/;
-
+        my ( $dir_name, undef ) =~ split( ".", $index_file[-1] );
+        say "Directory: $dir_name";
         say "Index: $index_file[-1]";
 
         update_dbs(
-            $widgets{Value}{EntryBookTitle}, $widgets{Value}{ComboAge},
-            $widgets{Value}{ComboCategory},  $index_file[-1]
+            $widgets{Value}{EntryBookTitle},
+            $widgets{Value}{ComboAge},
+            $widgets{Value}{ComboCategory},
+            BooksPath . $widgets{Value}{EntryBookTitle} . "/" . $index_file[-1]
         );
         apply_changes_gradually( $make_book_proc = 1 );
         Gtk3::Helper->remove_watch($helper_tag);
-        $BookAssistant->destroy();
-        exit 0;
     }
 
     #important so we can loop again
@@ -230,7 +232,8 @@ sub apply_changes_gradually {
             $fraction = 1.0;
             $Progressbar->set_fraction($fraction);
             system('echo "1" > status');
-            return FALSE;
+            $BookAssistant->destroy();
+            return;
         }
         else {
             $fraction += 0.01;

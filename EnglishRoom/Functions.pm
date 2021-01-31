@@ -13,6 +13,7 @@ use EnglishRoom::Config qw(
   Categories
   BooksURI
   BooksPath
+  NewIdentityExec
 );
 
 BEGIN {
@@ -26,6 +27,8 @@ BEGIN {
       update_dbs
       PDF2HTML
       get_categories
+      NewTorIdentity
+
     );
 }
 
@@ -80,6 +83,14 @@ sub get_categories {
     }
     close FILEHANDLER;
     return \@cats;
+}
+
+sub NewTorIdentity {
+    my $ni = NewIdentityExec();
+    say `sudo $ni`;
+    my $new_identity = `curl --socks5 127.0.0.1:9050 http://checkip.amazonaws.com/`;
+    say "New indentity: $new_identity";
+    return $new_identity;
 }
 
 sub CreateUserFiles {

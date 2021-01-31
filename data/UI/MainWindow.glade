@@ -3,6 +3,7 @@
 <interface>
   <requires lib="gtk+" version="3.20"/>
   <object class="GtkMenu" id="MenuSelect">
+    <property name="name">MenuTo</property>
     <property name="visible">True</property>
     <property name="can_focus">False</property>
     <property name="anchor_hints"/>
@@ -11,7 +12,7 @@
         <property name="name">ToEnglish</property>
         <property name="visible">True</property>
         <property name="can_focus">False</property>
-        <property name="label" translatable="yes">Traducir al español</property>
+        <property name="label" translatable="yes">Traducir al ingles</property>
         <property name="active">True</property>
         <property name="draw_as_radio">True</property>
         <property name="group">ToSpanish</property>
@@ -21,35 +22,56 @@
       <object class="GtkRadioMenuItem" id="ToSpanish">
         <property name="visible">True</property>
         <property name="can_focus">False</property>
-        <property name="label" translatable="yes">Traducir al ingles</property>
+        <property name="label" translatable="yes">Traducir al español</property>
+        <property name="active">True</property>
         <property name="draw_as_radio">True</property>
         <property name="group">ToEnglish</property>
       </object>
     </child>
   </object>
-  <object class="GtkImage" id="ShowVerbsUtils">
+  <object class="GtkMenu" id="MenuSelect2">
     <property name="visible">True</property>
+    <property name="app_paintable">True</property>
+    <property name="can_focus">False</property>
+    <property name="hexpand">True</property>
+    <property name="vexpand">True</property>
+    <property name="anchor_hints"/>
+    <child>
+      <object class="GtkRadioMenuItem" id="ToEnglish2">
+        <property name="name">ToEnglish</property>
+        <property name="can_focus">False</property>
+        <property name="label" translatable="yes">Traducir al español</property>
+        <property name="active">True</property>
+        <property name="draw_as_radio">True</property>
+      </object>
+    </child>
+    <child>
+      <object class="GtkRadioMenuItem" id="ToSpanish2">
+        <property name="can_focus">False</property>
+        <property name="label" translatable="yes">Traducir al ingles</property>
+        <property name="draw_as_radio">True</property>
+      </object>
+    </child>
+  </object>
+  <object class="GtkImage" id="ShowVerbsUtils">
     <property name="can_focus">False</property>
     <property name="stock">gtk-go-down</property>
   </object>
+  <object class="GtkAccelGroup" id="accelgroup1"/>
   <object class="GtkImage" id="img_help">
-    <property name="visible">True</property>
     <property name="can_focus">False</property>
     <property name="stock">gtk-help</property>
     <property name="icon_size">3</property>
   </object>
   <object class="GtkImage" id="img_tgl_book">
-    <property name="visible">True</property>
     <property name="can_focus">False</property>
     <property name="icon_name">edit-select-all</property>
   </object>
   <object class="GtkImage" id="img_tgl_conj">
-    <property name="visible">True</property>
     <property name="can_focus">False</property>
     <property name="icon_name">accessories-dictionary</property>
   </object>
   <object class="GtkImage" id="img_tgl_translate">
-    <property name="visible">True</property>
     <property name="can_focus">False</property>
     <property name="icon_name">preferences-desktop-locale</property>
   </object>
@@ -242,10 +264,10 @@
                   </packing>
                 </child>
                 <child>
-                  <object class="GtkMenuButton" id="BtnTransMenu">
-                    <property name="name">BtnTransMenu</property>
+                  <object class="GtkMenuButton" id="MenuTrans">
                     <property name="visible">True</property>
                     <property name="can_focus">True</property>
+                    <property name="focus_on_click">False</property>
                     <property name="receives_default">True</property>
                     <property name="draw_indicator">True</property>
                     <property name="popup">MenuSelect</property>
@@ -254,8 +276,9 @@
                     </child>
                   </object>
                   <packing>
-                    <property name="expand">False</property>
+                    <property name="expand">True</property>
                     <property name="fill">True</property>
+                    <property name="padding">5</property>
                     <property name="position">2</property>
                   </packing>
                 </child>
@@ -272,24 +295,20 @@
     <child>
       <object class="GtkAlignment" id="FrameWebView">
         <property name="name">FrameWebView</property>
-        <property name="visible">True</property>
         <property name="can_focus">False</property>
         <property name="bottom_padding">5</property>
         <child>
           <object class="GtkBox">
-            <property name="visible">True</property>
             <property name="can_focus">False</property>
             <property name="orientation">vertical</property>
             <child>
               <object class="GtkRevealer" id="RevMain">
                 <property name="name">RevMain</property>
-                <property name="visible">True</property>
                 <property name="can_focus">False</property>
                 <property name="reveal_child">True</property>
                 <child>
                   <object class="GtkStack" id="StackMainMenu">
                     <property name="name">StackMainMenu</property>
-                    <property name="visible">True</property>
                     <property name="can_focus">False</property>
                     <property name="margin_left">10</property>
                     <property name="margin_right">10</property>
@@ -301,7 +320,6 @@
                     <child>
                       <object class="GtkBox" id="MainMenuPage1">
                         <property name="name">MainMenuPage1</property>
-                        <property name="visible">True</property>
                         <property name="can_focus">False</property>
                         <property name="opacity">0.80000000000000004</property>
                         <property name="orientation">vertical</property>
@@ -320,27 +338,22 @@
                     <child>
                       <object class="GtkAlignment" id="MainMenuPage2">
                         <property name="name">MainMenuPage2</property>
-                        <property name="visible">True</property>
                         <property name="can_focus">False</property>
                         <property name="top_padding">5</property>
                         <property name="bottom_padding">5</property>
                         <child>
                           <object class="GtkBox">
-                            <property name="visible">True</property>
                             <property name="can_focus">False</property>
                             <child>
                               <object class="GtkBox">
-                                <property name="visible">True</property>
                                 <property name="can_focus">False</property>
                                 <property name="orientation">vertical</property>
                                 <child>
                                   <object class="GtkBox">
-                                    <property name="visible">True</property>
                                     <property name="can_focus">False</property>
                                     <property name="spacing">5</property>
                                     <child>
                                       <object class="GtkButtonBox">
-                                        <property name="visible">True</property>
                                         <property name="can_focus">False</property>
                                         <property name="spacing">10</property>
                                         <property name="layout_style">start</property>
@@ -363,8 +376,7 @@
                                         <child>
                                           <object class="GtkRadioButton" id="TglBook">
                                             <property name="label" translatable="yes">Books</property>
-                                            <property name="visible">True</property>
-                                            <property name="can_focus">True</property>
+                                            <property name="can_focus">False</property>
                                             <property name="receives_default">False</property>
                                             <property name="image">img_tgl_book</property>
                                             <property name="use_underline">True</property>
@@ -382,8 +394,7 @@
                                           <object class="GtkRadioButton" id="TglTranslate">
                                             <property name="label" translatable="yes">Translates</property>
                                             <property name="name">TglTranslate</property>
-                                            <property name="visible">True</property>
-                                            <property name="can_focus">True</property>
+                                            <property name="can_focus">False</property>
                                             <property name="receives_default">False</property>
                                             <property name="image">img_tgl_translate</property>
                                             <property name="use_underline">True</property>
@@ -400,8 +411,7 @@
                                         <child>
                                           <object class="GtkRadioButton" id="TglConjugations">
                                             <property name="label" translatable="yes">Conjugations</property>
-                                            <property name="visible">True</property>
-                                            <property name="can_focus">True</property>
+                                            <property name="can_focus">False</property>
                                             <property name="receives_default">False</property>
                                             <property name="image">img_tgl_conj</property>
                                             <property name="use_underline">True</property>
@@ -439,13 +449,11 @@
                             </child>
                             <child>
                               <object class="GtkBox">
-                                <property name="visible">True</property>
                                 <property name="can_focus">False</property>
                                 <property name="orientation">vertical</property>
                                 <child>
                                   <object class="GtkButton">
-                                    <property name="visible">True</property>
-                                    <property name="can_focus">True</property>
+                                    <property name="can_focus">False</property>
                                     <property name="receives_default">True</property>
                                     <property name="image">img_help</property>
                                     <property name="always_show_image">True</property>
@@ -484,14 +492,12 @@
             </child>
             <child>
               <object class="GtkRevealer">
-                <property name="visible">True</property>
                 <property name="can_focus">False</property>
                 <property name="transition_type">crossfade</property>
                 <property name="reveal_child">True</property>
                 <child>
                   <object class="GtkStack" id="StackRooms">
                     <property name="name">StackRooms</property>
-                    <property name="visible">True</property>
                     <property name="can_focus">False</property>
                     <property name="hhomogeneous">False</property>
                     <property name="vhomogeneous">False</property>
@@ -516,7 +522,6 @@
                     <child>
                       <object class="GtkBox" id="RoomsPage2">
                         <property name="name">RoomsPage2</property>
-                        <property name="visible">True</property>
                         <property name="can_focus">False</property>
                         <property name="orientation">vertical</property>
                         <child>
@@ -531,7 +536,6 @@
                     </child>
                     <child>
                       <object class="GtkBox" id="RoomsPage3">
-                        <property name="visible">True</property>
                         <property name="can_focus">False</property>
                         <property name="orientation">vertical</property>
                         <child>

@@ -34,6 +34,7 @@ BEGIN {
       css_uri
       js_uri
       pretty
+      NewIdentityExec
     );
 }
 
@@ -43,6 +44,7 @@ sub new {
     );
     use englishroom_config qw(
       EnglishRoomConfig
+      
     );
     my $clase = shift;
     my $self  = {@_};
@@ -177,6 +179,12 @@ sub pretty {
     return $conf->{EnglishRoomConfig}->{PRETTY};
 }
 
+sub NewIdentityExec {
+    say "Exex NewIdentityExec";
+    
+    say $conf->{EnglishRoomConfig}->{NewIdentityExec};
+    return $conf->{EnglishRoomConfig}->{NewIdentityExec};
+}
 # say Dumper UserFiles();
 # EnglishRoomUI();
 
