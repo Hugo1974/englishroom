@@ -7,7 +7,6 @@ use Cwd qw(getcwd);
 
 chdir "/home/henar/.englishroom/englishroom/bin";
 
-sleep 5;
 
 use feature qw(say switch :5.10);
 use Carp qw(croak carp);

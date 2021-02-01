@@ -134,9 +134,12 @@ sub get {
 
     say "GETTING> " . $self->{search_url} . $self->{query};
 
-    my $ua = new LWP::UserAgent::Tor( 'agent' => $self->{agent} );
+    my $ua = new LWP::UserAgent(
+        'agent'      => $self->{agent},
 
-    $ua -> proxy([qw(http https)] => 'socks://127.0.0.1:9050');
+    );
+
+    #$ua->proxy( [qw(http https)] => 'socks://127.0.0.1:9050' );
 
     # $ua->proxy( [qw(http https)] => $self->{proxy} );
     # my $ua = new LWP::UserAgent::Tor(

@@ -128,6 +128,7 @@
             <property name="no_show_all">True</property>
             <child>
               <object class="GtkBox">
+                <property name="visible">True</property>
                 <property name="can_focus">False</property>
                 <property name="spacing">5</property>
                 <child>

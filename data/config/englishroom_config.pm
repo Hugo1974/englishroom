@@ -30,19 +30,19 @@ sub EnglishRoomConfig {
     $config->{EnglishRoomUI}   = $config->{EnglishRoomPath} . "data/UI";
     $config->{EnglishRoomDict} = $config->{EnglishRoomPath} . "data/dicts/";
     $config->{EnglishRoomBin}  = $config->{EnglishRoomPath} . "bin/";
+    $config->{EnglishRoomTmp}  = "/tmp/";
     $config->{PDFTOHTML}       = '/usr/bin/pdftohtml -c ';
     $config->{AGENT} =
 '"Mozilla/5.0 (X11; Ubuntu; Linux x86_64; rv:59.0) Gecko/20100101 Firefox/59.0"';
     $config->{PROXY}               = 'socks://127.0.0.1:9050';
-    $config->{HtmlResponseFile}    = '/tmp/response.html';
+    $config->{HtmlResponseFile}    = $config->{EnglishRoomTmp} . 'response.html';
     $config->{HtmlFormatedFile}    = "/tmp/formated.html";
-    $config->{HtmlFormatedFileUri} = 'file:///tmp/formated.html';
+    $config->{HtmlFormatedFileUri} = 'file://' . $config->{EnglishRoomTmp} . 'formated.html';
     $config->{CssUri} =
       "file://" . $config->{EnglishRoomPath} . "data/styles/style.css";
     $config->{JsUri} = "file://" . $config->{EnglishRoomLibs} . "play_audio.js";
     $config->{PRETTY} = "/usr/local/bin/html5-print";
-    $config->{NewIdentityExec} =
-      "/home/hugo/.atom/github/englishroom/bin/new_identity.sh";
+    $config->{NewIdentityExec} = $config->{EnglishRoomBin} . "new_identity.sh";
     return $config;
 }
 
