@@ -197,6 +197,7 @@ sub watch_callback {
 
     if ($line) {
         say $line ;
+        $make_book_proc = 0;
     }
     else {
         say "Conversión completada";
@@ -216,7 +217,8 @@ sub watch_callback {
             $widgets{Value}{ComboCategory},
             BooksPath . $widgets{Value}{EntryBookTitle} . "/" . $index_file[-1]
         );
-        apply_changes_gradually( $make_book_proc = 1 );
+        $make_book_proc = 1;
+        apply_changes_gradually(  );
         Gtk3::Helper->remove_watch($helper_tag);
     }
 
