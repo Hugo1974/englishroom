@@ -269,7 +269,6 @@
                                               <object class="GtkStack" id="StackWebActions">
                                                 <property name="visible">True</property>
                                                 <property name="can_focus">False</property>
-                                                <property name="transition_duration">600</property>
                                                 <property name="transition_type">over-down-up</property>
                                                 <property name="interpolate_size">True</property>
                                                 <child>
