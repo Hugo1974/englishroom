@@ -201,6 +201,42 @@ sub BooksViewerSettings {
     return $BooksViewerSettings;
 }
 
+sub Overlay {
+    my $Overlay = $builder_main->get_object("Overlay")
+      or die "Error: no se encuentra el widget Overlay";
+    return $Overlay;
+}
+
+sub EventBoxWebActions {
+    my $EventBoxWebActions = $builder_main->get_object("EventBoxWebActions")
+      or die "Error: no se encuentra el widget EventBoxWebActions";
+    return $EventBoxWebActions;
+}
+
+sub StackWebActions {
+    my $StackWebActions = $builder_main->get_object("StackWebActions")
+      or die "Error: no se encuentra el widget StackWebActions";
+    return $StackWebActions;
+}
+
+sub StackP01 {
+    my $StackP01 = $builder_main->get_object("StackP01")
+      or die "Error: no se encuentra el widget StackP01";
+    return $StackP01;
+}
+
+sub StackP02 {
+    my $StackP02 = $builder_main->get_object("StackP02")
+      or die "Error: no se encuentra el widget StackP02";
+    return $StackP02;
+}
+
+EventBoxWebActions->signal_connect( 'enter_notify_event' =>
+      sub { StackWebActions->set_visible_child(StackP02); return; } );
+EventBoxWebActions->signal_connect( 'leave_notify_event' =>
+      sub { StackWebActions->set_visible_child(StackP01); return; } );
+
+
 sub BooksListStore {
 
     # my ( $title, $file ) = @_;
